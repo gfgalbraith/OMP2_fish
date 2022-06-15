@@ -84,9 +84,11 @@ unique(transect_data$T_ID) #135 transects in the transect_data
 transect_data %>% anti_join(fish, by = "T_ID")
 fish %>% anti_join(transect_data, by = "T_ID")
 levels(transect_data$T_ID)
+
 # 26/05/22 Saumarez, Wreck, Kenn, Marion and Frederick data are not yet in the project. Others in lagoon habitat are likely true zero observation transects. This should be made note of in the transect summary as the video anlaysis is done.
+
 # Discrepancy between fish Site BVille and transect Site Bville. Changed in Transect summary data csv.
-# Chilcott was spelt incorrectly inthe Eventmeasure file but correclty in the transect_data file, consequently wasn't matching - changed mannually in csv file now.
+# Chilcott was spelt incorrectly in the Eventmeasure file but correctly in the transect_data file, consequently wasn't matching - changed manually in csv file now.
 ```
 
 #The Merge
@@ -114,7 +116,7 @@ data %>% filter(
   !is.na(Comment)
 )
 
-# Remove any observation with a comment value from the main data and create a sep df. The just work on data2.
+# Remove any observation with a comment value from the main data and create a sep df. Then just work on data2.
 data2<-data %>% filter(
   !is.na(Comment)
 )
@@ -122,6 +124,41 @@ data2<-data %>% filter(
 data<-data %>% filter(
   is.na(Comment)
 )
+
+```
+
+# Main data still needs to be checked - may have missing species
+```{r}
+# Inspect the species variable and identify values 
+data %>% filter(
+  is.na(Species)
+)
+
+data3<-data %>% filter(
+  is.na(Species)
+)
+
+data<-data %>% filter(
+  !is.na(Species)
+)
+
+```
+
+```{r} 
+# Fix data3
+
+data3
+
+# Paracentropyge
+data3$Genus[2] <- "Paracentropyge"
+data3$Species[2] <- "multifasciata"
+data3$Family[2] <- "Pomacentridae"
+
+
+
+```
+
+```{r}
 
 # Most follow the "species_length.est" pattern but there are some funky entries. Split data2 again.
 # Fish species and species with average lengths follow the pattern "species_length". Use this in regex to select
@@ -156,7 +193,7 @@ data2 %>% filter(
   is.na(temp.length)
 )
 
-# Random missing length 
+# Random missing length for a trout - check video
 data2$Length_mm[116] <- 200
 data2$temp.species[116] <- NA
 
@@ -184,9 +221,14 @@ https://stackoverflow.com/questions/70868379/replace-one-column-with-another-usi
 
 ```{r}
 
+funky_data
+funky_data
+
 funky_data$Genus[6] <- "Paracentropyge"
 funky_data$Species[6] <- "multifasciata"
 funky_data$Length_mm[6] <- 103
+
+funky_data
 
 ```
 
@@ -195,13 +237,16 @@ funky_data$Length_mm[6] <- 103
 fin.data<-rbind(data,data2,single.species,funky_data)
 # Check that your final data here has the same observations as "fish" df that you started with. Otherwise you have lost some in the cleaning processes above :?
 
-
+# All NA species get "sp"
+fin.data$Species[is.na(fin.data$Species)]<- "sp"
+# spp <- sp in Species
+fin.data$Species[fin.data$Species == "spp"] <- "sp"
 ```
 
 
 ```{r}
 
-write.csv(fin.data, file= "../0_data/cleaned_fish.csv", row.names = FALSE)
+write.csv(fin.data, file= "../2_outputs/cleaned_fish.csv", row.names = FALSE)
 
 ```
 

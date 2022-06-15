@@ -9,7 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-This script is designed to take pre-prepared eventmeasure csv files (or similar) and pull out separate dataframes for different analyses. Note that some manipulation in excel is required for the raw eventmeasure output e.g. removing the top three rows and the columns spacing out file data from observations. 
+This script is designed to take pre-prepared eventmeasure csv files (or similar) and pull out separate data frames for different analyses. Note that some manipulation in excel is required for the raw eventmeasure output e.g. removing the top three rows and the columns spacing out file data from observations. 
 
 Fish
 Trash
@@ -56,6 +56,8 @@ Also, consider keeping the period/video time variable from the raw EventMeasure 
 ```{r}
 
 which(is.na(data$Period))
+data %>% filter(is.na(Period))
+# The two still showing are some observations of cool stuff.
 
 # Many NA values - requires going into the csv files and checking what's going on. May even require looking at the videos. Some are genuine observations made outside of any particular transect but these shouldn't be included in the statistical analysis.
 
@@ -68,13 +70,16 @@ Would like to select the site name from the file name variable using regex event
 
 ```{r}
 #Tidy up to remove unwanted variables and create a site name variable, Reef variable and a survey date.
+# NB. extra survey dates will be added to the case_when code line as and when more videos from other survey trips are added to data.
+
+unique(data$OpCode) # shows that some OpCodes have not been named correctly. Use 'filename' to apply SURVEY and maybe REEF.
 
 merged <- data %>% mutate(
   Site=str_sub(filename,9,-13),
   Site=substring(Site,12),
   Transect=as.factor(Period),
   Length_mm=as.double(Length_mm),
-  Survey=as.factor(case_when(grepl("Feb2021",OpCode) ~ "Feb_21")),
+  Survey=as.factor(case_when(grepl("FEB2021", filename) ~ "Feb_21")),
   Site=as.factor(Site))
 
 merged <- merged %>% mutate ( 
@@ -115,10 +120,9 @@ Fish
 ```{r, fish} 
 
 fish <- new.data %>% filter(
-  !is.na(Family)
-)
+  !is.na(Family))
 
-write.csv(fish, file= "../0_data/ROV_fish_data_F21.csv", row.names = FALSE)
+write.csv(fish, file= "../0_data/ROV_fish_data.csv", row.names = FALSE)
 
 ```
 
@@ -131,7 +135,7 @@ cucs<- new.data %>% filter(
   select(- Family, - Genus,- Species)
   
   
-write.csv(fish, file= "../0_data/ROV_cucumber_data_F21.csv", row.names = FALSE)
+write.csv(cucs, file= "../0_data/ROV_cucumber_data.csv", row.names = FALSE)
 
 # Alternatively a partial match for the word cucumber if there may be variations of this spelling in the data
 
@@ -157,11 +161,16 @@ glimpse(trash)
 trash$Comment
 distinct(trash, Comment)
 
-# "fishing_line" and "trash" are our only marine debris cats so far. There are also no multiple spellings of these variables.
+# We see from the above filtered data that other things from the comment variable have been selected. Exclude these by filtering only the known trash categories.
+
+# "fishing_line" and "trash" are our only marine debris cats so far. Check for multiple spellings e.f. "Fishing Line" by including partial string match.
 
 trash <- trash %>% filter(
-  str_detect(Comment, "fishing_line") | str_detect(Comment, "trash")) %>% 
-  select(-Length_mm, -Number)
+  str_detect(Comment, "ishing") | str_detect(Comment, "trash"))
+  # select(-Length_mm, -Number)
+
+write.csv(trash, file= "../0_data/ROV_trash_data.csv", row.names = FALSE)
+
 
 ```
 

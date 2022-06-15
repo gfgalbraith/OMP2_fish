@@ -29,7 +29,7 @@ library(rfishbase)
 This uses the Final_fish data created by the scripts "ROV_initial_wrangle" to isolate just fish observations and then "ROV_fish_wrangle" which identifies and corrects errors in species names, has assigned a and b values where species are identified etc.
 
 ```{r}
-fish <-read_csv("../0_data/cleaned_fish.csv")
+fish <-read_csv("../2_outputs/cleaned_fish.csv")
 
 fish <- fish %>% mutate(
   Transect=as.factor(Transect),
@@ -60,7 +60,7 @@ fish %>% anti_join(mermaid.species, by = "Species_name")
 ```
 
 
-#Fix all the issues! Working off the mERMAID data base
+#Fix all the issues! Working off the original mERMAID data base
 ```{r}
 
 # All NA species get "sp"
@@ -218,7 +218,7 @@ fish %>% anti_join(mermaid.species, by = "Species_name")
 
 ```{r}
 
-fishbase.data <-read_csv("../0_data/fishbase_list.csv")
+fishbase.data <-read_csv("../0_data/fishbase_data/fishbase_list.csv")
 fishbase.data<- fishbase.data %>% rename(
   Species_name = Species
 )
@@ -307,8 +307,10 @@ duplicated(mermaid.species$Species_name)
 mermaid.species[which(duplicated(mermaid.species[,c('Species_name')])==TRUE),]
 # Suspect - there may be spaces in the csv file. Manually changed and checked.
 
+# Work going forward will now always use my own custom fish list. This has been updated with many Coral Sea Species not originally on the list and includes biomass constants and max length. 
+
 mermaid.species <-read_csv("../0_data/MERMAID_data/fish-species_GFG.csv")
-mermaid.species<- mermaid.species %>% select(Species_name,`Biomass Constant A`,`Biomass Constant B`)
+mermaid.species<- mermaid.species %>% select(Species_name,`Biomass Constant A`,`Biomass Constant B`, `Max Length (cm)`, `Trophic Group`, `Trophic Level`)
 
 merged.data <- fish %>% 
   left_join(mermaid.species, by ="Species_name")
@@ -366,7 +368,7 @@ merged.data<-merged.data %>% mutate(
 # Check missing constants
 merged.data %>% filter(is.na(`Biomass Constant A`))
 
-# Check again
+# Check again, ensuring any missing values are just observations of family or genus level
 add.data<-merged.data %>% filter(is.na(`Biomass Constant A`)) %>% distinct(Species_name)
 
 add.data$Species_name %>% str_subset(pattern = "sp$", negate = TRUE)
@@ -424,13 +426,14 @@ sp.data <- sp.data %>% filter(!is.na(Genus))
 
 ```
 
-# Merge with MERMAID attribute data for misiing species
+# Merge with MERMAID attribute data for mising species
 ```{r}
+
 merged.sp <- sp.data %>% 
   left_join(mermaid.genus, by =c("Family","Genus")) %>% 
               mutate(`Biomass Constant A` = coalesce (`Biomass Constant A.x`, `Biomass Constant A.y`),
                      `Biomass Constant B` = coalesce (`Biomass Constant B.x`, `Biomass Constant B.y`)) %>% 
-  select(-c(21:24))
+  select(-c(21,22,26,27))
 
 ```
 
@@ -451,8 +454,7 @@ merged.sp <- sp.data %>%
   left_join(mermaid.genus, by =c("Family","Genus")) %>% 
               mutate(`Biomass Constant A` = coalesce (`Biomass Constant A.x`, `Biomass Constant A.y`),
                      `Biomass Constant B` = coalesce (`Biomass Constant B.x`, `Biomass Constant B.y`)) %>% 
-  select(-c(21:24))
-
+ select(-c(21,22,26,27))
 ```
 
 # Merge with MERMAID attribute data for misiing genera
@@ -461,8 +463,7 @@ merged.genera <- genus.data %>%
   left_join(mermaid.family, by = "Family") %>% 
               mutate(`Biomass Constant A` = coalesce (`Biomass Constant A.x`, `Biomass Constant A.y`),
                      `Biomass Constant B` = coalesce (`Biomass Constant B.x`, `Biomass Constant B.y`)) %>% 
-  select(-c(21:24))
-
+ select(-c(21,22,26,27))
 ```
 
 # Row bind all data back together
@@ -474,7 +475,7 @@ fish.1<- rbind(merged.data, merged.genera, merged.sp)
 summary(is.na(fish.1$`Biomass Constant A`))
 fish.1 %>% filter(is.na(`Biomass Constant A`))
 
-write.csv(fish.1, file= "../0_data/Fish_ab_constants.csv", row.names = FALSE)
+write.csv(fish.1, file= "../2_outputs/R0V_Fish_ab.csv", row.names = FALSE)
 
 ```
 

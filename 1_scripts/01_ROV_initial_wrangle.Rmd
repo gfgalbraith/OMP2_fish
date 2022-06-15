@@ -14,7 +14,7 @@ This script is designed to take pre-prepared eventmeasure csv files (or similar)
 Fish
 Trash
 Sea Cucumbers
-Other observations - cool things 
+Other observations
 
 In hindsight, it would have been good not to pre-process so much in excel. We lost the observation period/video times which would have been useful. Will proabbly come back to this and re do.
 

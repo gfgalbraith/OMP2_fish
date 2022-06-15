@@ -9,12 +9,12 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-This script is designed to take pre-prepared eventmeasure csv files (or similar) and pull out separate dataframes for different analyses. Note that some manipulation in excel is required for the raw eventmeasure output e.g. removing the top three rows and the colunms spacing out file data from observations. 
+This script is designed to take pre-prepared eventmeasure csv files (or similar) and pull out separate dataframes for different analyses. Note that some manipulation in excel is required for the raw eventmeasure output e.g. removing the top three rows and the columns spacing out file data from observations. 
 
 Fish
 Trash
 Sea Cucumbers
-Other observations
+Other observations - cool things 
 
 In hindsight, it would have been good not to pre-process so much in excel. We lost the observation period/video times which would have been useful. Will proabbly come back to this and re do.
 

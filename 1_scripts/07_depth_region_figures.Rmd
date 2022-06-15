@@ -1,0 +1,377 @@
+---
+title: "07_Regional_figures"
+author: "Gemma Galbraith"
+date: "30/05/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#HouseKeeping
+```{R}
+rm(list=ls())
+#dev.off()
+getwd()
+
+```
+
+#load libraries
+```{r}
+library(tidyverse)
+library(rfishbase)
+library(vegan)
+library(glmmTMB)
+library(sjPlot)
+library(DHARMa)
+library(car)
+library(emmeans)
+library(tidyverse)
+library(broom.mixed)
+library(ggpubr)
+library(gridExtra)
+library(svglite)
+library(lubridate)
+library(viridis)  
+library(RColorBrewer)
+library(unikn)
+```
+
+# My colours
+#F2C249
+#E6772E
+#4DB3B3
+#E64A45
+#3D4C53
+#a54a9c
+#5074c3
+
+```{r}
+my.cols = c("#F2C249", "#E6772E", "#4DB3B3", "#E64A45", "#3D4C53", "#a54a9c", "#5074c3")
+
+seecol(my.cols, 
+       col_brd = "black", lwd_brd = 2, 
+       title = "See the colors, HEX codes, and RGB values of my.cols") 
+
+depth.cols <- c("#F2C249", "#4DB3B3", "#a54a9c")
+
+seecol(depth.cols, 
+       col_brd = "black", lwd_brd = 2, 
+       title = "See the colors, HEX codes, and RGB values of my.cols") 
+```
+
+
+# Data import
+```{r}
+diversity <-read_csv("../0_data/fish_diversity.csv")
+biomass <-read_csv("../0_data/fish_biomass.csv")
+biomass<-biomass %>% select(T_ID, Total_Biomass_g)
+
+fish<-left_join(diversity, biomass, by="T_ID")
+
+fish <- fish %>% mutate(
+  Reef=as.factor(Reef),
+  T_ID=as.factor(T_ID),
+  Survey=as.factor(Survey),
+  Site=as.factor(Site),
+  Date = as.Date(Date),
+  Habitat = as.factor(Habitat),
+  Aspect = as.factor(Aspect),
+  Total_biomass_KG = as.double(Total_Biomass_g/1000))
+
+```
+
+# spotted T_ID error
+Check BVille transects, some observations do not have a transect number
+A fix for now
+```{r}
+fish <- fish %>% 
+  mutate(
+    T_ID = case_when(T_ID == "Feb_21_BVille_1_NA" ~ "Feb_21_BVille_1_T1",
+                        TRUE ~ as.character(T_ID)),
+    T_ID = as.factor(T_ID))
+```
+
+# apply Region grouping by reef
+```{r}
+fish <- fish %>% mutate ( 
+  Region = as.factor(case_when(grepl("Lihou", Reef) ~ "Central Coral Sea",
+                   grepl("Flinders", Reef) ~ "Central Coral Sea",
+                   grepl("Bougainville", Reef) ~ "Northern Coral Sea",
+                   grepl("Osprey", Reef) ~ "Northern Coral Sea",
+                   grepl("Chillcot", Reef) ~ "Central Coral Sea",
+                   grepl("Herald", Reef) ~ "Central Coral Sea",
+                   grepl("Holmes", Reef) ~ "Central Coral Sea",
+                   grepl("Willis", Reef) ~ "Central Coral Sea",
+                   grepl("Frederick", Reef) ~ "Southern Coral Sea",
+                   grepl("Kenn", Reef) ~ "Southern Coral Sea",
+                   grepl("Wreck", Reef) ~ "Southern Coral Sea",
+                   grepl("Saumarez", Reef) ~ "Southern Coral Sea",
+                   grepl("Marion", Reef) ~ "Central Coral Sea",)))
+
+unique(fish$Region)
+# Should just be three levels
+
+# Ordered factor for Region
+fish <-fish %>% mutate(
+  Region = factor(Region, levels= c("Southern Coral Sea","Central Coral Sea","Northern Coral Sea"),ordered = TRUE))
+```
+
+# Assign Depth grouping
+```{r}
+fish <- fish %>% mutate(
+  Depth_bin = as.factor(case_when(Depth < 30 ~ "Shallow",
+                                  Depth > 30 & Depth < 65 ~ "Mid",
+                                  TRUE ~ "Deep"))
+)
+
+unique(fish$Depth_bin)
+
+# Ordered factor for Region
+fish <-fish %>% mutate(
+  Depth_bin = factor(Depth_bin, levels= c("Shallow","Mid","Deep"),
+                                         ordered = TRUE))
+```
+
+
+# Calcualte mean indices by region and depth
+
+```{r, glmm1 richness}
+
+# Is there a difference between richness across depth bands and regions?
+set.seed(123)
+glmm1<- glmmTMB(richness ~ Depth_bin+Region+(1|Reef),data = na.omit(fish), family=nbinom1(), REML = TRUE)
+
+simulateResiduals(glmm1, plot=TRUE) # fit is fine
+
+summary(glmm1)
+Anova(glmm1) # season is not a sig predictor of fish spawned count
+
+means<-emmeans(glmm1, pairwise~ Depth_bin+Region, transform="response") %>% 
+  confint()
+
+means
+
+```
+
+# Richness Figure - boxplot
+```{r}
+ggplot(fish, aes(y=richness, x=Depth_bin)) + 
+  geom_boxplot(outlier.colour="black", outlier.shape=16,
+             outlier.size=2, notch=FALSE)+
+  scale_fill_viridis(discrete = TRUE, option = "plasma", direction= -1, alpha =0.7) +
+  ylab("Richness (\u00B1 SE)")+
+  xlab("Depth")+
+  scale_y_continuous(expand = c(0, 0), limits = c(0, 50))+ 
+  facet_wrap(~Region)+
+  theme_classic()+
+  theme(axis.text.x = element_text(size=14, color="black"),
+        axis.text.y = element_text(size=14, color="black"),
+        axis.title.y = element_text(size=16, vjust=2),
+        axis.title.x = element_text(size=16, vjust=-1),
+        legend.position = "none",
+        plot.margin=unit(c(15,5,5,10),"mm"))
+
+
+```
+
+
+# Richness Figure - bar
+```{r}
+plot.means<-as.data.frame(means$emmeans)
+
+tab_df(plot.means)
+
+# Bar
+P1<-ggplot(plot.means, aes(y=response, x=Depth_bin)) + 
+    geom_bar(aes(fill=Depth_bin),position="stack", stat="identity", width=0.5, alpha = 0.9)+
+  geom_errorbar(aes(ymin=response-SE, ymax=response+SE), size= 1,width=0.3, alpha = 0.9)+
+  scale_fill_manual(values = depth.cols)+
+  ylab(expression(Richness~("Species 150m"^-2 %+-%SE)))+  xlab("Depth")+
+  scale_y_continuous(expand = c(0, 0), limits = c(0, 25))+ 
+  facet_wrap(~Region)+
+  theme_classic()+
+  theme(axis.text.x = element_text(size=14, color="black", angle = 45, vjust = 0.6),
+        axis.text.y = element_text(size=14, color="black"),
+        axis.title.y = element_text(size=16, vjust=2),
+        axis.title.x = element_text(size=16, vjust=-0.2),
+        legend.position = "none",
+        strip.text = element_text(size = 14, colour = "black", face = "bold"),
+        strip.background = element_blank())
+
+
+        #plot.margin=unit(c(15,5,5,10),"mm"))
+
+
+
+P1
+
+ggsave(filename = "../3_figures/depth_region_richness.png", plot= P1,
+       width =200, height=120 , units = "mm", dpi = 500, device = "png" )
+
+```
+
+
+```{r, glmm2 abundance}
+
+# Is there a difference between abundance across depth bands and regions?
+set.seed(123)
+glmm2<- glmmTMB(abundance ~ Depth_bin+Region(1|Reef),data = na.omit(fish), family=nbinom1(), REML = TRUE)
+
+simulateResiduals(glmm1, plot=TRUE) # fit is fine
+
+summary(glmm2)
+Anova(glmm2) 
+
+means<-emmeans(glmm2, pairwise~ Depth_bin+Region, transform="response") %>% 
+  confint()
+
+means
+
+```
+# Abundance Figure - bar
+```{r}
+plot.means<-as.data.frame(means$emmeans)
+
+tab_df(plot.means)
+
+# Bar
+ P2<-ggplot(plot.means, aes(y=response, x=Depth_bin)) + 
+    geom_bar(aes(fill=Depth_bin),position="stack", stat="identity", width=0.5, alpha = 0.9)+
+  geom_errorbar(aes(ymin=response-SE, ymax=response+SE), size= 1,width=0.3, alpha = 0.9)+
+  scale_fill_manual(values = depth.cols)+
+  ylab(expression(Density~("n 150m"^-2 %+-%SE)))+  xlab("Depth")+
+  scale_y_continuous(expand = c(0, 0), limits = c(0, 250))+ 
+  facet_wrap(~Region)+
+  theme_classic()+
+  theme(axis.text.x = element_text(size=14, color="black", angle = 45, vjust = 0.6),
+        axis.text.y = element_text(size=14, color="black"),
+        axis.title.y = element_text(size=16, vjust=2),
+        axis.title.x = element_text(size=16, vjust=-0.2),
+        legend.position = "none",
+        strip.text = element_text(size = 14, colour = "black", face = "bold"),
+        strip.background = element_blank())
+
+
+        #plot.margin=unit(c(15,5,5,10),"mm"))
+
+
+
+P2
+
+ggsave(filename = "../3_figures/depth_region_abundance.png", plot= P2,
+       width =200, height=120 , units = "mm", dpi = 500, device = "png" )
+
+```
+
+```{r, glmm3 shannon diversity}
+
+# Is there a difference between abundace across depth bands and regions?
+set.seed(123)
+glmm3<- glmmTMB(shannon ~ Depth_bin+Region+(1|Reef),data = na.omit(fish), family=gaussian(), REML = TRUE)
+
+simulateResiduals(glmm3, plot=TRUE) # fit is fine
+
+summary(glmm3)
+Anova(glmm3) 
+
+means<-emmeans(glmm3, pairwise~ Depth_bin+Region, transform="response") %>% 
+  confint()
+
+means
+
+```
+# Diversity Figure - bar
+```{r}
+plot.means<-as.data.frame(means$emmeans)
+
+tab_df(plot.means)
+
+# Bar
+ P3<-ggplot(plot.means, aes(y=emmean, x=Depth_bin)) + 
+    geom_bar(aes(fill=Depth_bin),position="stack", stat="identity", width=0.5, alpha = 0.9)+
+  geom_errorbar(aes(ymin=emmean-SE, ymax=emmean+SE), size= 1,width=0.3, alpha = 0.9)+
+  scale_fill_manual(values = depth.cols)+
+  ylab(expression(Diversity~("H' 150m"^-2 %+-%SE)))+  xlab("Depth")+
+  scale_y_continuous(expand = c(0, 0), limits = c(0, 4))+ 
+  facet_wrap(~Region)+
+  theme_classic()+
+  theme(axis.text.x = element_text(size=14, color="black", angle = 45, vjust = 0.6),
+        axis.text.y = element_text(size=14, color="black"),
+        axis.title.y = element_text(size=16, vjust=2),
+        axis.title.x = element_text(size=16, vjust=-0.2),
+        legend.position = "none",
+        strip.text = element_text(size = 14, colour = "black", face = "bold"),
+        strip.background = element_blank())
+
+
+        #plot.margin=unit(c(15,5,5,10),"mm"))
+
+
+
+P3
+
+ggsave(filename = "../3_figures/depth_region_diversity.png", plot= P3,
+       width =200, height=120 , units = "mm", dpi = 500, device = "png" )
+
+```
+
+```{r, glmm4 biomass}
+
+# Is there a difference between abundace across depth bands and regions?
+set.seed(123)
+glmm4<- glmmTMB(Total_biomass_KG ~ Depth_bin+Region+(1|Reef),data = na.omit(fish), family=nbinom1(), REML = TRUE)
+
+simulateResiduals(glmm4, plot=TRUE) # fit is fine
+
+summary(glmm4)
+Anova(glmm4) 
+
+means<-emmeans(glmm4, pairwise~ Depth_bin+Region, transform="response") %>% 
+  confint()
+
+means
+
+```
+
+
+# Biomass Figure - bar
+```{r}
+plot.means<-as.data.frame(means$emmeans)
+
+tab_df(plot.means)
+
+# Bar
+
+ P4<-ggplot(plot.means, aes(y=response, x=Depth_bin)) + 
+    geom_bar(aes(fill=Depth_bin),position="stack", stat="identity", width=0.5, alpha = 0.9)+
+  geom_errorbar(aes(ymin=response-SE, ymax=response+SE), size= 1,width=0.3, alpha = 0.9)+
+  scale_fill_manual(values = depth.cols)+
+  #ylab(expression(Biomass~(Kg~150^2~\u00B1~SE)))+
+  ylab(expression(Biomass~("Kg 150m"^-2 %+-%SE)))+
+  xlab("Depth")+
+  scale_y_continuous(expand = c(0, 0), limits = c(0, 60))+ 
+  facet_wrap(~Region)+
+  theme_classic()+
+  theme(axis.text.x = element_text(size=14, color="black", angle = 45, vjust = 0.6),
+        axis.text.y = element_text(size=14, color="black"),
+        axis.title.y = element_text(size=16, vjust=2),
+        axis.title.x = element_text(size=16, vjust=-0.2),
+        legend.position = "none",
+        strip.text = element_text(size = 14, colour = "black", face = "bold"),
+        strip.background = element_blank())
+
+
+        #plot.margin=unit(c(15,5,5,10),"mm"))
+
+
+
+P4
+
+ggsave(filename = "../3_figures/depth_region_biomass.png", plot= P4,
+       width =200, height=120 , units = "mm", dpi = 500, device = "png" )
+
+```
+
+

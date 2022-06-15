@@ -1,0 +1,78 @@
+MaxN
+
+Generated: Monday 28 March 2022 16:45:37
+
+Filename	Frame	Time (HMS)	Period	Period time (HMS)	OpCode	TapeReader	Depth	Comment									Family	Genus	Species	Code	MaxN	Has fed
+PL_L_WILL_14-2-21_P01.MP4	   9335	00:05:11.48	T1	00:02:15.77	Willis_Feb21	GFG	32m														1	No
+PL_L_WILL_14-2-21_P07.MP4	   7810	01:04:24.19	T14	00:00:32.67	Willis_Feb21	GFG	32m												amboinensis		6	No
+PL_L_WILL_14-2-21_P05.MP4	    557	00:40:20.99	T9	00:02:19.87	Willis_Feb21	GFG	32m										Acanthuridae	Acanthurus	nigrofuscus	37437014	1	No
+PL_L_WILL_14-2-21_P01.MP4	  17764	00:09:52.73	T2	00:01:17.04	Willis_Feb21	GFG	32m										Acanthuridae	Acanthurus	pyroferus	37437017	1	No
+PL_L_WILL_14-2-21_P03.MP4	   3660	00:22:03.32	T5	00:01:31.46	Willis_Feb21	GFG	32m										Acanthuridae	Acanthurus	sp		6	No
+PL_L_WILL_14-2-21_P07.MP4	   9994	01:05:37.07	T14	00:01:45.54	Willis_Feb21	GFG	32m										Acanthuridae	Acanthurus	thompsoni	37437018	8	No
+PL_L_WILL_14-2-21_P01.MP4	  16833	00:09:21.66	T2	00:00:45.98	Willis_Feb21	GFG	32m										Acanthuridae	Ctenochaetus	sp		5	No
+PL_L_WILL_14-2-21_P01.MP4	   5995	00:03:20.03	T1	00:00:24.32	Willis_Feb21	GFG	32m										Acanthuridae	Ctenochaetus	striatus	37437022	4	No
+PL_L_WILL_14-2-21_P05.MP4	   4684	00:42:38.69	T10	00:00:56.09	Willis_Feb21	GFG	32m										Balistidae	Balistoides	viridescens	37465048	1	No
+PL_L_WILL_14-2-21_P08.MP4	    590	01:10:23.89	T15	00:01:08.33	Willis_Feb21	GFG	32m										Balistidae	Sufflamen			1	No
+PL_L_WILL_14-2-21_P04.MP4	    534	00:30:19.62	T7	00:01:55.78	Willis_Feb21	GFG	32m										Balistidae	Sufflamen	chrysopterum	37465079	3	No
+PL_L_WILL_14-2-21_P01.MP4	  15626	00:08:41.39	T2	00:00:05.71	Willis_Feb21	GFG	32m										Blenniidae	Meiacanthus			2	No
+PL_L_WILL_14-2-21_P07.MP4	   2846	01:01:38.56	T13	00:02:26.81	Willis_Feb21	GFG	32m										Caesionidae	Caesio	lunaris	37346061	4	No
+PL_L_WILL_14-2-21_P05.MP4	  16503	00:49:13.05			Willis_Feb21	GFG	32m										Carcharhinidae	Carcharhinus	albimarginatus	37018027	8	No
+PL_L_WILL_14-2-21_P04.MP4	    766	00:30:27.36	T7	00:02:03.52	Willis_Feb21	GFG	32m										Carcharhinidae	Carcharhinus	amblyrhynchos	37018030	1	No
+PL_L_WILL_14-2-21_P05.MP4	    656	00:40:24.29	T9	00:02:23.18	Willis_Feb21	GFG	32m										Chaetodontidae	Chaetodon			2	No
+PL_L_WILL_14-2-21_P05.MP4	   6564	00:43:41.42	T10	00:01:58.82	Willis_Feb21	GFG	32m										Chaetodontidae	Chaetodon	kleinii	37365040	2	No
+PL_L_WILL_14-2-21_P08.MP4	    306	01:10:14.41	T15	00:00:58.86	Willis_Feb21	GFG	32m										Chaetodontidae	Chaetodon	lunulatus	37365059	1	No
+PL_L_WILL_14-2-21_P07.MP4	  10398	01:05:50.55	T14	00:01:59.02	Willis_Feb21	GFG	32m										Chaetodontidae	Chaetodon	unimaculatus	37365061	1	No
+PL_L_WILL_14-2-21_P01.MP4	  17067	00:09:29.47	T2	00:00:53.79	Willis_Feb21	GFG	32m										Chaetodontidae	Forcipiger	flavissimus	37365068	6	No
+PL_L_WILL_14-2-21_P01.MP4	   6308	00:03:30.48	T1	00:00:34.77	Willis_Feb21	GFG	32m										Chaetodontidae	Hemitaurichthys	polylepis	37365074	4	No
+PL_L_WILL_14-2-21_P07.MP4	   2101	01:01:13.70	T13	00:02:01.96	Willis_Feb21	GFG	32m										Chaetodontidae	Heniochus	acuminatus	37365011	1	No
+PL_L_WILL_14-2-21_P05.MP4	    952	00:40:34.17	T9	00:02:33.05	Willis_Feb21	GFG	32m										Holocentridae	Myripristis	kuntee	37261011	1	No
+PL_L_WILL_14-2-21_P07.MP4	   2372	01:01:22.75	T13	00:02:11.00	Willis_Feb21	GFG	32m										Holocentridae	Sargocentron	spiniferum	37261029	1	No
+PL_L_WILL_14-2-21_P08.MP4	   2728	01:11:35.22	T15	00:02:19.67	Willis_Feb21	GFG	32m										Labridae				12	No
+PL_L_WILL_14-2-21_P08.MP4	   2752	01:11:36.03	T15	00:02:20.47	Willis_Feb21	GFG	32m										Labridae	Anampses	twistii	37384051	1	No
+PL_L_WILL_14-2-21_P02.MP4	   8247	00:14:35.77	T3	00:01:23.35	Willis_Feb21	GFG	32m										Labridae	Bodianus			1	No
+PL_L_WILL_14-2-21_P07.MP4	   7103	01:04:00.60	T14	00:00:09.08	Willis_Feb21	GFG	32m										Labridae	Choerodon	jordani	37384077	1	No
+PL_L_WILL_14-2-21_P05.MP4	   4684	00:42:38.69	T10	00:00:56.09	Willis_Feb21	GFG	32m										Labridae	Cirrhilabrus			11	No
+PL_L_WILL_14-2-21_P05.MP4	    329	00:40:13.38	T9	00:02:12.27	Willis_Feb21	GFG	32m										Labridae	Gomphosus	varius	37384106	4	No
+PL_L_WILL_14-2-21_P01.MP4	  17648	00:09:48.85	T2	00:01:13.17	Willis_Feb21	GFG	32m										Labridae	Halichoeres			1	No
+PL_L_WILL_14-2-21_P01.MP4	   6702	00:03:43.62	T1	00:00:47.91	Willis_Feb21	GFG	32m										Labridae	Halichoeres	sp		1	No
+PL_L_WILL_14-2-21_P08.MP4	   2031	01:11:11.97	T15	00:01:56.42	Willis_Feb21	GFG	32m										Labridae	Hemigymnus	fasciatus	37384124	3	No
+PL_L_WILL_14-2-21_P07.MP4	  10479	01:05:53.25	T14	00:02:01.72	Willis_Feb21	GFG	32m										Labridae	Labroides	dimidiatus	37384028	1	No
+PL_L_WILL_14-2-21_P01.MP4	  16833	00:09:21.66	T2	00:00:45.98	Willis_Feb21	GFG	32m										Labridae	Oxycheilinus	orientalis	37384030	1	No
+PL_L_WILL_14-2-21_P03.MP4	   2013	00:21:08.37	T5	00:00:36.50	Willis_Feb21	GFG	32m										Labridae	Oxycheilinus	unifasciatus	37384068	1	No
+PL_L_WILL_14-2-21_P01.MP4	  17471	00:09:42.95	T2	00:01:07.27	Willis_Feb21	GFG	32m										Labridae	Thalassoma	amblycephalum	37384164	1	No
+PL_L_WILL_14-2-21_P05.MP4	   6099	00:43:25.90	T10	00:01:43.30	Willis_Feb21	GFG	32m										Lethrinidae	Gnathodentex	aureolineatus	37351021	2	No
+PL_L_WILL_14-2-21_P01.MP4	   5655	00:03:08.69	T1	00:00:12.98	Willis_Feb21	GFG	32m										Lethrinidae	Gymnocranius			1	No
+PL_L_WILL_14-2-21_P05.MP4	   4949	00:42:47.53	T10	00:01:04.93	Willis_Feb21	GFG	32m										Lethrinidae	Monotaxis	grandoculis	37351026	1	No
+PL_L_WILL_14-2-21_P08.MP4	   1335	01:10:48.74	T15	00:01:33.19	Willis_Feb21	GFG	32m										Lutjanidae	Lutjanus	kasmira	37346044	1	No
+PL_L_WILL_14-2-21_P02.MP4	   2150	00:11:12.34	T2	00:02:36.66	Willis_Feb21	GFG	32m										Malacanthidae	Hoplolatilus			2	No
+PL_L_WILL_14-2-21_P01.MP4	  15626	00:08:41.39	T2	00:00:05.71	Willis_Feb21	GFG	32m										Microdesmidae	Ptereleotris	evides	37435015	2	No
+PL_L_WILL_14-2-21_P05.MP4	  12675	00:47:05.32	T11	00:02:00.02	Willis_Feb21	GFG	32m										Monacanthidae	Cantherhines	dumerilii	37465050	2	No
+PL_L_WILL_14-2-21_P01.MP4	  17648	00:09:48.85	T2	00:01:13.17	Willis_Feb21	GFG	32m										Mullidae	Parupeneus	multifasciatus	37355026	2	No
+PL_L_WILL_14-2-21_P07.MP4	   7103	01:04:00.60	T14	00:00:09.08	Willis_Feb21	GFG	32m										Mullidae	Parupeneus	pleurostigma	37355027	1	No
+PL_L_WILL_14-2-21_P08.MP4	    306	01:10:14.41	T15	00:00:58.86	Willis_Feb21	GFG	32m										Pomacanthidae	Centropyge			2	No
+PL_L_WILL_14-2-21_P01.MP4	  17131	00:09:31.60	T2	00:00:55.92	Willis_Feb21	GFG	32m										Pomacanthidae	Centropyge	flavissima	37365026	2	No
+PL_L_WILL_14-2-21_P05.MP4	   5746	00:43:14.12	T10	00:01:31.52	Willis_Feb21	GFG	32m										Pomacanthidae	Centropyge	sp		1	No
+PL_L_WILL_14-2-21_P02.MP4	   8021	00:14:28.23	T3	00:01:15.81	Willis_Feb21	GFG	32m										Pomacanthidae	Chaetodontoplus	sp		1	No
+PL_L_WILL_14-2-21_P05.MP4	   5191	00:42:55.61	T10	00:01:13.01	Willis_Feb21	GFG	32m										Pomacanthidae	Genicanthus			5	No
+PL_L_WILL_14-2-21_P01.MP4	  17351	00:09:38.95	T2	00:01:03.26	Willis_Feb21	GFG	32m										Pomacanthidae	Pygoplites	diacanthus	37365082	2	No
+PL_L_WILL_14-2-21_P07.MP4	  10410	01:05:50.95	T14	00:01:59.42	Willis_Feb21	GFG	32m										Pomacentridae	Acanthochromis	polyacanthus	37372015	12	No
+PL_L_WILL_14-2-21_P01.MP4	   9404	00:05:13.78	T1	00:02:18.07	Willis_Feb21	GFG	32m										Pomacentridae	Chromis			16	No
+PL_L_WILL_14-2-21_P07.MP4	  10573	01:05:56.39	T14	00:02:04.86	Willis_Feb21	GFG	32m										Pomacentridae	Chromis	alpha	37372033	1	No
+PL_L_WILL_14-2-21_P01.MP4	   9987	00:05:33.23	T1	00:02:37.52	Willis_Feb21	GFG	32m										Pomacentridae	Chromis	amboinensis	37372034	14	No
+PL_L_WILL_14-2-21_P01.MP4	  15773	00:08:46.29	T2	00:00:10.61	Willis_Feb21	GFG	32m										Pomacentridae	Chromis	atripes	37372037	6	No
+PL_L_WILL_14-2-21_P06.MP4	   9936	00:55:34.53	T12	00:01:07.10	Willis_Feb21	GFG	32m										Pomacentridae	Chromis	margaritifer	37372047	4	No
+PL_L_WILL_14-2-21_P02.MP4	   2150	00:11:12.34	T2	00:02:36.66	Willis_Feb21	GFG	32m										Pomacentridae	Chromis	sp		12	No
+PL_L_WILL_14-2-21_P03.MP4	   5543	00:23:06.15	T5	00:02:34.29	Willis_Feb21	GFG	32m										Pomacentridae	Chromis	ternatensis	37372051	6	No
+PL_L_WILL_14-2-21_P03.MP4	  11761	00:26:33.63	T6	00:02:26.78	Willis_Feb21	GFG	32m										Pomacentridae	Chromis	xanthochira	37372056	3	No
+PL_L_WILL_14-2-21_P04.MP4	   1223	00:30:42.61	T7	00:02:18.77	Willis_Feb21	GFG	32m										Pomacentridae	Chrysiptera			6	No
+PL_L_WILL_14-2-21_P07.MP4	   9994	01:05:37.07	T14	00:01:45.54	Willis_Feb21	GFG	32m										Pomacentridae	Dascyllus	reticulatus	37372074	13	No
+PL_L_WILL_14-2-21_P05.MP4	  12675	00:47:05.32	T11	00:02:00.02	Willis_Feb21	GFG	32m										Pomacentridae	Pomacentrus	sp		7	No
+PL_L_WILL_14-2-21_P01.MP4	   6308	00:03:30.48	T1	00:00:34.77	Willis_Feb21	GFG	32m										Scaridae	Hipposcarus	longiceps	37386008	1	No
+PL_L_WILL_14-2-21_P01.MP4	  17067	00:09:29.47	T2	00:00:53.79	Willis_Feb21	GFG	32m										Scaridae	Scarus			2	No
+PL_L_WILL_14-2-21_P07.MP4	  17223	01:09:38.27	T15	00:00:22.72	Willis_Feb21	GFG	32m										Scaridae	Scarus	dimidiatus	37386013	1	No
+PL_L_WILL_14-2-21_P01.MP4	   9243	00:05:08.41	T1	00:02:12.70	Willis_Feb21	GFG	32m										Scaridae	Scarus	flavipectoralis	37386014	1	No
+PL_L_WILL_14-2-21_P05.MP4	  11672	00:46:31.86	T11	00:01:26.55	Willis_Feb21	GFG	32m										Scaridae	Scarus	sp		1	No
+PL_L_WILL_14-2-21_P01.MP4	   7246	00:04:01.77	T1	00:01:06.07	Willis_Feb21	GFG	32m										Serranidae	Plectropomus	leopardus	37311078	1	No
+PL_L_WILL_14-2-21_P02.MP4	   5823	00:13:14.89	T3	00:00:02.47	Willis_Feb21	GFG	32m										Serranidae	Pseudanthias	pleurotaenia	37311123	4	No
+PL_L_WILL_14-2-21_P01.MP4	  17526	00:09:44.78	T2	00:01:09.10	Willis_Feb21	GFG	32m										Serranidae	Variola	louti	37311166	1	No
+PL_L_WILL_14-2-21_P05.MP4	  11888	00:46:39.06	T11	00:01:33.76	Willis_Feb21	GFG	32m										Zanclidae	Zanclus	cornutus	37437001	1	No

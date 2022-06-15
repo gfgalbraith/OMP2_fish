@@ -1,0 +1,12 @@
+---
+title: "fish_attributes_cleaning"
+author: "Gemma Galbraith"
+date: "30/05/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This script processes and cleans the most recent versions of data taken from fish base or MERMAID. These databases have numerous duplicates and sometimes older/unaccepted species names.

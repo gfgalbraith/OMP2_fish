@@ -1,0 +1,29 @@
+﻿Filename,Frame,Time (HMS),Period,Period time (HMS),Length (mm),Precision (mm),RMS (mm),Range (mm),Direction (deg),Horz. Dir. (deg),Vert. Dir. (deg),Mid X (mm),Mid Y (mm),Mid Z (mm),OpCode,TapeReader,Depth,Family,Genus,Species,Code,Number,Stage,Activity,Comment
+PL_L_MARION_10-2-21_P02.MP4,9513,05:17.4,T1,00:14.1,182.42,15.342,76.205,2281.197,21.929,29.465,22.338,-557.005,-644.618,-2116.146,Marion_Feb21,GFG,35m,Lethrinidae,Monotaxis,grandoculis,37351026,1,AD,Passing,
+PL_L_MARION_10-2-21_P02.MP4,9513,05:17.4,T1,00:14.1,87.596,23.65,78.733,2428.631,24.514,44.93,5.065,-631.718,-785.066,-2209.718,Marion_Feb21,GFG,35m,Acanthuridae,Ctenochaetus,striatus,37437022,3,AD,Passing,
+PL_L_MARION_10-2-21_P02.MP4,9598,05:20.2,T1,00:16.9,106.893,9.323,62.648,2618.355,21.602,9.495,11.011,-385.249,-883.631,-2434.453,Marion_Feb21,GFG,35m,Acanthuridae,Ctenochaetus,striatus,37437022,1,AD,Passing,
+PL_L_MARION_10-2-21_P02.MP4,9680,05:23.0,T1,00:19.7,230.909,14.902,9.513,2414.166,18.979,24.21,9.505,345.907,-704.842,-2282.924,Marion_Feb21,GFG,35m,Lutjanidae,Lutjanus,,,1,AD,Passing,adetii
+PL_L_MARION_10-2-21_P02.MP4,9680,05:23.0,T1,00:19.7,136.644,18.545,85.442,2162.164,26.028,43.077,1.388,-748.387,-583.207,-1942.869,Marion_Feb21,GFG,35m,Serranidae,Plectropomus,leopardus,37311078,1,J,Passing,
+PL_L_MARION_10-2-21_P02.MP4,9862,05:29.1,T1,00:25.8,237.339,18.54,36.493,3016.627,24.426,21.668,1.642,61.165,-1245.913,-2746.634,Marion_Feb21,GFG,35m,Mullidae,Mulloidichthys,vanicolensis,37355020,2,AD,Passing,
+PL_L_MARION_10-2-21_P04.MP4,3721,22:05.4,T5,01:32.5,94.471,10.138,26.015,1772.782,38.51,18.952,8.377,1093.679,-149.28,-1387.205,Marion_Feb21,GFG,35m,Pomacentridae,Pomacentrus,moluccensis,37372118,3,AD,Passing,
+PL_L_MARION_10-2-21_P04.MP4,11883,26:37.7,T6,01:59.9,140.277,17.009,13.192,2054.662,15.914,39.186,9.031,-524.488,-205.679,-1975.916,Marion_Feb21,GFG,35m,Acanthuridae,Ctenochaetus,striatus,37437022,3,AD,Passing,
+PL_L_MARION_10-2-21_P05.MP4,4688,32:38.2,T8,00:31.5,590.768,68.498,116.777,4379.281,17.684,33.201,3.733,-1111.882,730.382,-4172.333,Marion_Feb21,GFG,35m,Balistidae,Balistoides,viridescens,37465048,1,AD,Passing,
+PL_L_MARION_10-2-21_P02.MP4,9090,05:03.3,T1,00:00.0,487.03,548.11,0,0,,,,,,,Marion_Feb21,GFG,35m,Carcharhinidae,Carcharhinus,amblyrhynchos,37018030,1,AD,Passing,
+PL_L_MARION_10-2-21_P02.MP4,9204,05:07.1,T1,00:03.8,981.27,149.09,0,0,,,,,,,Marion_Feb21,GFG,35m,Serranidae,Plectropomus,leopardus,37311078,1,AD,Passing,
+PL_L_MARION_10-2-21_P02.MP4,9862,05:29.1,T1,00:25.8,861.19,1071.14,0,0,,,,,,,Marion_Feb21,GFG,35m,Scaridae,Scarus,flavipectoralis,37386014,1,AD,Passing,
+PL_L_MARION_10-2-21_P02.MP4,10691,05:56.7,T1,00:53.4,937.84,835.98,0,0,,,,,,,Marion_Feb21,GFG,35m,Serranidae,Plectropomus,leopardus,37311078,1,J,Passing,200
+PL_L_MARION_10-2-21_P02.MP4,10691,05:56.7,T1,00:53.4,930.73,1304.45,0,0,,,,,,,Marion_Feb21,GFG,35m,Balistidae,Sufflamen,chrysopterum,37465079,1,AD,Passing,
+PL_L_MARION_10-2-21_P02.MP4,10902,06:03.8,T1,01:00.5,851.03,1724.44,0,0,,,,,,,Marion_Feb21,GFG,35m,Acanthuridae,Zebrasoma,scopas,37437036,1,AD,Passing,
+PL_L_MARION_10-2-21_P02.MP4,11731,06:31.4,T1,01:28.1,931.3,403.86,0,0,,,,,,,Marion_Feb21,GFG,35m,Acanthuridae,Ctenochaetus,striatus,37437022,3,AD,Passing,
+PL_L_MARION_10-2-21_P03.MP4,6681,13:43.5,T3,01:10.0,274.03,1523.11,0,0,,,,,,,Marion_Feb21,GFG,35m,Lutjanidae,Aprion,virescens,37346027,1,AD,Passing,
+PL_L_MARION_10-2-21_P03.MP4,11436,16:22.2,T4,00:07.1,695.15,22.16,0,0,,,,,,,Marion_Feb21,GFG,35m,Pomacentridae,Pomacentrus,moluccensis,37372118,2,AD,Passing,
+PL_L_MARION_10-2-21_P04.MP4,2892,21:37.7,T5,01:04.9,338.99,403.1,0,0,,,,,,,Marion_Feb21,GFG,35m,Caesionidae,Dipterygonotus,balteatus,,400,AD,Passing,maybe Dipterygonotus balteatus
+PL_L_MARION_10-2-21_P04.MP4,4417,22:28.6,T5,01:55.8,296.13,1459.82,0,0,,,,,,,Marion_Feb21,GFG,35m,Lutjanidae,Aprion,virescens,37346027,1,AD,Passing,
+PL_L_MARION_10-2-21_P04.MP4,11977,26:40.8,T6,02:03.0,851.2,895.24,0,0,,,,,,,Marion_Feb21,GFG,35m,Acanthuridae,Ctenochaetus,nigricans,,1,AD,Passing,CHECK Nigricans?
+PL_L_MARION_10-2-21_P04.MP4,12011,26:42.0,T6,02:04.2,922.84,523.82,0,0,,,,,,,Marion_Feb21,GFG,35m,,,,,1,AD,Passing,fishing_line
+PL_L_MARION_10-2-21_P04.MP4,12157,26:46.8,T6,02:09.0,799.62,1675.72,0,0,,,,,,,Marion_Feb21,GFG,35m,Acanthuridae,Ctenochaetus,striatus,37437022,1,AD,Passing,
+PL_L_MARION_10-2-21_P04.MP4,12157,26:46.8,T6,02:09.0,986.48,1718.03,0,0,,,,,,,Marion_Feb21,GFG,35m,Pomacentridae,Pomacentrus,moluccensis,37372118,1,AD,Passing,
+PL_L_MARION_10-2-21_P04.MP4,12157,26:46.8,T6,02:09.0,965.88,1867.62,0,0,,,,,,,Marion_Feb21,GFG,35m,Scaridae,Scarus,flavipectoralis,37386014,1,AD,Passing,
+PL_L_MARION_10-2-21_P04.MP4,15857,28:50.3,T7,00:12.1,614.55,1865.6,0,0,,,,,,,Marion_Feb21,GFG,35m,Labridae,Labroides,dimidiatus,37384028,1,AD,Passing,
+PL_L_MARION_10-2-21_P05.MP4,4755,32:40.5,T8,00:33.8,483.58,231.69,0,0,,,,,,,Marion_Feb21,GFG,35m,Chaetodontidae,Chaetodon,,,1,AD,Passing,pelewensis
+PL_L_MARION_10-2-21_P05.MP4,4755,32:40.5,T8,00:33.8,554.1,215.57,0,0,,,,,,,Marion_Feb21,GFG,35m,Pomacentridae,Pomacentrus,moluccensis,37372118,1,AD,Passing,

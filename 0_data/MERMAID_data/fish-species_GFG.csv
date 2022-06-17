@@ -94,7 +94,6 @@ Menticirrhus,littoralis,Sciaenidae,Menticirrhus littoralis,0.00402,3.247,1,48.3,
 Canthigaster,margaritata,Tetraodontidae,Canthigaster margaritata,0.02818,2.094,1,31.2,total length,3.1,25.4,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,omnivore,micro-invertivore,solitary
 Paracheilinus,bellae,Labridae,Paracheilinus bellae,0.00977,3.05,1,6.5,total length,3.4,12,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,planktivore,planktivore,medium group
 Apogon,townsendi,Apogonidae,Apogon townsendi,0.01047,3.1,1,6.5,standard length,3.4,10,Tropical Atlantic,,planktivore,planktivore,small group
-,,,,,,,,,,,,,,,
 Scolopsis,trilineata,Nemipteridae,Scolopsis trilineata,0.0182,2.98,1,25,total length,3.5,24.26,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,invertivore-mobile,micro-invertivore,
 Choerodon,venustus,Labridae,Choerodon venustus,0.01698,3.03,1,65,total length,3.5,57.6,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,invertivore-mobile,micro-invertivore,solitary
 Canthigaster,figueiredoi,Tetraodontidae,Canthigaster figueiredoi,0.02818,2.97,1,12,total length,3.07,10.53,Tropical Atlantic,,omnivore,micro-invertivore,pair
@@ -137,7 +136,6 @@ Canthigaster,rostrata,Tetraodontidae,Canthigaster rostrata,0.02818,2.94,1,12,tot
 Cynoscion,nebulosus,Sciaenidae,Cynoscion nebulosus,0.0131,2.994,1,100,total length,3.98,58.44,Tropical Atlantic,,piscivore,pisci-invertivore,medium group
 Gymnothorax,castaneus,Muraenidae,Gymnothorax castaneus,0.00095,3.1,1,150,total length,4.03,78.17,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,piscivore,pisci-invertivore,
 Pterocaesio,chrysozona,Caesioinidae,Pterocaesio chrysozona,0.0408,2.7,0.818331,21,total length,3.4,16.41,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,planktivore,planktivore,large group
-,,,,,,,,,,,,,,,
 Anguilla,anguilla,Anguillidae,Anguilla anguilla,0.000859,3.235023,1,50,total length,3.62,64.35,Tropical Atlantic,,piscivore,macro-invertivore,small group
 Neopomacentrus,bankieri,Pomacentridae,Neopomacentrus bankieri,0.01479,2.98,1,8,total length,3.4,16.21,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,planktivore,planktivore,large group
 Doratonotus,megalepis,Labridae,Doratonotus megalepis,0.01122,3.03,1,9.4,total length,3.3,16,Tropical Atlantic,,invertivore-mobile,macro-invertivore,small group
@@ -217,7 +215,6 @@ Bodianus,atrolumbus,Labridae,Bodianus atrolumbus,0.01202,3.06,1,30.7,standard le
 Halichoeres,nicholsi,Labridae,Halichoeres nicholsi,0.01,3.08,1,38,total length,4,37.49,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,invertivore-mobile,macro-invertivore,solitary
 Caesio,varilineata,Caesioinidae,Caesio varilineata,0.01259,3.09,1,40,total length,3.4,28.23,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,planktivore,planktivore,large group
 Apolemichthys,xanthopunctatus,Pomacanthidae,Apolemichthys xanthopunctatus,0.0302,2.89,1,25,total length,2.64,30.01,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,omnivore,spongivore,small group
-,,,,,,,,,,,,,,,
 Mugil,cephalus,Mugilidae,Mugil cephalus,0.012592,3.00135,1,100,standard length,2.48,50.23,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,herbivore-detritivore,detritivore,large group
 Notolabrus,tetricus,Labridae,Notolabrus tetricus,0.01995,2.99,1,50,total length,3.6,51.81,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,invertivore-mobile,macro-invertivore,solitary
 Serranus,tigrinus,Serranidae,Serranus tigrinus,0.0145,3.048,1,29,fork length,3.72,38,Tropical Atlantic,,invertivore-mobile,macro-invertivore,pair
@@ -406,7 +403,6 @@ Coris,flavovittata,Labridae,Coris flavovittata,0.01,3.06,1,50.8,standard length,
 Pempheris,affinis,Pempheridae,Pempheris affinis,0.01585,2.99,1,15,total length,3.4,22.52,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,planktivore,planktivore,large group
 Labroides,rubrolabiatus,Labridae,Labroides rubrolabiatus,0.00447,3.14,1,9,total length,3.8,15.39,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,invertivore-mobile,micro-invertivore,pair
 Jenkinsia,parvula,Clupeidae,Jenkinsia parvula,0.00389,3.12,1,5.5,standard length,3.4,10,Tropical Atlantic,,planktivore,planktivore,large group
-,,,,,,,,,,,,,,,
 Eugerres,plumieri,Gerreidae,Eugerres plumieri,0.023524,2.93,1,40,total length,3.29,33.85,Tropical Atlantic,,omnivore,macro-invertivore,large group
 Sciades,parkeri,Ariidae,Sciades parkeri,0.00933,3.08,1,190,total length,4.14,51.23,Tropical Atlantic,,piscivore,pisci-invertivore,small group
 Hippocampus,histrix,Syngnathidae,Hippocampus histrix,0.00427,3,1,17,total length,3.45,13.37,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,invertivore-mobile,macro-invertivore,
@@ -639,7 +635,6 @@ Oxymonacanthus,halli,Monocanthidae,Oxymonacanthus halli,0.01047,3.05,1,7,total l
 Rhinoptera,bonasus,Myliobatidae,Rhinoptera bonasus,0.0076,3.15,1,213.3,wing diameter,3.49,45.13,Tropical Atlantic,,invertivore-mobile,macro-invertivore,large group
 Abudefduf,saxatilis,Pomacentridae,Abudefduf saxatilis,0.023283,2.877253,1,22.9,total length,2.76,32.28,Tropical Atlantic,,omnivore,planktivore,large group
 Opsanus,phobetron,Batrachoididae,Opsanus phobetron,0.0527,2.6894,1,21.5,total length,3.6,27.48,Tropical Atlantic,,invertivore-mobile,macro-invertivore,solitary
-,,,,,,,,,,,,,,,
 Meiacanthus,lineatus,Blenniidae,Meiacanthus lineatus,0.00537,3.05,1,9.5,total length,3.4,20.07,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,planktivore,planktivore,solitary
 Oplegnathus,punctatus,Oplegnathidae,Oplegnathus punctatus,0.01995,3.01,1,86,total length,3.55,37.09,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,invertivore-mobile,macro-invertivore,
 Upeneus,supravittatus,Mullidae,Upeneus supravittatus,0.00933,3.09,1,14,standard length,3.5,19.85,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,invertivore-mobile,macro-invertivore,medium group
@@ -731,7 +726,6 @@ Chaetodon,trifascialis,Chaetodontidae,Chaetodon trifascialis,0.03472,2.879309,1,
 Halichoeres,chrysotaenia,Labridae,Halichoeres chrysotaenia,,,1,13,,,,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,,,
 Sparisoma,chrysopterum,Scaridae,Sparisoma chrysopterum,0.0154,3.0423,1,46,total length,2,22.7,Tropical Atlantic,,herbivore-detritivore,excavator,small group
 Aioliops,megastigma,Gobiidae,Aioliops megastigma,0.00389,3.12,1,3,standard length,3.1,10,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,planktivore,planktivore,small group
-,,,,,,,,,,,,,,,
 Choerodon,gomoni,Labridae,Choerodon gomoni,0.01259,3.05,1,10.3,standard length,3.3,23,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,invertivore-mobile,micro-invertivore,small group
 Dischistodus,chrysopoecilus,Pomacentridae,Dischistodus chrysopoecilus,0.01479,2.98,1,15,total length,2,26.31,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,herbivore-detritivore,cropper/grazer,small group
 Pomacentrus,trilineatus,Pomacentridae,Pomacentrus trilineatus,0.02344,2.99,1,10,total length,2.64,20.93,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,planktivore,planktivore,small group
@@ -909,7 +903,6 @@ Epinephelus,retouti,Serranidae,Epinephelus retouti,0.01148,3.04,1,50,total lengt
 Chromis,nitida,Pomacentridae,Chromis nitida,0.01479,2.98,1,7,standard length,2.66,17.15,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,omnivore,planktivore,medium group
 Alosa,aestivalis,Clupeidae,Alosa aestivalis,0.00813,3.04,1,40,standard length,3.81,50.78,Tropical Atlantic,,piscivore,pisci-invertivore,large group
 Parupeneus,margaritatus,Mullidae,Parupeneus margaritatus,0.01202,3.09,1,23,total length,3.4,24.29,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,invertivore-mobile,macro-invertivore,small group
-,,,,,,,,,,,,,,,
 Stegastes,rectifraenum,Pomacentridae,Stegastes rectifraenum,0.0181,3.076,1,13.5,total length,2,12.54,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,herbivore-detritivore,cropper/grazer,
 Pristiapogon,kallopterus,Apogonidae,Pristiapogon kallopterus,0.008635,3.264717,1,15.5,total length,3.55,16.13,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,invertivore-mobile,micro-invertivore,solitary
 Cirrhilabrus,temminckii,Labridae,Cirrhilabrus temminckii,0.0166,2.95,1,9.9,standard length,3.4,22.08,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,planktivore,planktivore,medium group
@@ -1493,7 +1486,7 @@ Antennarius,hispidus,Antennariidae,Antennarius hispidus,0.01995,3.01,1,20,total 
 Canthigaster,jactator,Tetraodontidae,Canthigaster jactator,0.02818,2.094,1,9,total length,2.8,10,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,invertivore-sessile,spongivore,solitary
 Idiotropiscis,australe,Syngnathidae,Idiotropiscis australe,0.00049,3.1,1,5.5,total length,3.2,10,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,invertivore-mobile,macro-invertivore,small group
 Emblemaria,pandionis,Chaenopsidae,Emblemaria pandionis,0.00457,3.08,1,6,standard length,3.4,10,Tropical Atlantic,,planktivore,planktivore,solitary
-Zebrasoma,veliferum,Acanthuridae,Zebrasoma veliferum,0.034107,2.861415,1,40,standard length,2,36.94,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,herbivore-detritivore,cropper/grazer,pair
+Zebrasoma,velifer,Acanthuridae,Zebrasoma velifer,0.034107,2.861415,1,40,standard length,2,36.94,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,herbivore-detritivore,cropper/grazer,pair
 Bodianus,trilineatus,Labridae,Bodianus trilineatus,0.01202,3.06,1,28,total length,3.5,33.42,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,invertivore-mobile,micro-invertivore,solitary
 Pervagor,janthinosoma,Monocanthidae,Pervagor janthinosoma,0.025,2.946,1,13,standard length,2.9,25.41,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,omnivore,micro-invertivore,pair
 Calotomus,viridescens,Scaridae,Calotomus viridescens,0.01995,3.01,1,21,standard length,2,23.96,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,herbivore-detritivore,cropper/grazer,small group
@@ -3310,3 +3303,4 @@ Pteragogus,guttatus,Labridae,Pteragogus guttatus,0.0166,2.95,1,9,total length,3.
 Prognathodes,guyanensis,Chaetodontidae,Prognathodes guyanensis,0.02188,3.02,1,13.6,total length,2.9,11,Tropical Atlantic,,invertivore-sessile,spongivore,solitary
 Chaetodon,modestus,Chaetodontidae,Chaetodon modestus,0.02291,3.01,1,,,,,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,,,
 Meiacanthus,mossambicus,Blenniidae,Meiacanthus mossambicus,0.00537,3.05,1,10,total length,3.4,20.93,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,planktivore,planktivore,solitary
+Pseudanthias,ventralis,Serranidae,Pseudanthias ventralis,0.01259,3.01,1,7,total length,3.3,,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,planktivore,planktivore,medium group

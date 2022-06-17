@@ -246,7 +246,7 @@ fin.data$Species[fin.data$Species == "spp"] <- "sp"
 
 ```{r}
 
-write.csv(fin.data, file= "../2_outputs/cleaned_fish.csv", row.names = FALSE)
+write.csv(fin.data, file= "../2_outputs/ROV_cleaned_fish.csv", row.names = FALSE)
 
 ```
 

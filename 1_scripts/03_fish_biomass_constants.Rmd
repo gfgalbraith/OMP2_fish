@@ -29,7 +29,7 @@ library(rfishbase)
 This uses the Final_fish data created by the scripts "ROV_initial_wrangle" to isolate just fish observations and then "ROV_fish_wrangle" which identifies and corrects errors in species names, has assigned a and b values where species are identified etc.
 
 ```{r}
-fish <-read_csv("../2_outputs/cleaned_fish.csv")
+fish <-read_csv("../2_outputs/ROV_cleaned_fish.csv")
 
 fish <- fish %>% mutate(
   Transect=as.factor(Transect),
@@ -45,7 +45,7 @@ fish <- fish %>% mutate(
 # Match with MERMAID database for LW constants
 ```{r}
 
-mermaid.species <-read_csv("../0_data/MERMAID_data/fish-species.csv")
+mermaid.species <-read_csv("../0_data/MERMAID_data/fish-species_GFG.csv")
 
 mermaid.species<-mermaid.species %>% mutate(
   Species_name = paste(Genus,Species, sep = " ")
@@ -60,7 +60,7 @@ fish %>% anti_join(mermaid.species, by = "Species_name")
 ```
 
 
-#Fix all the issues! Working off the original mERMAID data base
+#Fix all the issues! Working off my updated mermaid list data base
 ```{r}
 
 # All NA species get "sp"
@@ -68,18 +68,13 @@ fish$Species[is.na(fish$Species)]<- "sp"
 # spp <- sp in Species
 fish$Species[fish$Species == "spp"] <- "sp"
 
-# Oxycheilinus diagrammus <- digramma. This needs a final catch all argument for case_when to say ' if it doesn't fit these rules just give it what it had before'.
-
+# Oxycheilinus diagrammus <- digramma. 
 fish <- fish %>% 
   mutate(
     Species = case_when(Genus == "Oxycheilinus" & Species == "digrammus" ~ "digramma",
                         TRUE ~ as.character(Species))
   )
 
-# Paracentropyge multifasciata - added manually to Eventmeasure species files and MERMAID.csv
-# Max length 12.0 , a = 0.03236, b = 2.89, trophic level = 2.8
-
-# Chaetodon mertensi - added mannually to MERMAID.csv for better future use
 # Chaetodon mertensii - spelling corrected
 # martensii - spelling corrected
 # meretensii - spelling corrected
@@ -121,11 +116,6 @@ fish <- fish %>%
                         TRUE ~ as.character(Species))
   )
 
-# added manually to MERMAID and EM species list
-# Max length 24.0 , a = 0.00977, b = 3.07, Trophic level = 3.5
-
-# Genicanthus watanabie - added manually to MERMAID and EM species list
-# Max length 15.0 , a = 0.03236, b = 2.89, Trophic level = 3.4
 
 # Acanthurus nubilis  - spelling <- nubilus
 fish <- fish %>% 
@@ -141,9 +131,7 @@ fish <- fish %>%
                         TRUE ~ as.character(Species))
   )
 
-# Chrysiptera starcki -  - added manually to MERMAID and EM species list
-# Max length 7.0 , a = 0.01479, b = 2.98, Trophic level = 2.8
-#length_weight("Chrysiptera starcki")
+
 # and a spelling mistake - starki
 fish <- fish %>% 
   mutate(
@@ -151,12 +139,6 @@ fish <- fish %>%
                         TRUE ~ as.character(Species))
   )
 
-
-# Pseudanthias ventralis
-# Max length 7.0 , a = 0.01259, b = 3.01, Trophic level = 3.3
-
-# Pseudochromis flavipinnis
-# Max length 7.2 , a = 0.01148, b = 3.01, Trophic level = 3.5
 
 # Sufflamen chrysopterus - spelling <- chrysopterum
 fish <- fish %>% 
@@ -166,15 +148,12 @@ fish <- fish %>%
   )
 
 # Chaetodon pelwensis - spelling <-pelewensis
-# Max length 12.5 , a = 0.02089, b = 3.02, Trophic level = 2.9
 fish <- fish %>% 
   mutate(
     Species = case_when(Genus == "Chaetodon" & Species == "pelwensis" ~ "pelewensis",
                         TRUE ~ as.character(Species))
   )
 
-# Pseudocaranx georgianus
-# Max length 122 cm , a = 0.01413, b = 2.96, Trophic level = 3.9
 
 # Chromis xanthurus - spelling <- xanthura
 fish <- fish %>% 
@@ -197,19 +176,36 @@ fish <- fish %>%
                         TRUE ~ as.character(Species))
   )
 
+# Spelling issues with Genicanthus watanabei
+fish %>% filter(
+  str_detect(Species, pattern = "wata")
+  )
+
+fish <- fish %>% 
+  mutate(
+    Species = case_when(Genus == "Genicanthus" & str_detect(Species, "wata") ~ "watanabei",
+                        TRUE ~ as.character(Species))
+  )
+
+# Pseudochromis flavipinnis < Chrysiptera flavipinnis
+fish <- fish %>% 
+  mutate(
+    Genus = case_when(Genus == "Pseudochromis" & Species == "flavipinnis" ~ "Chrysiptera",
+                        TRUE ~ as.character(Genus))
+  )
+
 ```
 
 # Pre merge second check
 
 ```{r}
-# Refresh species_name after changes
+# Refresh species_name after above changes
 fish<-fish %>% mutate(
   Species_name = paste(Genus,Species, sep = " ")
 )
 
 
 fish %>% anti_join(mermaid.species, by = "Species_name")
-
 
 ```
 
@@ -241,24 +237,6 @@ fish <- fish %>%
     Species = case_when(Genus == "Zebrasoma" & Species == "veliferum" ~ "velifer",
                         TRUE ~ as.character(Species))
   )
-
-# Spelling issues with Genicanthus watanabei
-fish %>% filter(
-  str_detect(Species, pattern = "wata")
-  )
-
-fish <- fish %>% 
-  mutate(
-    Species = case_when(Genus == "Genicanthus" & str_detect(Species, "wata") ~ "watanabei",
-                        TRUE ~ as.character(Species))
-  )
-
-# Pseudochromis flavipinnis < Chrysiptera flavipinnis
-fish <- fish %>% 
-  mutate(
-    Genus = case_when(Genus == "Pseudochromis" & Species == "flavipinnis" ~ "Chrysiptera",
-                        TRUE ~ as.character(Genus))
-  )
 ```
 
 ```{r}
@@ -269,6 +247,8 @@ fish<-fish %>% mutate(
 
 
 fish %>% anti_join(fishbase.data, by = "Species_name")
+
+# All that remains should be ovservations only identified as "sp"
 
 
 ```
@@ -281,20 +261,8 @@ unique(fish)
 
 ```
 
-
 # Merge with mermaid data
-The fishbase data set was good for validating accepted species names, further spelling checks etc but had some issues with assigning the correct a and b constants. Firstly, there are multiple values for a given species - which is correct? They also seemed very different from the Mermaid ones and often the ones given on the fish's page on fishbase.org. 
-```{R} 
-# Isolate species name and the constants
-#fishbase.data<- fishbase.data %>% select(Species_name,a,b)
-
-# Fishbase seems to have duplicate values for species depending on the method used to generate constants
-#fishbase.data<-distinct(fishbase.data, Species_name, .keep_all = TRUE)
-
-# Merge
-#merged.data <- fish %>% 
-#  left_join(fishbase.data, by ="Species_name")
-```
+The fishbase data set was good for validating accepted species names, further spelling checks etc but had some issues with assigning the correct a and b constants. Firstly, there are multiple values for a given species - which is correct? They also seemed very different from the Mermaid ones and often the ones given on the fish's page on fishbase.org. For these reasons using the mermaid database.
 
 ```{r}
 # MERMAID merge for a and b constants
@@ -305,11 +273,13 @@ merged.data <- fish %>%
 duplicated(mermaid.species$Species_name)
 
 mermaid.species[which(duplicated(mermaid.species[,c('Species_name')])==TRUE),]
-# Suspect - there may be spaces in the csv file. Manually changed and checked.
+
+```
+
+```{r}
 
 # Work going forward will now always use my own custom fish list. This has been updated with many Coral Sea Species not originally on the list and includes biomass constants and max length. 
 
-mermaid.species <-read_csv("../0_data/MERMAID_data/fish-species_GFG.csv")
 mermaid.species<- mermaid.species %>% select(Species_name,`Biomass Constant A`,`Biomass Constant B`, `Max Length (cm)`, `Trophic Group`, `Trophic Level`)
 
 merged.data <- fish %>% 
@@ -323,47 +293,6 @@ add.data$Species_name %>% str_subset(pattern = "sp$", negate = TRUE)
 
 # \s is regex for white space - could also us that
 
-# Mermaid has the wrong name for Z.velifer -> change in your master MERMAID csv.
-merged.data <- merged.data %>% 
-  mutate(
-    Species = case_when(Genus == "Zebrasoma" & Species == "veliferum" ~ "velifer",
-                        TRUE ~ as.character(Species))
-  )
-
-merged.data <- merged.data %>% 
-  mutate(
-    `Biomass Constant A` = case_when(Genus == "Zebrasoma" & Species == "velifer" ~ 0.02344 ,
-                        TRUE ~ as.double(`Biomass Constant A`))
-  )
-
-merged.data <- merged.data %>% 
-  mutate(
-    `Biomass Constant B` = case_when(Genus == "Zebrasoma" & Species == "velifer" ~ 2.94 ,
-                        TRUE ~ as.double(`Biomass Constant B`))
-  )
-
-#Cheilinus fasciatus - duplicated in mermaid data - causes duplicates in the merge
-
-
-# Pseudanthias ventralis
-# Max Length = 7.0, a = 0.01259, b = 3.01, Trophic level = 3.3
-merged.data <- merged.data %>% 
-  mutate(
-    `Biomass Constant A` = case_when(Genus == "Pseudanthias" & Species == "ventralis" ~ 0.01259 ,
-                        TRUE ~ as.double(`Biomass Constant A`))
-  )
-
-merged.data <- merged.data %>% 
-  mutate(
-    `Biomass Constant B` = case_when(Genus == "Pseudanthias" & Species == "ventralis" ~ 3.01 ,
-                        TRUE ~ as.double(`Biomass Constant B`))
-  )
-
-
-# Rebind species name
-merged.data<-merged.data %>% mutate(
-  Species_name = paste(Genus,Species, sep = " ")
-)
 
 # Check missing constants
 merged.data %>% filter(is.na(`Biomass Constant A`))
@@ -471,7 +400,7 @@ merged.genera <- genus.data %>%
 ```{r}
 fish.1<- rbind(merged.data, merged.genera, merged.sp)
 
-# Final check that every observation has a and or b constants
+# Final check that every observation has a and or b constants - ALL should be false
 summary(is.na(fish.1$`Biomass Constant A`))
 fish.1 %>% filter(is.na(`Biomass Constant A`))
 

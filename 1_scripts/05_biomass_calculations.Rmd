@@ -9,7 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Used the "Fish_Final" data to calculate the biomass of each fish observation.
+Uses the "ROV_Fish_Final" data to calculate the biomass of each fish observation.
 
 #HouseKeeping
 ```{R}
@@ -27,7 +27,7 @@ library(rfishbase)
 
 # Data import
 ```{r}
-fish <-read_csv("../0_data/Fish_Final.csv")
+fish <-read_csv("../2_outputs/ROV_Fish_Final.csv")
 
 fish <- fish %>% mutate(
   Transect=as.factor(Transect),
@@ -67,65 +67,40 @@ fish<-fish %>% mutate(Total_Biomass_g = Number*weight_g)
 
 ```
 
-# Select variables exculding species names etc and Group by transect
-```{r}
 
+# Check and write csv for observation level biomass
+```{r}
+# check each observation has a biomass value, if all good, write to CSV
+fish %>% filter(is.na(Total_Biomass_g)) 
+
+write.csv(fish, file= "../2_outputs/ROV_fish_biomass.csv", row.names = FALSE)
+
+```
+
+# Summary per transect total biomass
+```{r}
+# Select variables excluding species names etc and Group by transect
 biomass.total <- fish %>% select(
 Survey,Reef,Site,Transect,T_ID, Date, Lat, Long, Depth, Temperature, Habitat,Aspect,Benthic_Complexity,Total_Biomass_g
 )
 
-# Summary per transect total biomas
+ 
+```
+
+
+
+
+```{r}
+# Summary per transect total biomass
 biomass.total<- biomass.total %>% group_by(Survey,Reef,Site,Transect,T_ID, Date, Lat, Long, Depth, Temperature, Habitat,Aspect,Benthic_Complexity) %>%
   summarise(Total_Biomass_g = sum(Total_Biomass_g))
 
 ```
 
-
+# Write csv for summary total biomass by transect biomass
 ```{r}
 
-write.csv(biomass.total, file= "../0_data/fish_biomass.csv", row.names = FALSE)
+write.csv(biomass.total, file= "../2_outputs/ROV_transect_biomass.csv", row.names = FALSE)
 
 ```
 
-# Biomass by functional group
-```{r}
-mermaid.species <-read_csv("../0_data/MERMAID_data/fish-species_GFG.csv")
-mermaid.species<- mermaid.species %>% select(Species_name,`Trophic Level`,`Trophic Group`, `Functional Group`)
-
-fish %>% anti_join(mermaid.species, by = "Species_name")
-
-# Figure out which species MERMAID does not have
-missing<-fish %>% anti_join(mermaid.species, by = "Species_name")
-unique(missing$Species_name)
-
-```
-
-```{r}
-# Merge the data
-merged.data <- fish %>% 
-  left_join(mermaid.species, by ="Species_name")
-
-# Manual application of appropriate trophic groups
-merged.data$`Trophic Group`[merged.data$Species_name == "Zebrasoma velifer"] <- ""
-merged.data$`Trophic Group`[merged.data$Species_name == ""] <- ""
-merged.data$`Trophic Group`[merged.data$Species_name == ""] <- ""
-
-
-
-```
-
-# Find NA values
-```{r}
-summary(is.na(merged.data$`Trophic Group`))
-
-merged.data %>% filter(is.na(`Trophic Group`))
-
-```
-
-# Summarise and Group by trophic group
-```{r}
-trophic.biomass<-merged.data %>% group_by(Survey,Reef,Site,Transect,T_ID, Date, Lat, Long, Depth, Temperature, Habitat,Aspect,Benthic_Complexity,`Trophic Group`) %>%
-  summarise(Total_Biomass_g = sum(Total_Biomass_g))
-
-
-```

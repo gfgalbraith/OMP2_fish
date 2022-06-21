@@ -1,0 +1,268 @@
+---
+title: "06_biomass_trophic"
+author: "GF Galbraith"
+date: '2022-06-21'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This script works with the observation level biomass calculated in "05_biomass_calculations". It is used to summarise biomass by trophic or funcational groups.
+
+#HouseKeeping
+```{R}
+rm(list=ls())
+#dev.off()
+getwd()
+```
+
+#load libraries
+```{r}
+library(tidyverse)
+library(rfishbase)
+```
+
+# Data import
+```{r}
+fish <-read_csv("../2_outputs/ROV_fish_biomass.csv")
+
+fish <- fish %>% mutate(
+  Transect=as.factor(Transect),
+  Reef=as.factor(Reef),
+  T_ID=as.factor(T_ID),
+  Length_mm=as.double(Length_mm),
+  Survey=as.factor(Survey),
+  Site=as.factor(Site),
+  Comment = as.character(Comment),
+  Date = as.Date(Date),
+  Habitat = as.factor(Habitat),
+  Aspect = as.factor(Aspect))
+
+```
+
+
+# Biomass by trophic group - find NA values
+```{r}
+summary(is.na(fish$`Trophic Group`))
+# remove from main data 
+fish.2<-fish %>% filter(!is.na(`Trophic Group`))
+# create a df of missing species - 277 observations
+missing<-fish %>% filter(is.na(`Trophic Group`))
+```
+
+```{r}
+# Subset observations missing only the species (trophic group applied to genus)
+unique(missing$Species_name)
+# Note: Gnathodentex aureolineatus and Chromis chrysura have no Trophic group - manual apply
+missing$`Trophic Group`[missing$Species_name == "Gnathodentex aureolineatus"] <- "invertivore-mobile"
+missing$`Trophic Group`[missing$Species_name == "Chromis chrysura"] <- "planktivore"
+unique(missing$Species_name)
+```
+
+```{r}
+# Missing genera
+missing.genera<-missing %>% filter(is.na(Genus))  
+missing.species<-missing %>% filter(!is.na(Genus))  
+```
+
+```{r}
+# Apply a best estimate trophic group based on fishbase information.
+unique(missing.genera$Family)
+unique(fish$`Trophic Group`)
+
+missing.genera$`Trophic Group`[missing.genera$Family == "Labridae"] <- "omnivore"
+missing.genera$`Trophic Group`[missing.genera$Family == "Pomacentridae"] <- "planktivore"
+missing.genera$`Trophic Group`[missing.genera$Family == "Clupeidae"] <- "planktivore"
+missing.genera$`Trophic Group`[missing.genera$Family == "Carangidae"] <- "piscivore"
+
+# Check all values assigned
+missing.genera %>% filter(is.na(`Trophic Group`))  
+
+```
+
+# Missing species, trophic grouop based on genus
+```{r}
+# Apply a best estimate trophic group based on fishbase information.
+unique(missing.species$Genus)
+unique(fish$`Trophic Group`)
+```
+
+```{r}
+sp<-unique(missing.species$Genus)
+sp %in% fish$Genus
+
+sp.4<-filter(fish, Genus %in% sp)
+
+sp.4<-sp.4 %>% distinct(Species_name, .keep_all = TRUE) %>% 
+  select(Species_name,Genus, `Trophic Group`, `Trophic Level`)
+
+sp.4<-sp.4 %>% filter(!is.na(`Trophic Group`)) 
+
+# Now summerise by the most frequent value of the Trophic group and a mean TL
+sp.3<-sp.4 %>% group_by(Genus) %>% 
+  summarise(`Trophic Level` = mean(`Trophic Level`),
+            `Trophic Group` = names(which.max(table(`Trophic Group`))))
+
+```
+
+
+# Merge sp.4 with the missing species dfs
+```{r}
+sp.4<-left_join(missing.species, sp.3, by = "Genus") %>% 
+  mutate(`Trophic Group` = coalesce(`Trophic Group.x`,`Trophic Group.y`),
+         `Trophic Level` = coalesce(`Trophic Level.x`, `Trophic Level.y`)) %>% 
+  select(-c(24,25,29,30))
+
+```
+
+# Check reamining NA Values
+```{r}
+sp.4 %>% filter(is.na(`Trophic Group`))
+# 7 Tricky missing genera still remaining - they must have been the only observations from that genus hence no average TL or most frequent TG.
+tricky<-sp.4 %>% filter(is.na(`Trophic Group`))
+tricky<-tricky$Genus
+tricky %in% mermaid.species$Genus
+
+tricky.2<-filter(mermaid.species, Genus %in% tricky)
+tricky.2<-tricky.2 %>% distinct(Species_name, .keep_all = TRUE) %>% 
+  select(Species_name,Genus, `Trophic Group`, `Trophic Level`)
+
+# Now summerise by the most frequent value of the Trophic group and a mean TL
+tricky.2<-tricky.2 %>% group_by(Genus) %>% 
+  summarise(`Trophic Level` = mean(`Trophic Level`),
+            `Trophic Group` = names(which.max(table(`Trophic Group`))))
+
+# Merge back
+tricky<-sp.4 %>% filter(is.na(`Trophic Group`))
+tricky<-left_join(tricky, tricky.2, by = "Genus") %>% 
+  mutate(`Trophic Group` = coalesce(`Trophic Group.x`,`Trophic Group.y`),
+         `Trophic Level` = coalesce(`Trophic Level.x`, `Trophic Level.y`)) %>% 
+  select(-c(27:30))
+
+sp.5<-left_join(sp.4, tricky.2, by = "Genus") %>% 
+  mutate(`Trophic Group` = coalesce(`Trophic Group.x`,`Trophic Group.y`),
+         `Trophic Level` = coalesce(`Trophic Level.x`, `Trophic Level.y`)) %>% 
+    select(-c(27:30))
+
+
+```
+
+
+# Final merge
+Rbind fish.2, missing.genera, and sp.5.
+```{r}
+
+fish.3<- rbind(fish.2,missing.genera,sp.5)
+
+# Final check no NA values.
+fish.3 %>% filter(is.na(`Trophic Group`))
+
+
+```
+
+# Write csv
+
+```{r}
+
+write.csv(fish.3, file= "../2_outputs/ROV_trophic_biomass.csv", row.names = FALSE)
+
+```
+
+```{r}
+# Summary per transect total biomass
+transect.biomass<- fish.3 %>% group_by(Survey,Reef,Site,Transect,T_ID, Date, Lat, Long, Depth, Temperature, Habitat,Aspect,Benthic_Complexity, `Trophic Group`) %>%
+  summarise(Total_Biomass_g = sum(Total_Biomass_g))
+```
+
+```{r}
+
+write.csv(transect.biomass, file= "../2_outputs/ROV_trophic_biomass_transect.csv", row.names = FALSE)
+
+```
+
+
+
+SCRATCH WORK
+-----------------------
+# Tricky species
+Still no match for 8 genera Try fishbase or mermaid to match? Or Manual extraction from webpage.
+```{r}
+mermaid.species <-read_csv("../0_data/MERMAID_data/fish-species_GFG.csv")
+mermaid.species<-mermaid.species %>% select(c(Genus, Species, Family, Species_name, `Trophic Level`, `Trophic Group`))
+
+```
+
+
+```{r}
+sp.4$`Trophic Group`[sp.4$Genus == "Myliobatis"] <- ""
+sp.4$`Trophic Level`[sp.4$Genus == "Myliobatis"] <-
+sp.4$`Trophic Group`[sp.4$Genus == "Lethrinus"] <- ""
+sp.4$`Trophic Level`[sp.4$Genus == "Lethrinus"] <-
+sp.4$`Trophic Group`[sp.4$Genus == "Pseudocheilinus"] <- ""
+sp.4$`Trophic Level`[sp.4$Genus == "Pseudocheilinus"] <- 
+sp.4$`Trophic Group`[sp.4$Genus == "Pseudochromis"] <- ""
+sp.4$`Trophic Level`[sp.4$Genus == "Pseudochromis"] <-   
+sp.4$`Trophic Group`[sp.4$Genus == "Pseudocoris"] <- ""
+sp.4$`Trophic Level`[sp.4$Genus == "Pseudocoris"] <- 
+sp.4$`Trophic Group`[sp.4$Genus == "Chaetodontoplus"] <- ""
+sp.4$`Trophic Level`[sp.4$Genus == "Chaetodontoplus"] <- 
+sp.4$`Trophic Group`[sp.4$Genus == "Synodus"] <- ""
+sp.4$`Trophic Level`[sp.4$Genus == "Synodus"] <- 
+
+  
+sp.4 %>% filter(is.na(`Trophic Group`))  
+sp.4
+
+```
+
+```{r}
+
+# Manual application of appropriate trophic groups based on unique list of missing species names.
+missing.species$`Trophic Group`[missing.species$Genus == "Myripristis"] <- ""
+missing.species$`Trophic Group`[missing.species$Genus == "Meiacanthus"] <- "Halichoeres sp"
+missing.species$`Trophic Group`[missing.species$Genus == "Scarus"] <- ""
+missing.species$`Trophic Group`[missing.species$Genus == "Chromis"] <- ""
+missing.species$`Trophic Group`[missing.species$Genus == "Pseudanthias"] <- ""
+missing.species$`Trophic Group`[missing.species$Genus == "Thalassoma"] <- ""
+missing.species$`Trophic Group`[missing.species$Genus == "Anampses"] <- ""
+missing.species$`Trophic Group`[missing.species$Genus == "Sargocentron"] <- ""
+missing.species$`Trophic Group`[missing.species$Genus == "Cephalopholis"] <- ""
+missing.species$`Trophic Group`[missing.species$Genus == "Halichoeres"] <- ""
+missing.species$`Trophic Group`[missing.species$Genus == "Myliobatis"] <- ""
+missing.species$`Trophic Group`[missing.species$Genus == "Pomacentrus"] <- ""
+missing.species$`Trophic Group`[missing.species$Genus == "Acanthurus"] <- ""
+missing.species$`Trophic Group`[missing.species$Genus == "Ctenochaetus"] <- ""
+missing.species$`Trophic Group`[missing.species$Genus == "Centropyge"] <- ""
+missing.species$`Trophic Group`[missing.species$Genus == "Lethrinus"] <- ""
+missing.species$`Trophic Group`[missing.species$Genus == "Pentapodus"] <- ""
+missing.species$`Trophic Group`[missing.species$Genus == "Stegastes"] <- ""
+missing.species$`Trophic Group`[missing.species$Genus == "Cirrhilabrus"] <- ""
+missing.species$`Trophic Group`[missing.species$Genus == "Hoplolatilus"] <- ""
+missing.species$`Trophic Group`[missing.species$Genus == "Coris"] <- ""
+missing.species$`Trophic Group`[missing.species$Genus == "Pseudocheilinus"] <- ""
+missing.species$`Trophic Group`[missing.species$Genus == "Canthigaster"] <- ""
+missing.species$`Trophic Group`[missing.species$Genus == "Pseudodax"] <- ""
+missing.species$`Trophic Group`[missing.species$Genus == "Ptereleotris"] <- ""
+missing.species$`Trophic Group`[missing.species$Genus == "Ptereleotris"] <- ""
+missing.species$`Trophic Group`[missing.species$Genus == "Parupeneus"] <- ""
+missing.species$`Trophic Group`[missing.species$Genus == "Rhabdamia"] <- ""
+missing.species$`Trophic Group`[missing.species$Genus == "Caesio"] <- ""
+missing.species$`Trophic Group`[missing.species$Genus == "Pseudochromis"] <- ""
+missing.species$`Trophic Group`[missing.species$Genus == "Pseudocoris"] <- ""
+missing.species$`Trophic Group`[missing.species$Genus == "Chaetodontoplus"] <- ""
+missing.species$`Trophic Group`[missing.species$Genus == "Synodus"] <- ""
+
+
+```
+
+
+
+# Summarise and Group by trophic group
+```{r}
+trophic.biomass<-merged.data %>% group_by(Survey,Reef,Site,Transect,T_ID, Date, Lat, Long, Depth, Temperature, Habitat,Aspect,Benthic_Complexity,`Trophic Group`) %>%
+  summarise(Total_Biomass_g = sum(Total_Biomass_g))
+
+
+```

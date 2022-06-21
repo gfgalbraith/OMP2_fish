@@ -27,7 +27,7 @@ library(rfishbase)
 
 #Import fish data
 ```{r}
-fish <-read_csv("../0_data/Fish_ab_constants.csv")
+fish <-read_csv("../2_outputs/R0V_Fish_ab.csv")
 
 fish <- fish %>% mutate(
   Transect=as.factor(Transect),
@@ -75,16 +75,6 @@ unique(no.values$Species_name)
 # Errors spotted
 
 ```{r}
-# Carcharhinus amblyrhynchoides should be amblyrhincos
-fish <- fish %>% 
-  mutate(
-    Species = case_when(Genus == "Carcharhinus" & Species == "amblyrhynchoides" ~ "amblyrhynchos",
-                        TRUE ~ as.character(Species))
-  )
-
-fish<-fish %>% mutate(
-  Species_name = paste(Genus,Species, sep = " ")
-)
 
 # Need to reapply those means
 fish.2<-left_join(fish, means, by = "Species_name")
@@ -100,9 +90,11 @@ fish.2<-fish.2 %>% filter(!is.na(Length_mm))
 
 
 ```
-# Apply a mean length 
-Could calculate these based on the in-situ data?Otherwise apply an estimate?
 
+# Apply a mean length 
+Could calculate these based on the in-situ data? Otherwise apply an estimate?
+
+- Option 1 - Manual Entry
 ```{r}
 unique(no.values$Species_name)
 
@@ -150,6 +142,28 @@ no.values$Length_mm[no.values$Species_name == "Chrysiptera taupou"] <- 70
 
 ```
 
+- Option 2 - fishbase species table
+```{r}
+fishbase<-rfishbase::species()
+write.csv(fishbase, file= "../0_data/fishbase_data/fishbase_species.csv", row.names = FALSE)
+
+fishbase<-fishbase %>% select(Species, CommonLength) %>% 
+  rename(Species_name = Species)
+
+```
+
+# Match no.values with fishbase species
+```{r}
+no.values<- no.values %>% 
+  left_join(fishbase, by= "Species_name")
+  
+
+no.values<-no.values %>% 
+    mutate(Length_mm = coalesce(Length_mm,CommonLength))
+
+no.values<-no.values %>% select(-CommonLength)
+
+```
 
 # row bind species with na values back to main fish.2 data
 
@@ -163,6 +177,7 @@ fish %>% filter(is.na(`Biomass Constant A`))
 fish %>% filter(is.na(`Biomass Constant B`))
 fish %>% filter(is.na(Length_mm))
 
+# fishbase list is still missing some values for common lengths. Missing species added manually as per above option 1.
 
 ```
 
@@ -182,6 +197,6 @@ fish <- fish %>%
 
 ```{r}
 
-write.csv(fish, file= "../0_data/Fish_Final.csv", row.names = FALSE)
+write.csv(fish, file= "../2_outputs/ROV_Fish_Final.csv", row.names = FALSE)
 
 ```

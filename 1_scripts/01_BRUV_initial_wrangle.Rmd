@@ -1,0 +1,133 @@
+---
+title: "01_BRUV_initial_wrangle"
+output: html_document
+date: '2022-06-22'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This markdown uses the point measurement file associated with each BRUV drop to match observations in Maxn field. For observations that were not in the Eventmneasure species file, often the comment option is used to record the species name quickly. Maxn exported data however, does not contain the associated "comment" and so this must be extracted from he point measurement file.
+
+Best practice to make this wrangling easier in future is to update the species file regularly as you go.
+
+After lots of wrangling, the easiest solution that I could come up with was to manually calculate maxn from the point count data. This ensures that any observation that might match family and genus, but not necessarily species, is assessed based on the frame number and the file name. After this, applying the "comment" species name to "species is simple. Still import the maxn file to double check the same number of observations are returned by the manual maxn calculation
+
+#Housekeeping
+```{}
+rm(list=ls())
+#dev.off()
+getwd()
+```
+
+#Libraries
+```{r}
+library(tidyverse)
+library(readr)
+```
+
+
+#Import data
+Files need to have been saved as csv, all excel modifications made and renamed as per analysis instructions.
+```{r}
+# We need the reef, site name as a new variable to identify the source of the data
+# Pulls each file in, merges and creates a filename variable. 
+
+path <- "../0_data/BRUV_data"
+
+files <- list.files(path, pattern="csv", full.names=TRUE) %>%
+    set_names()
+
+data <- files %>% map_dfr(read_csv, .id="filename")
+
+```
+# Tidy variables
+```{r}
+data <- data %>% mutate(
+  filename=str_sub(filename,21,-5)) %>% 
+  separate(filename,c("Reef","Site","Drop","Count_type","Survey"), "_", remove = FALSE) %>% 
+  mutate(
+  Transect=as.factor(Period),
+  filename = as.factor(filename),
+  Reef = as.factor(Reef),
+  Site =  as.factor(paste(Reef, Site, sep = "_")),
+  Drop = as.factor(Drop),
+  Count_type = as.factor(Count_type),
+  Survey=as.factor(case_when(grepl("FEB2021", Survey) ~ "Feb_21")),
+  Family = as.factor(Family),
+  Genus = as.factor(Genus),
+  Species =as.factor(Species))
+
+```
+
+# Split MAXN and POINT data
+Filter using string detect
+
+```{r}
+maxn<-data %>% filter(
+  str_detect(filename, "MAXN")
+)
+
+points<-data %>% filter(
+  str_detect(filename, "POINT")
+)
+
+```
+
+
+# Transfer the species name from comments to Species variable in points
+```{r}
+points<-points %>% 
+  mutate(
+    Species = case_when(Species == "sp" ~ as.character(Comment),
+                        TRUE ~ as.character(Species)),
+    Species = as.factor(Species))
+```
+
+# Check for remaining NA values in points Species
+```{r}
+points2<-points %>% filter(is.na(Species)) # Na species
+points<-points %>% filter(!is.na(Species)) # Non-na species
+
+# Looks like should be a gymnocranium euanus
+points2$Species[1]<- "euanus"
+
+```
+
+# Rebind points and points2
+```{r}
+points<-rbind(points,points2)
+```
+
+# Select frame family genus species from points
+```{r}
+points2<-points %>% 
+  mutate(Species_name=as.factor(paste(Genus,Species, sep = " ")))%>% 
+  distinct()
+
+```
+
+# My custom maxn calculation
+Picks out distinct observations by frame and chooses the frame with the highest counts. with_ties = FALSE will pick the first frame in a tie.
+
+```{r}
+points3<-points2 %>% group_by(filename,Family,Genus, Species) %>%
+  slice_max(Number, with_ties = FALSE) %>% 
+  mutate(
+    MaxN = coalesce(MaxN, Number)
+  )
+
+```
+
+At this point check that the number of obs from the manual maxn matches the EM Maxn data.
+
+# Write to csv
+```{r}
+write.csv(points3, file= "../0_data/BRUV_fish_data.csv", row.names = FALSE)
+
+
+```
+
+
+

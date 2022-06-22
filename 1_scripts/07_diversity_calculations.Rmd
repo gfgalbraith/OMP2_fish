@@ -84,7 +84,7 @@ diversity.data<-left_join(diversity.data, transect.data, by="T_ID")
 # Write CSV
 ```{r}
 
-write.csv(diversity.data, file= "../0_data/ROV_fish_diversity.csv", row.names = FALSE)
+write.csv(diversity.data, file= "../2_outputs/ROV_fish_diversity.csv", row.names = FALSE)
 
 ```
 

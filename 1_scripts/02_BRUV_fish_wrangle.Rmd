@@ -1,0 +1,68 @@
+---
+title: "02_BRUV_fish_wrangle"
+output: html_document
+date: '2022-06-22'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This markdown takes the prepared fish data from the initial BRUV wrangle (01_BRUV_initial_wrangle). Is removes unnecessary variables, forms a unique transect/drop ID and merged with the site information.
+
+#Housekeeping
+```{}
+rm(list=ls())
+#dev.off()
+getwd()
+```
+
+#Libraries
+```{r}
+library(tidyverse)
+library(readr)
+```
+
+# Data import
+
+```{r}
+fish <-read_csv("../0_data/BRUV_fish_data.csv")
+
+fish<-fish %>% select(Survey,Reef, Site,Drop,Frame,Depth, Comment, Family, Genus, Species,Code, MaxN, Species_name)
+
+fish <- fish %>% mutate(
+  Reef=as.factor(Reef),
+  Survey=as.factor(Survey),
+  Site=as.factor(Site),
+  Drop =as.factor(Drop),
+  Depth = as.factor(Depth))
+```
+
+Create Unique Transect ID, T_ID - must be T to match later analyses with ROV data.
+
+```{r}
+fish<-fish %>% mutate(
+  T_ID = as.factor(paste(Survey,Site,Drop, sep = "_"))
+)
+
+```
+
+# Import drop locations summary info
+```{r}
+sites <-read_csv("../0_data/BRUV_site_drop_summary.csv")
+
+```
+# Define variables and create matching T_ID
+```{r}
+sites <- sites %>% mutate(
+  Reef=as.factor(Reef),
+  Survey=as.factor(Survey),
+  Site=as.factor(Site),
+  Drop =as.factor(paste("D",Drop, sep ="")),
+  Depth = as.factor(Depth),
+  Habitat = as.factor(Habitat),
+  T_ID = as.factor(paste(Survey,R_site_code,Drop, sep = "_")),
+  Site = as.factor(R_site_code)) %>% 
+  select(-R_site_code)
+
+```

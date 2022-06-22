@@ -64,8 +64,8 @@ seecol(depth.cols,
 
 # Data import
 ```{r}
-diversity <-read_csv("../0_data/fish_diversity.csv")
-biomass <-read_csv("../0_data/fish_biomass.csv")
+diversity <-read_csv("../2_outputs/ROV_fish_diversity.csv")
+biomass <-read_csv("../2_outputs/ROV_transect_biomass.csv")
 biomass<-biomass %>% select(T_ID, Total_Biomass_g)
 
 fish<-left_join(diversity, biomass, by="T_ID")
@@ -85,6 +85,7 @@ fish <- fish %>% mutate(
 # spotted T_ID error
 Check BVille transects, some observations do not have a transect number
 A fix for now
+
 ```{r}
 fish <- fish %>% 
   mutate(
@@ -128,7 +129,7 @@ fish <- fish %>% mutate(
 
 unique(fish$Depth_bin)
 
-# Ordered factor for Region
+# Ordered factor for depth
 fish <-fish %>% mutate(
   Depth_bin = factor(Depth_bin, levels= c("Shallow","Mid","Deep"),
                                          ordered = TRUE))
@@ -146,9 +147,9 @@ glmm1<- glmmTMB(richness ~ Depth_bin+Region+(1|Reef),data = na.omit(fish), famil
 simulateResiduals(glmm1, plot=TRUE) # fit is fine
 
 summary(glmm1)
-Anova(glmm1) # season is not a sig predictor of fish spawned count
+Anova(glmm1) # depth nor region is not a sig predictor of fish species richness
 
-means<-emmeans(glmm1, pairwise~ Depth_bin+Region, transform="response") %>% 
+means<-emmeans(glmm1, pairwise~ Depth_bin+Region, type="response") %>% 
   confint()
 
 means
@@ -161,7 +162,7 @@ ggplot(fish, aes(y=richness, x=Depth_bin)) +
   geom_boxplot(outlier.colour="black", outlier.shape=16,
              outlier.size=2, notch=FALSE)+
   scale_fill_viridis(discrete = TRUE, option = "plasma", direction= -1, alpha =0.7) +
-  ylab("Richness (\u00B1 SE)")+
+  ylab("Richness (taxa.site-1)")+
   xlab("Depth")+
   scale_y_continuous(expand = c(0, 0), limits = c(0, 50))+ 
   facet_wrap(~Region)+
@@ -173,7 +174,7 @@ ggplot(fish, aes(y=richness, x=Depth_bin)) +
         legend.position = "none",
         plot.margin=unit(c(15,5,5,10),"mm"))
 
-
+# ylab("Richness (\u00B1 SE)")+
 ```
 
 
@@ -199,6 +200,7 @@ P1<-ggplot(plot.means, aes(y=response, x=Depth_bin)) +
         legend.position = "none",
         strip.text = element_text(size = 14, colour = "black", face = "bold"),
         strip.background = element_blank())
+
 
 
         #plot.margin=unit(c(15,5,5,10),"mm"))

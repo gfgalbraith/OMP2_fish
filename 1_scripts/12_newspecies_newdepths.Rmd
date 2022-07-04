@@ -1,0 +1,86 @@
+---
+title: "12_newspecies_newdepths"
+author: "GF Galbraith"
+date: '2022-06-24'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This script takes the fish observed on ROV or BRUV surveys and matches/anti-matches with the species list from the shallow monitoring surveys. ---> new species observed in deep surveys
+
+Also matches with rfishbase list for depth ranges to give a list of new depth records from the study based on fishbase information.
+
+#Housekeeping
+```{}
+rm(list=ls())
+#dev.off()
+getwd()
+```
+
+#Libraries
+```{r}
+library(tidyverse)
+library(readr)
+```
+
+# Data import
+
+```{r}
+rov.fish <-read_csv("../2_outputs/ROV_Fish_Final.csv")  # ROV fish data including site info
+
+rov.fish <- rov.fish %>% mutate(
+  Reef=as.factor(Reef),
+  Survey=as.factor(Survey),
+  Transect= as.factor(Transect),
+  Site=as.factor(Site),
+  T_ID_ = as.factor(T_ID),
+  Depth = as.factor(Depth),
+  Species_name = as.factor(Species_name))
+
+# bruv.fish<-  TBC
+
+
+monitoring<-read_csv("../0_data/Monitoring_species.csv") # all species from the UVU shallow surveys,a,b and functional group
+
+monitoring <- monitoring %>% mutate(
+  Family = as.factor(Family),
+  Species = as.factor(Species),
+  Species_name = as.factor(Species),
+  `Functional group` = as.factor(`Functional group`)
+)
+```
+
+
+# Unique species from ROV or BUV
+```{R}
+unique.rov<-rov.fish %>% 
+  distinct(Species_name)
+
+# unique.bruv<-
+
+```
+
+# Anti Match with monitoring species
+```{r}
+df<-anti_join(rov.fish, monitoring, by = "Species_name")
+
+df<-df %>% distinct(Species_name)
+
+```
+
+# Get rid of anything only identified to "sp" in deep surveys
+```{r}
+df<-df %>% filter(!str_detect(Species_name,"sp"))
+
+# or regex (?!.*sp.*)^.*$
+```
+
+# Export to csv for checking
+```{r}
+write.csv(df, file= "../2_outputs/newspecies_ROV.csv", row.names = FALSE)
+
+
+```

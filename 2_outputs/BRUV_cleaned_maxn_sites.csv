@@ -1,0 +1,24 @@
+"Survey","Reef","Site","Drop","Frame","Depth","Comment","Family","Genus","Species","Code","MaxN","Species_name","T_ID","Date","Lat","Long","Habitat","Aspect","Benthic_Complexity"
+"Feb_21","Chilcott","Chilcott_1","D3",42777,"50",NA,"Balistidae","Abalistes","filamentosus",37465089,1,"Abalistes filamentosus","Feb_21_Chilcott_1_D3","13/02/2021",16.92783,150.02371,"outer_reef",NA,NA
+"Feb_21","Chilcott","Chilcott_1","D3",1600,"50",NA,"Carangidae","Decapterus","macarellus",37337055,2,"Decapterus macarellus","Feb_21_Chilcott_1_D3","13/02/2021",16.92783,150.02371,"outer_reef",NA,NA
+"Feb_21","Chilcott","Chilcott_1","D3",11091,"50",NA,"Carcharhinidae","Carcharhinus","albimarginatus",37018027,1,"Carcharhinus albimarginatus","Feb_21_Chilcott_1_D3","13/02/2021",16.92783,150.02371,"outer_reef",NA,NA
+"Feb_21","Chilcott","Chilcott_1","D3",16475,"50",NA,"Labridae","Choerodon","jordani",37384077,1,"Choerodon jordani","Feb_21_Chilcott_1_D3","13/02/2021",16.92783,150.02371,"outer_reef",NA,NA
+"Feb_21","Chilcott","Chilcott_1","D3",4020,"50","nigromarginatus","Labridae","Oxycheilinus","nigromarginatus",NA,3,"Oxycheilinus nigromarginatus","Feb_21_Chilcott_1_D3","13/02/2021",16.92783,150.02371,"outer_reef",NA,NA
+"Feb_21","Chilcott","Chilcott_1","D3",9912,"50","cerasinus","Labridae","Pseudojuloides","cerasinus",NA,1,"Pseudojuloides cerasinus","Feb_21_Chilcott_1_D3","13/02/2021",16.92783,150.02371,"outer_reef",NA,NA
+"Feb_21","Chilcott","Chilcott_1","D3",29794,"50",NA,"Lethrinidae","Gymnocranius","euanus",NA,6,"Gymnocranius euanus","Feb_21_Chilcott_1_D3","13/02/2021",16.92783,150.02371,"outer_reef",NA,NA
+"Feb_21","Chilcott","Chilcott_1","D3",52197,"50",NA,"Lethrinidae","Lethrinus","miniatus",37351009,2,"Lethrinus miniatus","Feb_21_Chilcott_1_D3","13/02/2021",16.92783,150.02371,"outer_reef",NA,NA
+"Feb_21","Chilcott","Chilcott_1","D3",17087,"50",NA,"Lethrinidae","Lethrinus","rubrioperculatus",37351012,16,"Lethrinus rubrioperculatus","Feb_21_Chilcott_1_D3","13/02/2021",16.92783,150.02371,"outer_reef",NA,NA
+"Feb_21","Chilcott","Chilcott_1","D3",12258,"50",NA,"Lutjanidae","Aprion","virescens",37346027,1,"Aprion virescens","Feb_21_Chilcott_1_D3","13/02/2021",16.92783,150.02371,"outer_reef",NA,NA
+"Feb_21","Chilcott","Chilcott_1","D3",47241,"50","pflugeri","Mullidae","Mulloidichthys","pflugeri",NA,2,"Mulloidichthys pflugeri","Feb_21_Chilcott_1_D3","13/02/2021",16.92783,150.02371,"outer_reef",NA,NA
+"Feb_21","Chilcott","Chilcott_1","D4",22222,"49",NA,"Acanthuridae","Naso","annulatus",37437024,1,"Naso annulatus","Feb_21_Chilcott_1_D4","13/02/2021",16.9336,150.02206,"outer_reef",NA,NA
+"Feb_21","Chilcott","Chilcott_1","D4",10917,"49",NA,"Balistidae","Pseudobalistes","flavimarginatus",37465071,1,"Pseudobalistes flavimarginatus","Feb_21_Chilcott_1_D4","13/02/2021",16.9336,150.02206,"outer_reef",NA,NA
+"Feb_21","Chilcott","Chilcott_1","D4",25943,"49",NA,"Carcharhinidae","Carcharhinus","albimarginatus",37018027,1,"Carcharhinus albimarginatus","Feb_21_Chilcott_1_D4","13/02/2021",16.9336,150.02206,"outer_reef",NA,NA
+"Feb_21","Chilcott","Chilcott_1","D4",39520,"49",NA,"Carcharhinidae","Triaenodon","obesus",37018038,1,"Triaenodon obesus","Feb_21_Chilcott_1_D4","13/02/2021",16.9336,150.02206,"outer_reef",NA,NA
+"Feb_21","Chilcott","Chilcott_1","D4",30758,"49","longipes","Labridae","Hologymnosus","longipes",NA,2,"Hologymnosus longipes","Feb_21_Chilcott_1_D4","13/02/2021",16.9336,150.02206,"outer_reef",NA,NA
+"Feb_21","Chilcott","Chilcott_1","D4",35246,"49","euanus","Lethrinidae","Gymnocranius","euanus",NA,10,"Gymnocranius euanus","Feb_21_Chilcott_1_D4","13/02/2021",16.9336,150.02206,"outer_reef",NA,NA
+"Feb_21","Chilcott","Chilcott_1","D4",57502,"49",NA,"Lethrinidae","Lethrinus","miniatus",37351009,3,"Lethrinus miniatus","Feb_21_Chilcott_1_D4","13/02/2021",16.9336,150.02206,"outer_reef",NA,NA
+"Feb_21","Chilcott","Chilcott_1","D4",7166,"49",NA,"Lethrinidae","Lethrinus","rubrioperculatus",37351012,11,"Lethrinus rubrioperculatus","Feb_21_Chilcott_1_D4","13/02/2021",16.9336,150.02206,"outer_reef",NA,NA
+"Feb_21","Chilcott","Chilcott_1","D4",2979,"49",NA,"Lethrinidae","Lethrinus","semicinctus",37351016,3,"Lethrinus semicinctus","Feb_21_Chilcott_1_D4","13/02/2021",16.9336,150.02206,"outer_reef",NA,NA
+"Feb_21","Chilcott","Chilcott_1","D4",58912,"49",NA,"Lutjanidae","Aprion","virescens",37346027,1,"Aprion virescens","Feb_21_Chilcott_1_D4","13/02/2021",16.9336,150.02206,"outer_reef",NA,NA
+"Feb_21","Chilcott","Chilcott_1","D4",11849,"49","pflugeri","Mullidae","Mulloidichthys","pflugeri",NA,1,"Mulloidichthys pflugeri","Feb_21_Chilcott_1_D4","13/02/2021",16.9336,150.02206,"outer_reef",NA,NA
+"Feb_21","Chilcott","Chilcott_1","D4",11234,"49",NA,"Siganidae","Siganus","argenteus",37438007,5,"Siganus argenteus","Feb_21_Chilcott_1_D4","13/02/2021",16.9336,150.02206,"outer_reef",NA,NA

@@ -41,7 +41,7 @@ fish <- fish %>% mutate(
 Take the output file "transect_summary_data" and merge by TID. This now assigns the details e.g. depth, temp, complexity etc to each observation
 
 ```{r}
-transect_data <-read_csv("../0_data/Feb21_Transect_Summary.csv")
+transect_data <-read_csv("../0_data/ROV_Transect_Summary.csv")
 
 transect_data<-select(transect_data,c(-Day_no, -Dive_no, -Trash, -Cucumbers,- Notes))
 

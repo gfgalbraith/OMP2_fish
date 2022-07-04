@@ -98,6 +98,7 @@ points2$Species[1]<- "euanus"
 # Rebind points and points2
 ```{r}
 points<-rbind(points,points2)
+points %>% filter(is.na(Species))
 ```
 
 # Select frame family genus species from points
@@ -125,8 +126,6 @@ At this point check that the number of obs from the manual maxn matches the EM M
 # Write to csv
 ```{r}
 write.csv(points3, file= "../0_data/BRUV_fish_data.csv", row.names = FALSE)
-
-
 ```
 
 

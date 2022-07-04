@@ -1,0 +1,53 @@
+---
+title: "11_functional_proportions"
+author: "GF Galbraith"
+date: '2022-06-24'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This script uses the monitoring species list and functional groups and merges with ROV/BRUV species to break down into functional groups.
+
+#Housekeeping
+```{}
+rm(list=ls())
+#dev.off()
+getwd()
+```
+
+#Libraries
+```{r}
+library(tidyverse)
+library(readr)
+```
+
+# Data import
+
+```{r}
+rov.fish <-read_csv("../2_outputs/ROV_Fish_Final.csv")  # ROV fish data including site info
+
+rov.fish <- rov.fish %>% mutate(
+  Reef=as.factor(Reef),
+  Survey=as.factor(Survey),
+  Transect= as.factor(Transect),
+  Site=as.factor(Site),
+  T_ID_ = as.factor(T_ID),
+  Depth = as.factor(Depth),
+  Species_name = as.factor(Species_name))
+
+# bruv.fish<-  TBC
+
+
+monitoring<-read_csv("../0_data/Monitoring_species.csv") # all species from the UVU shallow surveys,a,b and functional group
+
+monitoring <- monitoring %>% mutate(
+  Family = as.factor(Family),
+  Species = as.factor(Species),
+  Species_name = as.factor(Species),
+  `Functional group` = as.factor(`Functional group`)
+)
+```
+

@@ -64,5 +64,16 @@ sites <- sites %>% mutate(
   T_ID = as.factor(paste(Survey,R_site_code,Drop, sep = "_")),
   Site = as.factor(R_site_code)) %>% 
   select(-R_site_code)
+```
+
+#Merge
+```{r}
+merged.data<-left_join(fish, sites, by = c("Survey", "Site","Reef","Drop","Depth","T_ID"))
+```
+
+# Write csv
+```{r}
+write.csv(merged.data, file= "../2_outputs/BRUV_cleaned_maxn_sites.csv", row.names = FALSE)
+
 
 ```

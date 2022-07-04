@@ -30,7 +30,7 @@ library(readr)
 
 #Import data
 Files need to have been saved as csv, all excel modifications made and renamed as per analysis instructions.
-```{r}
+```{r,echo=FALSE, results=FALSE, include=FALSE}
 # We need the reef, site name as a new variable to identify the source of the data
 # Pulls each file in, merges and creates a filename variable. 
 
@@ -42,6 +42,8 @@ files <- list.files(path, pattern="csv", full.names=TRUE) %>%
 data <- files %>% map_dfr(read_csv, .id="filename")
 
 ```
+
+
 # Tidy variables
 ```{r}
 data <- data %>% mutate(
@@ -54,12 +56,52 @@ data <- data %>% mutate(
   Site =  as.factor(paste(Reef, Site, sep = "_")),
   Drop = as.factor(Drop),
   Count_type = as.factor(Count_type),
-  Survey=as.factor(case_when(grepl("FEB2021", Survey) ~ "Feb_21")),
+  Survey=as.factor(case_when(grepl("FEB2021", Survey) ~ "Feb_21",
+                             grepl("OCT2021", Survey) ~ "Oct_21")),
   Family = as.factor(Family),
   Genus = as.factor(Genus),
   Species =as.factor(Species))
 
 ```
+
+# Change site names in the Site Factor to the R code site names
+
+```{r}
+levels(data$Site)
+
+# old_name = new_name
+
+data <- data %>% mutate(Site =recode_factor(Site,'CHILCOTT_CHILCOTT' = 'CHILCOTT_1',
+                                           'HERALD_HERALD' = 'HERALD_1',
+                                           'HOLMES_HOLMES' = 'HOLMES_1',
+                                           'KENN_KENN' = 'KENN_1',
+                                           'MARION_MARION' = 'MARION_1',
+                                           'WILLIS_WILLIS' = 'WILLIS_1',
+                                           "FLINDERS_N" = "FLINDERS_N1",
+                                           "LIHOU_N" = "LIHOU_N1",
+                                           "LIHOU_S" = "LIHOU_S1",
+                                           "SAUMAREZ_N" = "SAUMAREZ_N1",
+                                           "WRECK_W" = "WRECK_W1"))
+                        
+levels(data$Site)
+
+# Ashmore is not just one site - 5 days of drops, 5 different sites - 4/07/22 eventually just manually renamed all the csv files as there was no date ID in the EM files to distinguish. 
+
+
+```
+
+# De-captialise Reef and Site names
+```{r}
+data<-data%>% mutate(Site = str_to_title(Site),
+                     Reef = str_to_title(Reef))
+
+
+data$Site<-gsub("(?<=^|_)([a-z])", "\\U\\1", data$Site, perl=TRUE)
+
+
+
+```
+
 
 # Split MAXN and POINT data
 Filter using string detect
@@ -87,17 +129,39 @@ points<-points %>%
 
 # Check for remaining NA values in points Species
 ```{r}
-points2<-points %>% filter(is.na(Species)) # Na species
-points<-points %>% filter(!is.na(Species)) # Non-na species
+points2<-points %>% filter(is.na(Species)) # 123 Na species
+points<-points %>% filter(!is.na(Species)) # 2165 # Non-na species
+```
 
-# Looks like should be a gymnocranium euanus
-points2$Species[1]<- "euanus"
+# Addressing missing species issues in points2
+```{r}
+unique(points2$Comment)
+
+# in Comments:  
+
+# unknown spp is fine
+
+# Aipysurus laevis = olive sea snake - filter observations and save as sep data
+# search for "Aipysurus" ---> there are 10 observations in different entry formats (comment, genus and species)
+
+snakes <- data %>% filter(Comment == "Aipysurus laevis" | Genus=="Aipysurus") # note filtered from "data" as 2x observations has "sp" in species so are not detected in the points2 filter
+points2<-points2%>%subset(Comment != 'Aipysurus laevis' | is.na(Comment)) # remove snakes from points (2 obs) and points2 (4obs)
+points<-points%>%subset(Genus != 'Aipysurus') 
+write.csv(snakes, file= "../0_data/BRUV_snake_data.csv", row.names = FALSE)
+
+# Check remaining NA values in points2
+points2 %>% filter(is.na(Species)) # 119 obs
+points2 %>% distinct(Family, Genus, .keep_all = TRUE) # 38 unique
+points3<-points2 %>% distinct(Family, Genus, .keep_all = TRUE)
+
+# All the missing sp look legit, just unknowns, no spelling mistakes etc...
 
 ```
 
 # Rebind points and points2
 ```{r}
-points<-rbind(points,points2)
+# check new points4 matches obs in original points
+points4<-rbind(points,points2)
 points %>% filter(is.na(Species))
 ```
 
@@ -122,6 +186,7 @@ points3<-points2 %>% group_by(filename,Family,Genus, Species) %>%
 ```
 
 At this point check that the number of obs from the manual maxn matches the EM Maxn data.
+Note Maxn will also need wrangling to remove seasnakes, missing sp names etc
 
 # Write to csv
 ```{r}

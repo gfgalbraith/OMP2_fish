@@ -1,0 +1,29 @@
+﻿Filename,Frame,Time (mins),Period,Period time (mins),Image row,Image col,Width,Height,OpCode,TapeReader,Depth,Family,Genus,Species,Code,Number,Stage,Activity,Comment
+KENN_BRUV5_C3_01.MP4,16725,4.6505,Kenn_BRUV5_start,0.2272,694.29,1327.34,0,0,ENN_BRUV5_C3,ECM,72,Lethrinidae,Lethrinus,rubrioperculatus,37351012,2,AD,Passing,
+KENN_BRUV5_C3_01.MP4,18385,5.1121,Kenn_BRUV5_start,0.6887,606.62,133.26,0,0,ENN_BRUV5_C3,ECM,72,Mullidae,Mulloidichthys,sp,,2,AD,Passing,pfluegeri
+KENN_BRUV5_C3_01.MP4,18583,5.1671,Kenn_BRUV5_start,0.7438,606.62,1495.67,0,0,ENN_BRUV5_C3,ECM,72,Lethrinidae,Gymnocranius,sp,,3,AD,Passing,euanus
+KENN_BRUV5_C3_01.MP4,19577,5.4435,Kenn_BRUV5_start,1.0202,394.48,1820.05,0,0,ENN_BRUV5_C3,ECM,72,Lethrinidae,Gymnocranius,sp,,4,AD,Passing,
+KENN_BRUV5_C3_01.MP4,28510,7.9274,Kenn_BRUV5_start,3.5041,802.99,1451.84,0,0,ENN_BRUV5_C3,ECM,72,Lethrinidae,Gymnocranius,sp,,4,AD,Passing,euanus
+KENN_BRUV5_C3_01.MP4,31248,8.6887,Kenn_BRUV5_start,4.2654,683.77,1111.67,0,0,ENN_BRUV5_C3,ECM,72,Lethrinidae,Gymnocranius,sp,,5,AD,Passing,
+KENN_BRUV5_C3_01.MP4,31590,8.7838,Kenn_BRUV5_start,4.3605,687.27,1209.86,0,0,ENN_BRUV5_C3,ECM,72,Lethrinidae,Lethrinus,rubrioperculatus,37351012,5,AD,Passing,
+KENN_BRUV5_C3_01.MP4,32534,9.0463,Kenn_BRUV5_start,4.623,501.43,776.77,0,0,ENN_BRUV5_C3,ECM,72,Lethrinidae,Lethrinus,rubrioperculatus,37351012,6,AD,Passing,
+KENN_BRUV5_C3_01.MP4,39388,10.9521,Kenn_BRUV5_start,6.5287,720.58,1106.41,0,0,ENN_BRUV5_C3,ECM,72,Lethrinidae,Lethrinus,rubrioperculatus,37351012,8,AD,Passing,
+KENN_BRUV5_C3_01.MP4,40694,11.3152,Kenn_BRUV5_start,6.8919,496.17,1520.22,0,0,ENN_BRUV5_C3,ECM,72,Lethrinidae,Gymnocranius,sp,,6,AD,Passing,euanus
+KENN_BRUV5_C3_01.MP4,49670,13.811,Kenn_BRUV5_start,9.3877,596.1,1511.45,0,0,ENN_BRUV5_C3,ECM,72,Lutjanidae,Aprion,virescens,37346027,1,AD,Passing,
+KENN_BRUV5_C3_01.MP4,62286,17.319,Kenn_BRUV5_start,12.8957,433.05,818.85,0,0,ENN_BRUV5_C3,ECM,72,Carangidae,Seriola,rivoliana,37337052,2,AD,Passing,
+KENN_BRUV5_C3_02.MP4,26175,24.9291,Kenn_BRUV5_start,20.5058,818.77,1648.22,0,0,ENN_BRUV5_C3,ECM,72,Malacanthidae,Malacanthus,brevirostris,37331009,1,AD,Passing,
+KENN_BRUV5_C3_02.MP4,27070,25.1779,Kenn_BRUV5_start,20.7546,615.39,1739.4,0,0,ENN_BRUV5_C3,ECM,72,Carcharhinidae,Carcharhinus,albimarginatus,37018027,1,AD,Passing,
+KENN_BRUV5_C3_02.MP4,35629,27.5578,Kenn_BRUV5_start,23.1345,643.44,1041.53,0,0,ENN_BRUV5_C3,ECM,72,,,,,1,AD,Passing,Aipysurus laevis
+KENN_BRUV5_C3_02.MP4,40398,28.8839,Kenn_BRUV5_start,24.4605,603.12,1525.48,0,0,ENN_BRUV5_C3,ECM,72,Carcharhinidae,Carcharhinus,albimarginatus,37018027,2,AD,Passing,
+KENN_BRUV5_C3_02.MP4,50817,31.7809,Kenn_BRUV5_start,27.3576,752.14,1713.1,0,0,ENN_BRUV5_C3,ECM,72,Malacanthidae,Malacanthus,brevirostris,37331009,2,AD,Passing,
+KENN_BRUV5_C3_03.MP4,34398,44.8498,Kenn_BRUV5_start,40.4265,1050.19,1671.01,0,0,ENN_BRUV5_C3,ECM,72,Pomacanthidae,Genicanthus,sp,,1,AD,Passing,watanabei
+KENN_BRUV5_C3_03.MP4,36076,45.3164,Kenn_BRUV5_start,40.8931,1030.91,1520.22,0,0,ENN_BRUV5_C3,ECM,72,Labridae,Bodianus,bimaculatus,37384055,2,AD,Passing,
+KENN_BRUV5_C3_03.MP4,36622,45.4682,Kenn_BRUV5_start,41.0449,850.32,1832.33,0,0,ENN_BRUV5_C3,ECM,72,Labridae,Bodianus,bimaculatus,37384055,4,AD,Passing,
+KENN_BRUV5_C3_03.MP4,42169,47.0106,Kenn_BRUV5_start,42.5873,1036.17,1595.62,0,0,ENN_BRUV5_C3,ECM,72,Labridae,Bodianus,bimaculatus,37384055,5,AD,Passing,
+KENN_BRUV5_C3_03.MP4,46912,48.3294,Kenn_BRUV5_start,43.9061,937.99,1692.05,0,0,ENN_BRUV5_C3,ECM,72,Labridae,Oxycheilinus,bimaculatus,37384063,1,AD,Passing,
+KENN_BRUV5_C3_03.MP4,50205,49.245,Kenn_BRUV5_start,44.8217,769.68,226.19,0,0,ENN_BRUV5_C3,ECM,72,Pinguipedidae,Parapercis,sp,,1,AD,Passing,
+KENN_BRUV5_C3_04.MP4,1200,53.2532,Kenn_BRUV5_start,48.8299,743.38,771.51,0,0,ENN_BRUV5_C3,ECM,72,Labridae,Bodianus,bimaculatus,37384055,6,AD,Passing,
+KENN_BRUV5_C3_04.MP4,1864,53.4378,Kenn_BRUV5_start,49.0145,776.69,1204.6,0,0,ENN_BRUV5_C3,ECM,72,Labridae,Cirrhilabrus,sp,,2,AD,Passing,bathyphilus
+KENN_BRUV5_C3_04.MP4,2263,53.5488,Kenn_BRUV5_start,49.1255,794.22,117.48,0,0,ENN_BRUV5_C3,ECM,72,Labridae,Pseudojuloides,sp,,1,AD,Passing,cerasinus
+KENN_BRUV5_C3_04.MP4,6947,54.8512,Kenn_BRUV5_start,50.4279,724.09,266.52,0,0,ENN_BRUV5_C3,ECM,72,Serranidae,Pseudanthias,sp,,1,AD,Passing,
+KENN_BRUV5_C3_04.MP4,40488,64.1774,Kenn_BRUV5_start,59.7541,925.71,1818.3,0,0,ENN_BRUV5_C3,ECM,72,Cirrhitidae,Cyprinocirrhites,polyactis,37374006,4,AD,Passing,

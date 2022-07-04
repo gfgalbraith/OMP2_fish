@@ -1,0 +1,34 @@
+﻿Filename,Frame,Time (mins),Period,Period time (mins),Image row,Image col,Width,Height,OpCode,TapeReader,Depth,Family,Genus,Species,Code,Number,Stage,Activity,Comment
+SAUM_N_BRUV3_C4_01.MP4,15514,4.3138,Drop3_start,0.0503,943.25,324.38,0,0,Saum_N_BRUV3_C4,ECM,36,Chaetodontidae,Chaetodon,kleinii,37365040,1,AD,Passing,
+SAUM_N_BRUV3_C4_01.MP4,15514,4.3138,Drop3_start,0.0503,918.7,457.64,0,0,Saum_N_BRUV3_C4,ECM,36,Labridae,Oxycheilinus,bimaculatus,37384063,1,AD,Passing,
+SAUM_N_BRUV3_C4_01.MP4,15514,4.3138,Drop3_start,0.0503,771.43,354.19,0,0,Saum_N_BRUV3_C4,ECM,36,Balistidae,Sufflamen,chrysopterum,37465079,1,AD,Passing,
+SAUM_N_BRUV3_C4_01.MP4,16858,4.6875,Drop3_start,0.424,867.86,343.67,0,0,Saum_N_BRUV3_C4,ECM,36,Mullidae,Parupeneus,multifasciatus,37355026,3,AD,Passing,
+SAUM_N_BRUV3_C4_01.MP4,17117,4.7595,Drop3_start,0.4961,1018.64,822.36,0,0,Saum_N_BRUV3_C4,ECM,36,Labridae,Pseudocheilinus,evanidus,37384142,1,AD,Passing,
+SAUM_N_BRUV3_C4_01.MP4,17240,4.7937,Drop3_start,0.5303,718.83,115.73,0,0,Saum_N_BRUV3_C4,ECM,36,Labridae,Cirrhilabrus,sp,,4,AD,Passing,laboutei
+SAUM_N_BRUV3_C4_01.MP4,19892,5.5311,Drop3_start,1.2677,724.09,1052.05,0,0,Saum_N_BRUV3_C4,ECM,36,Mullidae,Parupeneus,multifasciatus,37355026,12,AD,Passing,
+SAUM_N_BRUV3_C4_01.MP4,19892,5.5311,Drop3_start,1.2677,771.43,1034.52,0,0,Saum_N_BRUV3_C4,ECM,36,Mullidae,Parupeneus,pleurostigma,37355027,1,AD,Passing,
+SAUM_N_BRUV3_C4_01.MP4,21477,5.9718,Drop3_start,1.7084,678.51,1153.75,0,0,Saum_N_BRUV3_C4,ECM,36,Labridae,,sp,,3,AD,Passing,
+SAUM_N_BRUV3_C4_01.MP4,21487,5.9746,Drop3_start,1.7112,745.13,1788.49,0,0,Saum_N_BRUV3_C4,ECM,36,Balistidae,Sufflamen,fraenatum,37465014,1,AD,Passing,
+SAUM_N_BRUV3_C4_01.MP4,21636,6.016,Drop3_start,1.7526,969.55,874.96,0,0,Saum_N_BRUV3_C4,ECM,36,Labridae,Pseudocheilinus,evanidus,37384142,2,AD,Passing,
+SAUM_N_BRUV3_C4_01.MP4,22522,6.2624,Drop3_start,1.9989,462.86,1206.36,0,0,Saum_N_BRUV3_C4,ECM,36,Carcharhinidae,Carcharhinus,amblyrhynchos,37018030,1,AD,Passing,
+SAUM_N_BRUV3_C4_01.MP4,22529,6.2643,Drop3_start,2.0009,704.81,1607.89,0,0,Saum_N_BRUV3_C4,ECM,36,Balistidae,Balistoides,conspicillum,37465031,1,AD,Passing,
+SAUM_N_BRUV3_C4_01.MP4,23604,6.5632,Drop3_start,2.2998,999.35,594.41,0,0,Saum_N_BRUV3_C4,ECM,36,Pomacentridae,Pomacentrus,sp,,2,AD,Passing,
+SAUM_N_BRUV3_C4_01.MP4,23769,6.6091,Drop3_start,2.3457,622.4,285.81,0,0,Saum_N_BRUV3_C4,ECM,36,Labridae,Cirrhilabrus,sp,,14,AD,Passing,laboutei
+SAUM_N_BRUV3_C4_01.MP4,29526,8.2099,Drop3_start,3.9464,722.34,894.25,0,0,Saum_N_BRUV3_C4,ECM,36,Synodontidae,Synodus,sp,,1,AD,Passing,euanus
+SAUM_N_BRUV3_C4_01.MP4,37073,10.3084,Drop3_start,6.0449,657.47,1036.27,0,0,Saum_N_BRUV3_C4,ECM,36,Lethrinidae,Lethrinus,rubrioperculatus,37351012,8,AD,Passing,
+SAUM_N_BRUV3_C4_01.MP4,41996,11.6772,Drop3_start,7.4138,753.9,1223.89,0,0,Saum_N_BRUV3_C4,ECM,36,Lethrinidae,Lethrinus,rubrioperculatus,37351012,10,AD,Passing,
+SAUM_N_BRUV3_C4_01.MP4,46298,12.8734,Drop3_start,8.61,667.99,1195.84,0,0,Saum_N_BRUV3_C4,ECM,36,Lethrinidae,Lethrinus,olivaceus,37351004,2,AD,Passing,
+SAUM_N_BRUV3_C4_01.MP4,47496,13.2065,Drop3_start,8.9431,569.81,789.04,0,0,Saum_N_BRUV3_C4,ECM,36,Carangidae,Caranx,melampygus,37337050,1,AD,Passing,
+SAUM_N_BRUV3_C4_01.MP4,49325,13.7151,Drop3_start,9.4517,569.81,713.64,0,0,Saum_N_BRUV3_C4,ECM,36,Lethrinidae,Lethrinus,olivaceus,37351004,2,AD,Passing,
+SAUM_N_BRUV3_C4_01.MP4,50700,14.0974,Drop3_start,9.834,389.22,1146.74,0,0,Saum_N_BRUV3_C4,ECM,36,Siganidae,Siganus,argenteus,37438007,4,AD,Passing,
+SAUM_N_BRUV3_C4_01.MP4,53845,14.9719,Drop3_start,10.7085,603.12,1597.37,0,0,Saum_N_BRUV3_C4,ECM,36,Balistidae,Sufflamen,fraenatum,37465014,2,AD,Passing,
+SAUM_N_BRUV3_C4_01.MP4,57773,16.0641,Drop3_start,11.8007,420.78,1153.75,0,0,Saum_N_BRUV3_C4,ECM,36,Lutjanidae,Aprion,virescens,37346027,1,AD,Passing,
+SAUM_N_BRUV3_C4_02.MP4,188,17.6866,Drop3_start,13.4231,471.62,1325.59,0,0,Saum_N_BRUV3_C4,ECM,36,Carcharhinidae,Carcharhinus,amblyrhynchos,37018030,2,AD,Passing,
+SAUM_N_BRUV3_C4_02.MP4,9729,20.3395,Drop3_start,16.0761,978.31,1227.4,0,0,Saum_N_BRUV3_C4,ECM,36,Lethrinidae,Gymnocranius,sp,,2,AD,Passing,euanus
+SAUM_N_BRUV3_C4_02.MP4,34347,27.1847,Drop3_start,22.9212,631.17,1676.27,0,0,Saum_N_BRUV3_C4,ECM,36,Serranidae,Variola,louti,37311166,1,AD,Passing,
+SAUM_N_BRUV3_C4_02.MP4,43854,29.8281,Drop3_start,25.5647,638.18,890.74,0,0,Saum_N_BRUV3_C4,ECM,36,Lutjanidae,Lutjanus,bohar,37346029,1,AD,Passing,
+SAUM_N_BRUV3_C4_02.MP4,55831,33.1584,Drop3_start,28.895,436.56,1592.11,0,0,Saum_N_BRUV3_C4,ECM,36,Acanthuridae,Naso,unicornis,37437031,1,AD,Passing,
+SAUM_N_BRUV3_C4_03.MP4,4591,36.5451,Drop3_start,32.2817,659.22,1723.62,0,0,Saum_N_BRUV3_C4,ECM,36,Mullidae,Parupeneus,barberinus,37355022,1,AD,Passing,
+SAUM_N_BRUV3_C4_03.MP4,23422,41.7812,Drop3_start,37.5178,603.12,247.23,0,0,Saum_N_BRUV3_C4,ECM,36,Balistidae,Sufflamen,fraenatum,37465014,2,AD,Passing,
+SAUM_N_BRUV3_C4_04.MP4,15479,57.2069,Drop3_start,52.9434,429.55,985.42,0,0,Saum_N_BRUV3_C4,ECM,36,Lethrinidae,Gymnocranius,sp,,3,AD,Passing,euanus
+SAUM_N_BRUV3_C4_04.MP4,24900,59.8264,Drop3_start,55.563,916.95,775.01,0,0,Saum_N_BRUV3_C4,ECM,36,,,,,1,AD,Passing,Aipysurus laevis

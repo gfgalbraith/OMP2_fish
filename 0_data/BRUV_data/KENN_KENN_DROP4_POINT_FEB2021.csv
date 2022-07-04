@@ -1,0 +1,33 @@
+﻿Filename,Frame,Time (mins),Period,Period time (mins),Image row,Image col,Width,Height,OpCode,TapeReader,Depth,Family,Genus,Species,Code,Number,Stage,Activity,Comment
+KENN_BRUV4_C5_01.MP4,14012,3.8961,Kenn_BRUV4_Start,0.2672,405,40.33,0,0,KENN_BRUV4_C5,ECM,58,Lethrinidae,Gymnocranius,sp,,3,AD,Passing,euanus
+KENN_BRUV4_C5_01.MP4,14689,4.0844,Kenn_BRUV4_Start,0.4555,675,508.49,0,0,KENN_BRUV4_C5,ECM,58,Lethrinidae,Lethrinus,rubrioperculatus,37351012,1,AD,Passing,
+KENN_BRUV4_C5_01.MP4,17897,4.9764,Kenn_BRUV4_Start,1.3475,245.45,624.22,0,0,KENN_BRUV4_C5,ECM,58,Lethrinidae,Gymnocranius,sp,,6,AD,Passing,euanus
+KENN_BRUV4_C5_01.MP4,17897,4.9764,Kenn_BRUV4_Start,1.3475,703.05,1453.59,0,0,KENN_BRUV4_C5,ECM,58,Lethrinidae,Lethrinus,rubrioperculatus,37351012,2,AD,Passing,
+KENN_BRUV4_C5_01.MP4,19867,5.5241,Kenn_BRUV4_Start,1.8952,669.74,1325.59,0,0,KENN_BRUV4_C5,ECM,58,Labridae,Hologymnosus,sp,,1,AD,Passing,longipes
+KENN_BRUV4_C5_01.MP4,19867,5.5241,Kenn_BRUV4_Start,1.8952,655.71,1669.26,0,0,KENN_BRUV4_C5,ECM,58,Lethrinidae,Lethrinus,rubrioperculatus,37351012,3,AD,Passing,
+KENN_BRUV4_C5_01.MP4,20002,5.5617,Kenn_BRUV4_Start,1.9328,685.52,738.19,0,0,KENN_BRUV4_C5,ECM,58,Mullidae,Parupeneus,pleurostigma,37355027,1,AD,Passing,
+KENN_BRUV4_C5_01.MP4,22230,6.1812,Kenn_BRUV4_Start,2.5523,122.73,811.84,0,0,KENN_BRUV4_C5,ECM,58,Lethrinidae,Gymnocranius,sp,,7,AD,Passing,euanus
+KENN_BRUV4_C5_01.MP4,23237,6.4612,Kenn_BRUV4_Start,2.8323,622.4,1772.71,0,0,KENN_BRUV4_C5,ECM,58,Labridae,Hologymnosus,sp,,2,AD,Passing,longipes
+KENN_BRUV4_C5_01.MP4,25176,7.0003,Kenn_BRUV4_Start,3.3714,564.55,61.37,0,0,KENN_BRUV4_C5,ECM,58,Lethrinidae,Lethrinus,rubrioperculatus,37351012,4,AD,Passing,
+KENN_BRUV4_C5_01.MP4,25176,7.0003,Kenn_BRUV4_Start,3.3714,762.66,1351.89,0,0,KENN_BRUV4_C5,ECM,58,Mullidae,Parupeneus,cyclostomus,37355025,1,AD,Passing,
+KENN_BRUV4_C5_01.MP4,25444,7.0748,Kenn_BRUV4_Start,3.4459,487.4,718.9,0,0,KENN_BRUV4_C5,ECM,58,Siganidae,Siganus,argenteus,37438007,2,AD,Passing,
+KENN_BRUV4_C5_01.MP4,26255,7.3003,Kenn_BRUV4_Start,3.6714,464.61,1059.07,0,0,KENN_BRUV4_C5,ECM,58,Labridae,Hologymnosus,sp,,3,AD,Passing,longipes
+KENN_BRUV4_C5_01.MP4,26300,7.3129,Kenn_BRUV4_Start,3.684,489.16,1276.49,0,0,KENN_BRUV4_C5,ECM,58,Lethrinidae,Lethrinus,rubrioperculatus,37351012,5,AD,Passing,
+KENN_BRUV4_C5_01.MP4,29526,8.2099,Kenn_BRUV4_Start,4.581,717.08,760.99,0,0,KENN_BRUV4_C5,ECM,58,Labridae,Hologymnosus,sp,,4,AD,Passing,longipes
+KENN_BRUV4_C5_01.MP4,35728,9.9344,Kenn_BRUV4_Start,6.3055,559.29,173.59,0,0,KENN_BRUV4_C5,ECM,58,Carcharhinidae,Galeocerdo,cuvier,37018022,1,AD,Passing,
+KENN_BRUV4_C5_01.MP4,40634,11.2985,Kenn_BRUV4_Start,7.6696,631.17,1728.88,0,0,KENN_BRUV4_C5,ECM,58,Lethrinidae,Lethrinus,rubrioperculatus,37351012,7,AD,Passing,
+KENN_BRUV4_C5_01.MP4,42428,11.7973,Kenn_BRUV4_Start,8.1684,511.95,1593.86,0,0,KENN_BRUV4_C5,ECM,58,Acanthuridae,Acanthurus,dussumieri,,1,AD,Passing,dussumieri
+KENN_BRUV4_C5_01.MP4,44956,12.5003,Kenn_BRUV4_Start,8.8714,525.97,1162.52,0,0,KENN_BRUV4_C5,ECM,58,Epinephelidae,Epinephelus,maculatus,37311011,1,AD,Passing,
+KENN_BRUV4_C5_01.MP4,44956,12.5003,Kenn_BRUV4_Start,8.8714,718.83,1258.96,0,0,KENN_BRUV4_C5,ECM,58,Mullidae,Parupeneus,sp,,2,AD,Passing,
+KENN_BRUV4_C5_01.MP4,52600,14.6257,Kenn_BRUV4_Start,10.9968,543.51,776.77,0,0,KENN_BRUV4_C5,ECM,58,Carcharhinidae,Carcharhinus,amblyrhynchos,37018030,1,AD,Passing,
+KENN_BRUV4_C5_02.MP4,6931,19.5615,Kenn_BRUV4_Start,15.9326,850.32,855.67,0,0,KENN_BRUV4_C5,ECM,58,Lethrinidae,Lethrinus,rubrioperculatus,37351012,9,AD,Passing,
+KENN_BRUV4_C5_02.MP4,13051,21.2632,Kenn_BRUV4_Start,17.6343,930.97,445.37,0,0,KENN_BRUV4_C5,ECM,58,,,,,1,AD,Passing,Aipysurus laevis
+KENN_BRUV4_C5_02.MP4,14539,21.6769,Kenn_BRUV4_Start,18.048,462.86,1053.81,0,0,KENN_BRUV4_C5,ECM,58,Carcharhinidae,Carcharhinus,amblyrhynchos,37018030,2,AD,Passing,
+KENN_BRUV4_C5_02.MP4,23075,24.0504,Kenn_BRUV4_Start,20.4215,515.45,1299.29,0,0,KENN_BRUV4_C5,ECM,58,Lethrinidae,Lethrinus,rubrioperculatus,37351012,12,AD,Passing,
+KENN_BRUV4_C5_02.MP4,60391,34.4263,Kenn_BRUV4_Start,30.7974,506.69,1116.93,0,0,KENN_BRUV4_C5,ECM,58,Labridae,Bodianus,perditio,37384007,1,AD,Passing,
+KENN_BRUV4_C5_03.MP4,10421,38.1662,Kenn_BRUV4_Start,34.5373,461.1,1813.04,0,0,KENN_BRUV4_C5,ECM,58,Pomacanthidae,Pomacanthus,imperator,37365014,1,AD,Passing,
+KENN_BRUV4_C5_03.MP4,31362,43.9889,Kenn_BRUV4_Start,40.36,17.53,613.7,0,0,KENN_BRUV4_C5,ECM,58,Serranidae,Plectropomus,laevis,37311079,1,AD,Passing,
+KENN_BRUV4_C5_03.MP4,38408,45.9481,Kenn_BRUV4_Start,42.3192,294.55,1567.56,0,0,KENN_BRUV4_C5,ECM,58,Lutjanidae,Lutjanus,bohar,37346029,1,AD,Passing,
+KENN_BRUV4_C5_03.MP4,57093,51.1436,Kenn_BRUV4_Start,47.5147,802.99,82.41,0,0,KENN_BRUV4_C5,ECM,58,Mullidae,Parupeneus,pleurostigma,37355027,3,AD,Passing,
+KENN_BRUV4_C5_03.MP4,57093,51.1436,Kenn_BRUV4_Start,47.5147,760.91,555.84,0,0,KENN_BRUV4_C5,ECM,58,Mullidae,Parupeneus,multifasciatus,37355026,1,AD,Passing,
+KENN_BRUV4_C5_03.MP4,59696,51.8674,Kenn_BRUV4_Start,48.2385,604.87,1888.44,0,0,KENN_BRUV4_C5,ECM,58,Chaetodontidae,Chaetodon,sp,,2,AD,Passing,mertensii

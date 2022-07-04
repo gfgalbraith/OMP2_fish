@@ -1,0 +1,15 @@
+﻿Filename,Frame,Time (mins),Period,Period time (mins),OpCode,TapeReader,Depth,Family,Genus,Species,Code,MaxN,Has fed
+WRECK_W_BRUV3_C1_02.MP4,34663,9.6382,Start,4.1261,WRECK_W_BRUV3_C1,ECM,44,Balistidae,Sufflamen,fraenatum,37465014,2,No
+WRECK_W_BRUV3_C1_04.MP4,26250,42.5675,Start,37.0554,WRECK_W_BRUV3_C1,ECM,44,Carangidae,Elagatis,bipinnulata,37337029,1,No
+WRECK_W_BRUV3_C1_02.MP4,19953,5.548,Start,0.0359,WRECK_W_BRUV3_C1,ECM,44,Carcharhinidae,Carcharhinus,albimarginatus,37018027,2,No
+WRECK_W_BRUV3_C1_03.MP4,55330,33.0191,Start,27.5069,WRECK_W_BRUV3_C1,ECM,44,Carcharhinidae,Carcharhinus,amblyrhynchos,37018030,1,No
+WRECK_W_BRUV3_C1_04.MP4,40343,46.4862,Start,40.974,WRECK_W_BRUV3_C1,ECM,44,Echeneidae,Remora,remora,37336002,1,No
+WRECK_W_BRUV3_C1_03.MP4,57761,33.6951,Start,28.1829,WRECK_W_BRUV3_C1,ECM,44,Labridae,Leptojulis,cyanopleura,,2,No
+WRECK_W_BRUV3_C1_04.MP4,40443,46.514,Start,41.0018,WRECK_W_BRUV3_C1,ECM,44,Labridae,Novaculichthys,taeniourus,37384140,2,No
+WRECK_W_BRUV3_C1_03.MP4,27640,25.3197,Start,19.8076,WRECK_W_BRUV3_C1,ECM,44,Lethrinidae,Gymnocranius,sp,,5,No
+WRECK_W_BRUV3_C1_02.MP4,30341,8.4365,Start,2.9243,WRECK_W_BRUV3_C1,ECM,44,Lethrinidae,Lethrinus,rubrioperculatus,37351012,17,No
+WRECK_W_BRUV3_C1_02.MP4,44065,12.2525,Start,6.7403,WRECK_W_BRUV3_C1,ECM,44,Lutjanidae,Aprion,virescens,37346027,2,No
+WRECK_W_BRUV3_C1_03.MP4,19898,23.167,Start,17.6549,WRECK_W_BRUV3_C1,ECM,44,Mullidae,Mulloidichthys,pfluegeri,,3,No
+WRECK_W_BRUV3_C1_04.MP4,3722,36.3035,Start,30.7913,WRECK_W_BRUV3_C1,ECM,44,Pinguipedidae,Parapercis,sp,,3,No
+WRECK_W_BRUV3_C1_03.MP4,35034,27.3757,Start,21.8635,WRECK_W_BRUV3_C1,ECM,44,Serranidae,Pseudanthias,sp,,7,No
+WRECK_W_BRUV3_C1_02.MP4,22231,6.1815,Start,0.6693,WRECK_W_BRUV3_C1,ECM,44,Siganidae,Siganus,argenteus,37438007,2,No

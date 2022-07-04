@@ -1,0 +1,7 @@
+﻿Filename,Frame,Time (mins),Period,Period time (mins),Image row,Image col,Width,Height,OpCode,TapeReader,Depth,Family,Genus,Species,Code,Number,Stage,Activity,Comment
+ASHMORE_BRUV3_Cam4_01.MP4,24298,6.7562,ASHMORE_BRUV3_C4_start,1.97,669.74,711.89,0,0,ASHMORE_BRUV3_C4,ECM,42,Lethrinidae,Gymnocranius,sp,,1,AD,Passing,euanus
+ASHMORE_BRUV3_Cam4_03.MP4,41274,46.8952,ASHMORE_BRUV3_C4_start,42.109,75.39,1067.84,0,0,ASHMORE_BRUV3_C4,ECM,42,Carangidae,Gnathanodon,speciosus,37337012,1,AD,Passing,
+ASHMORE_BRUV3_Cam4_03.MP4,58054,51.561,ASHMORE_BRUV3_C4_start,46.7748,508.44,1311.56,0,0,ASHMORE_BRUV3_C4,ECM,42,Carangidae,Carangoides,fulvoguttatus,37337037,1,AD,Passing,
+ASHMORE_BRUV3_Cam4_04.MP4,35620,63.0408,ASHMORE_BRUV3_C4_start,58.2546,361.17,263.01,0,0,ASHMORE_BRUV3_C4,ECM,42,Carangidae,Caranx,ignobilis,37337027,1,AD,Passing,
+ASHMORE_BRUV3_Cam4_04.MP4,40580,64.4199,ASHMORE_BRUV3_C4_start,59.6337,482.14,857.42,0,0,ASHMORE_BRUV3_C4,ECM,42,Carcharhinidae,Carcharhinus,amblyrhynchos,37018030,1,AD,Passing,
+ASHMORE_BRUV3_Cam4_04.MP4,40786,64.4772,ASHMORE_BRUV3_C4_start,59.691,813.51,401.53,0,0,ASHMORE_BRUV3_C4,ECM,42,Carcharhinidae,Carcharhinus,albimarginatus,37018027,1,AD,Passing,

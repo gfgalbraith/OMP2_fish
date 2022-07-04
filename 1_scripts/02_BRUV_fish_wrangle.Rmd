@@ -34,13 +34,20 @@ fish <- fish %>% mutate(
   Reef=as.factor(Reef),
   Survey=as.factor(Survey),
   Site=as.factor(Site),
-  Drop =as.factor(Drop),
-  Depth = as.factor(Depth))
+  Drop =as.character(Drop),
+  Depth = as.factor(Depth),
+  Species_name = as.factor(Species_name))
 ```
 
-Create Unique Transect ID, T_ID - must be T to match later analyses with ROV data.
+Create Unique Transect(Drop) ID, T_ID - must be T to match potential future analyses with ROV data.
 
 ```{r}
+# Convert Drop1 to D1 throughout
+fish<-fish%>%mutate(Drop=as.factor(str_remove_all(Drop, "[DROP]")))
+
+fish<-fish%>%mutate(Drop=paste("D",Drop, sep=""))
+
+
 fish<-fish %>% mutate(
   T_ID = as.factor(paste(Survey,Site,Drop, sep = "_"))
 )
@@ -50,6 +57,8 @@ fish<-fish %>% mutate(
 # Import drop locations summary info
 ```{r}
 sites <-read_csv("../0_data/BRUV_site_drop_summary.csv")
+
+
 
 ```
 # Define variables and create matching T_ID
@@ -64,12 +73,61 @@ sites <- sites %>% mutate(
   T_ID = as.factor(paste(Survey,R_site_code,Drop, sep = "_")),
   Site = as.factor(R_site_code)) %>% 
   select(-R_site_code)
+
+levels(sites$Site)
+levels(sites$Depth)
 ```
+
+```{r}
+levels(fish$T_ID)
+levels(fish$Site)
+levels(fish$Depth)
+#check matching TID
+anti_join(fish,sites, by ="T_ID")
+anti_join(fish,sites, by ="Survey")
+anti_join(fish,sites, by ="Site")
+anti_join(fish,sites, by ="Reef")
+anti_join(fish,sites, by ="Drop")
+anti_join(fish,sites, by ="Depth")
+
+anti_join(sites,fish, by ="T_ID")
+```
+
 
 #Merge
 ```{r}
-merged.data<-left_join(fish, sites, by = c("Survey", "Site","Reef","Drop","Depth","T_ID"))
+merged.data<-left_join(fish, sites, by = c("Survey","Reef","Site","Drop","Depth","T_ID"))
+
+merged.data%>%filter(is.na(Lat))
+is.na(merged.data$Habitat)
+
+# Depth discrepancies?
+depths<-merged.data%>%select(T_ID,Depth.x, Depth.y)%>%
+  mutate(Depth.x = as.numeric(Depth.x),
+         Depth.y = as.numeric(Depth.y))
+
+depths2<-subset(fish$Depth, sites$Depth)
+
+mismatches = subset(depths, depths$Depth.x != depths$Depth.y)
+
+# Two sites incorrect in BRUV csv files
+fish$Depth[fish$T_ID=="Feb_21_Flinders_S2_D3"] <-55
+fish$Depth[fish$T_ID=="Oct_21_Ashmore_2_D9"] <-37
+
+# Merge Again
+merged.data<-left_join(fish, sites, by = c("Survey","Reef","Site","Drop","Depth","T_ID"))
+
+merged.data%>%filter(is.na(Lat))
+merged.data%>%filter(is.na(Habitat))
+
+
 ```
+# Missing drops - proabbly not usbale drops
+```{r}
+missing<-anti_join(sites,fish, by = "T_ID")
+
+```
+
 
 # Write csv
 ```{r}

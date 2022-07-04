@@ -1,0 +1,26 @@
+﻿Filename,Frame,Time (mins),Period,Period time (mins),Image row,Image col,Width,Height,OpCode,TapeReader,Depth,Family,Genus,Species,Code,Number,Stage,Activity,Comment
+LIHOU_BRUV5_C1_01.MP4,10036,2.7906,,,689.03,827.62,0,0,Lihou.S_BRUV5_C1,ECM,61,Labridae,Oxycheilinus,sp,,1,AD,Passing,nigromarginatus
+LIHOU_BRUV5_C1_01.MP4,10642,2.9591,,,969.55,1201.1,0,0,Lihou.S_BRUV5_C1,ECM,61,Nemipteridae,Pentapodus,nagasakiensis,37347012,2,AD,Passing,
+LIHOU_BRUV5_C1_01.MP4,13079,3.6367,LIHOU.S_BRUV5_start,0.5706,895.91,1479.89,0,0,Lihou.S_BRUV5_C1,ECM,61,Lethrinidae,Lethrinus,semicinctus,37351016,2,AD,Passing,
+LIHOU_BRUV5_C1_01.MP4,13475,3.7468,LIHOU.S_BRUV5_start,0.6807,841.56,1574.58,0,0,Lihou.S_BRUV5_C1,ECM,61,Lethrinidae,Lethrinus,semicinctus,37351016,3,AD,Passing,
+LIHOU_BRUV5_C1_01.MP4,14492,4.0296,LIHOU.S_BRUV5_start,0.9635,804.74,1462.36,0,0,Lihou.S_BRUV5_C1,ECM,61,Labridae,Oxycheilinus,sp,,6,AD,Passing,nigromarginatus
+LIHOU_BRUV5_C1_01.MP4,15373,4.2745,LIHOU.S_BRUV5_start,1.2084,913.44,1872.66,0,0,Lihou.S_BRUV5_C1,ECM,61,Labridae,Oxycheilinus,bimaculatus,37384063,1,AD,Passing,
+LIHOU_BRUV5_C1_01.MP4,17245,4.7951,LIHOU.S_BRUV5_start,1.7289,876.62,1476.38,0,0,Lihou.S_BRUV5_C1,ECM,61,Labridae,Oxycheilinus,bimaculatus,37384063,2,AD,Passing,
+LIHOU_BRUV5_C1_01.MP4,17807,4.9513,LIHOU.S_BRUV5_start,1.8852,997.6,1500.93,0,0,Lihou.S_BRUV5_C1,ECM,61,Nemipteridae,Pentapodus,nagasakiensis,37347012,2,AD,Passing,
+LIHOU_BRUV5_C1_01.MP4,19245,5.3512,LIHOU.S_BRUV5_start,2.2851,901.17,87.67,0,0,Lihou.S_BRUV5_C1,ECM,61,Labridae,Oxycheilinus,bimaculatus,37384063,3,AD,Passing,
+LIHOU_BRUV5_C1_01.MP4,20555,5.7154,LIHOU.S_BRUV5_start,2.6493,845.06,1627.18,0,0,Lihou.S_BRUV5_C1,ECM,61,Labridae,Oxycheilinus,sp,,7,AD,Passing,nigromarginatus
+LIHOU_BRUV5_C1_01.MP4,21175,5.8878,LIHOU.S_BRUV5_start,2.8217,964.29,1841.1,0,0,Lihou.S_BRUV5_C1,ECM,61,Lethrinidae,Lethrinus,semicinctus,37351016,4,AD,Passing,
+LIHOU_BRUV5_C1_01.MP4,24095,6.6997,LIHOU.S_BRUV5_start,3.6336,862.6,1506.19,0,0,Lihou.S_BRUV5_C1,ECM,61,Labridae,Pseudojuloides,sp,,1,AD,Passing,cerasinus
+LIHOU_BRUV5_C1_01.MP4,33229,9.2395,LIHOU.S_BRUV5_start,6.1734,836.3,1763.95,0,0,Lihou.S_BRUV5_C1,ECM,61,Nemipteridae,Pentapodus,nagasakiensis,37347012,4,AD,Passing,
+LIHOU_BRUV5_C1_01.MP4,41626,11.5743,LIHOU.S_BRUV5_start,8.5082,755.65,282.3,0,0,Lihou.S_BRUV5_C1,ECM,61,Lethrinidae,Gymnocranius,sp,,1,J,Passing,
+LIHOU_BRUV5_C1_01.MP4,43216,12.0164,LIHOU.S_BRUV5_start,8.9503,678.51,1260.71,0,0,Lihou.S_BRUV5_C1,ECM,61,Lethrinidae,Lethrinus,semicinctus,37351016,7,AD,Passing,
+LIHOU_BRUV5_C1_02.MP4,326,17.7416,LIHOU.S_BRUV5_start,14.6755,894.16,1792,0,0,Lihou.S_BRUV5_C1,ECM,61,Nemipteridae,Pentapodus,nagasakiensis,37347012,6,AD,Passing,
+LIHOU_BRUV5_C1_02.MP4,43574,29.767,LIHOU.S_BRUV5_start,26.7008,827.53,1444.82,0,0,Lihou.S_BRUV5_C1,ECM,61,Lethrinidae,Lethrinus,semicinctus,37351016,7,AD,Passing,
+LIHOU_BRUV5_C1_02.MP4,43960,29.8743,LIHOU.S_BRUV5_start,26.8082,787.21,396.27,0,0,Lihou.S_BRUV5_C1,ECM,61,Monacanthidae,Pseudaluttarius,nasicornis,,1,AD,Passing,
+LIHOU_BRUV5_C1_02.MP4,50262,31.6266,LIHOU.S_BRUV5_start,28.5605,1002.86,587.4,0,0,Lihou.S_BRUV5_C1,ECM,61,Monacanthidae,Paramonacanthus,sp,,1,AD,Passing,
+LIHOU_BRUV5_C1_02.MP4,50449,31.6786,LIHOU.S_BRUV5_start,28.6125,804.74,1855.12,0,0,Lihou.S_BRUV5_C1,ECM,61,Pomacentridae,Chrysiptera,sp,,1,AD,Passing,tricincta
+LIHOU_BRUV5_C1_02.MP4,58115,33.8102,LIHOU.S_BRUV5_start,30.744,378.7,1564.05,0,0,Lihou.S_BRUV5_C1,ECM,61,Carangidae,Carangoides,sp,,2,AD,Passing,
+LIHOU_BRUV5_C1_03.MP4,30751,43.8357,LIHOU.S_BRUV5_start,40.7696,887.14,731.18,0,0,Lihou.S_BRUV5_C1,ECM,61,Lethrinidae,Lethrinus,semicinctus,37351016,12,AD,Passing,
+LIHOU_BRUV5_C1_03.MP4,51558,49.6212,LIHOU.S_BRUV5_start,46.5551,569.81,1115.18,0,0,Lihou.S_BRUV5_C1,ECM,61,Balistidae,Abalistes,stellatus,37465011,1,AD,Passing,
+LIHOU_BRUV5_C1_03.MP4,53704,50.2179,LIHOU.S_BRUV5_start,47.1518,778.44,734.68,0,0,Lihou.S_BRUV5_C1,ECM,61,Nemipteridae,Pentapodus,nagasakiensis,37347012,8,AD,Passing,
+LIHOU_BRUV5_C1_04.MP4,4447,54.156,LIHOU.S_BRUV5_start,51.0899,871.36,1865.64,0,0,Lihou.S_BRUV5_C1,ECM,61,Labridae,Pseudojuloides,sp,,2,AD,Passing,cerasinus

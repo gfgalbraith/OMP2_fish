@@ -1,0 +1,281 @@
+---
+title: "03_BRUV_fish_biomass_constants"
+output: html_document
+date: '2022-07-04'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+BRUV Fish Data - apply a and b constants
+
+After initial cleaning and wrangle, some observations remain at family or genus level. Apply the fish-families or fish-genera data from MERMAID to assign approximate a and b values for these species.
+
+#HouseKeeping
+```{R}
+rm(list=ls())
+#dev.off()
+#getwd()
+
+```
+
+#load libraries
+```{r}
+library(tidyverse)
+library(rfishbase)
+```
+
+#Import fish data
+This uses the Final_fish data created by the scripts "ROV_initial_wrangle" to isolate just fish observations and then "ROV_fish_wrangle" which identifies and corrects errors in species names, has assigned a and b values where species are identified etc.
+
+```{r}
+fish <-read_csv("../2_outputs/BRUV_cleaned_maxn_sites.csv")
+
+fish <- fish %>% mutate(
+  Drop=as.factor(Drop),
+  Reef=as.factor(Reef),
+  T_ID=as.factor(T_ID),
+  Survey=as.factor(Survey),
+  Site=as.factor(Site))
+
+```
+
+
+# Match with MERMAID database for LW constants
+```{r}
+
+mermaid.species <-read_csv("../0_data/MERMAID_data/fish-species_GFG.csv")
+
+mermaid.species<-mermaid.species %>% mutate(
+  Species_name = paste(Genus,Species, sep = " ")
+)
+
+fish<-fish %>% mutate(
+  Species_name = paste(Genus,Species, sep = " ")
+)
+
+fish2<-fish %>% anti_join(mermaid.species, by = "Species_name")
+
+```
+# Examine missing species
+```{r}
+unique(fish2$Species_name)
+# Species here all now added to GFG_mermaid species list. Unaccepted names in mermaid changed
+# 23 obs to resolve
+```
+# Paramonacanthus curtorhynchos - ADDED
+Monacanthidae
+Bayesian length-weight: a=0.02089 (0.00979 - 0.04459), b=2.92 (2.74 - 3.10), in cm total length, based on LWR estimates for this Subfamily-BS (Ref. 93245).
+Trophic level (Ref. 69278):  3.1   ±0.3 se; based on size and trophs of closest relatives Max length : 11.3 cm 
+
+# Conger Heteroconger hassi -ADDED needs adding to EM species list
+Congridae, depth range 5 - 50 m, Max length : 40.0 cm,Often found on sandy slopes below 15 m; withdraws into its burrow when approached. Usually in colonies containing up to several hundred individuals. Feeds on zooplanktons. Bayesian length-weight: a=0.00102 (0.00046 - 0.00225), b=3.06 (2.88 - 3.24), in cm total length, based on all LWR estimates for this BS (Ref. 93245).
+Trophic level (Ref. 69278):  3.3   ±0.4 se; based on size and trophs of closest relatives
+```{r}
+fish <- fish %>% 
+  mutate(
+    Species = case_when(Comment == "Heteroconger hassi" ~ "hassi",
+                        TRUE ~ as.character(Species)),
+    Genus = case_when(Comment == "Heteroconger hassi" ~ "Heteroconger",
+                        TRUE ~ as.character(Genus)))
+  
+
+```
+
+# Zebrasoma veliferum - unaccepted name from eventmeasure - change in fish df
+```{r}
+
+fish <- fish %>% 
+  mutate(
+    Species = case_when(Genus == "Zebrasoma" & Species == "veliferum" ~ "velifer",
+                        TRUE ~ as.character(Species))
+  )
+
+```
+
+# Oxycheilinus digrammus - unaccepted name from eventmeasure - change in fish df
+```{r}
+# Oxycheilinus diagrammus <- digramma. 
+fish <- fish %>% 
+  mutate(
+    Species = case_when(Genus == "Oxycheilinus" & Species == "digrammus" ~ "digramma",
+                        TRUE ~ as.character(Species))
+  )
+
+```
+
+# Parapercis hexophthalma -ADDED
+Pinguipedidae Max length : 29.0 , depth range 2 - 25 m,Bayesian length-weight: a=0.00759 (0.00464 - 0.01241), b=3.14 (3.00 - 3.28), in cm total length, based on LWR estimates for species & Genus-BS (Ref. 93245).
+Trophic level (Ref. 69278):  3.6   ±0.3 se; based on diet studies.
+
+# Scarus flavipinnis - Scarus longipinnis? No S.flavipinnis, Pseudoscarus flavipinnis is a synonymised name for S.ghoban?
+Or could be chyriptera flavipinnis? OR Pristipomoides FLAVIPINNIS?
+Judgement call for now
+```{r}
+fish <- fish %>% 
+  mutate(
+    Species = case_when(Species == "flavipinnis" & Genus == "Scarus" ~ "longipinnis",
+                        TRUE ~ as.character(Species))
+  )
+
+```
+
+
+# Siganus argenteus.woodlandi - ADDED
+Replace species name with just woodlandi - same biomass constants as argenteus
+```{r}
+fish <- fish %>% 
+  mutate(
+    Species = case_when(Comment == "argenteus.woodlandi" & Genus == "Siganus" ~ "woodlandi",
+                        TRUE ~ as.character(Species))
+  )
+
+```
+
+# Gymnocranius aureofasciatus - either gymnocranius euanus or  Pentapodus aureofasciatus? 
+```{r}
+fish <- fish %>% 
+  mutate(
+    Genus = case_when(Species == "aureofasciatus" & Frame == 24768 ~ "Pentapodus",
+                        TRUE ~ as.character(Genus)),
+    Family = case_when(Species == "aureofasciatus" & Frame == 24768 ~ "Nemipteridae",
+                        TRUE ~ as.character(Family)))
+
+```
+
+# Synodus longipes - Hologymnosus longipes ?
+```{r}
+fish <- fish %>% 
+  mutate(
+    Genus = case_when(Species == "longipes" & Frame == 43950 ~ "Hologymnosus",
+                        TRUE ~ as.character(Genus)),
+    Family = case_when(Species == "longipes" & Frame == 43950 ~ "Labridae",
+                        TRUE ~ as.character(Family)))
+
+
+```
+
+# Pristipomoides filamentosus - crimson jobfish - ADDED
+ benthopelagic; depth range 40 - 400 m (Ref. 11888), usually 180 - 270 m, Max length : 100.0 cm , common length : 50.0 cm,
+Bayesian length-weight: a=0.01072 (0.00749 - 0.01533), b=2.93 (2.83 - 3.03), in cm total length, based on LWR estimates for this species (Ref. 93245).
+Trophic level (Ref. 69278):  4.2   ±0.4 se; based on diet studies.
+
+# Naso planktivore
+```{r}
+fish <- fish %>% 
+  mutate(
+    Species = case_when(Species == "planktivore" & Genus == "Naso" ~ "sp",
+                        TRUE ~ as.character(Species))
+  )
+
+```
+
+# Pomacentrus iomelas - probably should have been chromis iomelas
+```{r}
+fish <- fish %>% 
+  mutate(
+    Genus = case_when(Species == "iomelas" & Frame == 39643 ~ "Chromis",
+                        TRUE ~ as.character(Genus))
+  )
+```
+
+# Cyprinocirrhites polyactis - Swallow tailed hawkfish - ADDED
+Cirrhitidae, depth range 10 - 132 m, Max length : 15.0 cm, Found on steep slopes and around small coral heads exposed to currents (Ref. 9710). Hovers several meters above the bottom and feeds mainly on pelagic crustaceans, copepods, and other animals of the plankton. Also found around sponges. Bayesian length-weight: a=0.01479 (0.00579 - 0.03782), b=3.05 (2.83 - 3.27), in cm total length, based on LWR estimates for this Subfamily-BS (Ref. 93245).
+Trophic level (Ref. 69278):  3.2   ±0.31 se; based on food items.
+
+# Cirrhilabrus bathyphilus - ADDED
+ depth range 60 - 217 m, Max length : 7.6 cm, new from the Coral sea in 2002 Randall, J.E and B.H. Nagareda, 2002. Cirrhilabrus bathyphilus, a new deep-dwelling labrid fish from the Coral Sea. Cybium 26(2):123-127. (Ref. 44203) Bayesian length-weight: a=0.01622 (0.00726 - 0.03621), b=2.95 (2.76 - 3.14), in cm total length, based on LWR estimates for this Subfamily-BS (Ref. 93245).
+Trophic level (Ref. 69278):  3.3   ±0.4 se; based on size and trophs of closest relatives
+
+# Naso planktivorous sp.
+```{r}
+fish <- fish %>% 
+  mutate(
+    Species = case_when(Species == "planktivorous sp." & Genus == "Naso" ~ "sp",
+                        TRUE ~ as.character(Species))
+  )
+
+```
+
+# Scarus SP   
+```{r}
+fish <- fish %>% 
+  mutate(
+    Species = case_when(Species == "SP" & Genus == "Scarus" ~ "longipinnis",
+                        TRUE ~ as.character(Species))
+  )
+
+```
+
+# Pseudaluttarius nasicornis - EM species file spelling mistake. Should be Pseudalutarius nasicornis
+```{r}
+fish <- fish %>% 
+  mutate(
+    Genus = case_when(Species == "nasicornis" & Genus == "Pseudaluttarius" ~ "Pseudalutarius",
+                        TRUE ~ as.character(Genus))
+  )
+
+```
+
+# Cheilinus bimaculatus - Oxycheilinus bimaculatus - check EM lists
+```{r}
+fish <- fish %>% 
+  mutate(
+    Genus = case_when(Species == "bimaculatus" & Genus == "Cheilinus" ~ "Oxycheilinus",
+                        TRUE ~ as.character(Genus))
+  )
+
+```
+
+# Synodus laboutei - Cirrhilabrus
+```{r}
+fish <- fish %>% 
+  mutate(
+    Genus = case_when(Species == "laboutei" & Genus == "Synodus" ~ "Cirrhilabrus",
+                        TRUE ~ as.character(Genus))
+  )
+
+```
+
+# Synodus euanus - Gymnocranius euanus
+```{r}
+fish <- fish %>% 
+  mutate(
+    Genus = case_when(Species == "euanus" & Genus == "Synodus" ~ "Gymnocranius",
+                        TRUE ~ as.character(Genus))
+  )
+
+```
+
+
+
+# Refresh species_name after above changes
+```{r}
+fish<-fish %>% mutate(
+  Species_name = paste(Genus,Species, sep = " ")
+)
+
+
+fish %>% anti_join(mermaid.species, by = "Species_name")
+
+```
+All that remains are some unidentified Naso sp. All good to move on.
+
+# Merge
+```{r}
+
+merged.data <- fish %>% 
+  left_join(mermaid.species, by =c("Family","Genus","Species","Species_name"))
+
+duplicated(mermaid.species$Species_name)
+
+mermaid.species[which(duplicated(mermaid.species[,c('Species_name')])==TRUE),]
+
+```
+
+# Write
+```{r}
+write.csv(merged.data, file= "../2_outputs/BRUV_Fish_ab.csv", row.names = FALSE)
+
+```

@@ -51,3 +51,18 @@ monitoring <- monitoring %>% mutate(
 )
 ```
 
+
+# Missing Trophic or Functional groups?
+
+```{r}
+
+summary(is.na(merged.data$`Trophic Group`))
+merged.data %>% filter(is.na(`Trophic Group`))
+missing.trophic <-merged.data %>% filter(is.na(`Trophic Group`))
+
+
+
+summary(is.na(merged.data$`Functional Group`))
+merged.data %>% filter(is.na(`Functional Group`))
+```
+

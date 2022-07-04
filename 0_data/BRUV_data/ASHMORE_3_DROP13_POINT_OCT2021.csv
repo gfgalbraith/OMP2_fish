@@ -1,0 +1,11 @@
+﻿Filename,Frame,Time (mins),Period,Period time (mins),Image row,Image col,Width,Height,OpCode,TapeReader,Depth,Family,Genus,Species,Code,Number,Stage,Activity,Comment
+ASHMORE_Drop13_Cam3_01.MP4,46976,13.0619,ASHMORE_BRUV13_Cam3,8.0086,848.16,1495.47,0,0,ASHMORE_BRUV13_C3,ECM,42,Monacanthidae,Paramonacanthus,sp,,1,J,Passing,curtorhynchos
+ASHMORE_Drop13_Cam3_02.MP4,3275,18.5449,ASHMORE_BRUV13_Cam3,13.4915,964.44,729.9,0,0,ASHMORE_BRUV13_C3,ECM,42,Monacanthidae,Paramonacanthus,sp,,2,J,Passing,curtorhynchos
+ASHMORE_Drop13_Cam3_02.MP4,13758,21.4598,ASHMORE_BRUV13_Cam3,16.4064,367.37,1096.63,0,0,ASHMORE_BRUV13_C3,ECM,42,Monacanthidae,Paramonacanthus,sp,,3,J,Passing,curtorhynchos
+ASHMORE_Drop13_Cam3_02.MP4,23740,24.2353,ASHMORE_BRUV13_Cam3,19.1819,629.17,480.18,0,0,ASHMORE_BRUV13_C3,ECM,42,Carangidae,Carangoides,ferdau,37337068,9,AD,Passing,
+ASHMORE_Drop13_Cam3_03.MP4,20403,40.9417,ASHMORE_BRUV13_Cam3,35.8884,532.87,1386.31,0,0,ASHMORE_BRUV13_C3,ECM,42,Lutjanidae,Lutjanus,bohar,37346029,1,AD,Passing,
+ASHMORE_Drop13_Cam3_03.MP4,34748,44.9304,ASHMORE_BRUV13_Cam3,39.8771,849.59,1087.36,0,0,ASHMORE_BRUV13_C3,ECM,42,Monacanthidae,Paramonacanthus,sp,,4,J,Passing,curtorhynchos
+ASHMORE_Drop13_Cam3_04.MP4,19862,58.4256,ASHMORE_BRUV13_Cam3,53.3722,766.13,1157.99,0,0,ASHMORE_BRUV13_C3,ECM,42,Tetraodontidae,,,,1,J,Passing,unknown spp.
+ASHMORE_Drop13_Cam3_04.MP4,28583,60.8505,ASHMORE_BRUV13_Cam3,55.7971,726.18,1155.14,0,0,ASHMORE_BRUV13_C3,ECM,42,Tetraodontidae,,,,5,J,Passing,unknown spp.
+ASHMORE_Drop13_Cam3_04.MP4,30012,61.2479,ASHMORE_BRUV13_Cam3,56.1945,708.35,1382.74,0,0,ASHMORE_BRUV13_C3,ECM,42,Tetraodontidae,,,,7,J,Passing,unknown spp.
+ASHMORE_Drop13_Cam3_04.MP4,33284,62.1577,ASHMORE_BRUV13_Cam3,57.1043,695.51,1524.73,0,0,ASHMORE_BRUV13_C3,ECM,42,Carcharhinidae,Carcharhinus,albimarginatus,37018027,1,AD,Passing,

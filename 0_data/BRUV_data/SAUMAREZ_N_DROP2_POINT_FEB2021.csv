@@ -1,0 +1,27 @@
+﻿Filename,Frame,Time (mins),Period,Period time (mins),Image row,Image col,Width,Height,OpCode,TapeReader,Depth,Family,Genus,Species,Code,Number,Stage,Activity,Comment
+SAUM_N_BRUV2_C1_01.MP4,19145,5.3234,Drop2_start,1.3057,582.08,1081.86,0,0,SAUM_N_BRUV2_C1,ECM,34,Malacanthidae,Malacanthus,brevirostris,37331009,2,AD,Passing,
+SAUM_N_BRUV2_C1_01.MP4,19145,5.3234,Drop2_start,1.3057,969.55,640,0,0,SAUM_N_BRUV2_C1,ECM,34,Mullidae,Parupeneus,pleurostigma,37355027,4,AD,Passing,
+SAUM_N_BRUV2_C1_01.MP4,19240,5.3498,Drop2_start,1.3322,669.74,478.68,0,0,SAUM_N_BRUV2_C1,ECM,34,Lethrinidae,Lethrinus,rubrioperculatus,,4,AD,Passing,
+SAUM_N_BRUV2_C1_01.MP4,30617,8.5132,Drop2_start,4.4956,682.01,1085.37,0,0,SAUM_N_BRUV2_C1,ECM,34,Mullidae,Parupeneus,multifasciatus,37355026,4,AD,Passing,
+SAUM_N_BRUV2_C1_01.MP4,32175,8.9464,Drop2_start,4.9288,923.96,338.41,0,0,SAUM_N_BRUV2_C1,ECM,34,Mullidae,Parupeneus,barberinoides,37355021,1,AD,Passing,
+SAUM_N_BRUV2_C1_01.MP4,34742,9.6602,Drop2_start,5.6426,829.29,782.03,0,0,SAUM_N_BRUV2_C1,ECM,34,Labridae,Coris,dorsomacula,37384093,3,AD,Passing,
+SAUM_N_BRUV2_C1_01.MP4,38849,10.8022,Drop2_start,6.7846,655.71,408.55,0,0,SAUM_N_BRUV2_C1,ECM,34,Labridae,Coris,dorsomacula,37384093,4,AD,Passing,
+SAUM_N_BRUV2_C1_01.MP4,42676,11.8663,Drop2_start,7.8487,587.34,676.82,0,0,SAUM_N_BRUV2_C1,ECM,34,Balistidae,Sufflamen,chrysopterum,37465079,1,AD,Passing,
+SAUM_N_BRUV2_C1_01.MP4,46794,13.0113,Drop2_start,8.9937,571.56,285.81,0,0,SAUM_N_BRUV2_C1,ECM,34,Lethrinidae,Gymnocranius,sp,,2,AD,Passing,euanus
+SAUM_N_BRUV2_C1_01.MP4,46835,13.0227,Drop2_start,9.0051,305.06,312.11,0,0,SAUM_N_BRUV2_C1,ECM,34,Labridae,Coris,dorsomacula,37384096,1,AD,Passing,
+SAUM_N_BRUV2_C1_01.MP4,49176,13.6737,Drop2_start,9.656,655.71,1490.41,0,0,SAUM_N_BRUV2_C1,ECM,34,Nemipteridae,Pentapodus,sp,,22,AD,Passing,aureofasciatus
+SAUM_N_BRUV2_C1_02.MP4,778,17.8506,Drop2_start,13.833,554.03,564.6,0,0,SAUM_N_BRUV2_C1,ECM,34,Labridae,Hologymnosus,doliatus,37384127,3,AD,Passing,
+SAUM_N_BRUV2_C1_02.MP4,3772,18.6831,Drop2_start,14.6655,545.26,447.12,0,0,SAUM_N_BRUV2_C1,ECM,34,Nemipteridae,Pentapodus,sp,,27,AD,Passing,aureofasciatus
+SAUM_N_BRUV2_C1_02.MP4,3797,18.6901,Drop2_start,14.6724,610.13,992.44,0,0,SAUM_N_BRUV2_C1,ECM,34,Nemipteridae,Pentapodus,sp,,26,AD,Passing,aureofasciatus
+SAUM_N_BRUV2_C1_02.MP4,4726,18.9484,Drop2_start,14.9307,725.84,387.51,0,0,SAUM_N_BRUV2_C1,ECM,34,Chaetodontidae,Chaetodon,kleinii,37365040,1,AD,Passing,
+SAUM_N_BRUV2_C1_02.MP4,13349,21.346,Drop2_start,17.3284,566.3,713.64,0,0,SAUM_N_BRUV2_C1,ECM,34,Labridae,Halichoeres,hartzfeldii,,1,AD,Passing,
+SAUM_N_BRUV2_C1_02.MP4,51803,32.0384,Drop2_start,28.0208,555.78,1378.19,0,0,SAUM_N_BRUV2_C1,ECM,34,Lethrinidae,Lethrinus,olivaceus,37351004,1,AD,Passing,
+SAUM_N_BRUV2_C1_03.MP4,5862,36.8985,Drop2_start,32.8809,466.36,369.97,0,0,SAUM_N_BRUV2_C1,ECM,34,Labridae,Coris,gaimard,37384094,3,AD,Passing,
+SAUM_N_BRUV2_C1_03.MP4,31873,44.131,Drop2_start,40.1134,713.57,340.16,0,0,SAUM_N_BRUV2_C1,ECM,34,Labridae,Halichoeres,hartzfeldii,,1,AD,Passing,
+SAUM_N_BRUV2_C1_03.MP4,32255,44.2372,Drop2_start,40.2196,667.99,773.26,0,0,SAUM_N_BRUV2_C1,ECM,34,Labridae,Hologymnosus,sp,,1,AD,Passing,longipes
+SAUM_N_BRUV2_C1_03.MP4,35221,45.062,Drop2_start,41.0443,920.45,1681.53,0,0,SAUM_N_BRUV2_C1,ECM,34,Pinguipedidae,Parapercis,sp,,1,AD,Passing,
+SAUM_N_BRUV2_C1_03.MP4,56314,50.927,Drop2_start,46.9094,171.82,212.16,0,0,SAUM_N_BRUV2_C1,ECM,34,Labridae,Cirrhilabrus,sp,,2,AD,Passing,laboutei
+SAUM_N_BRUV2_C1_03.MP4,60855,52.1896,Drop2_start,48.172,625.91,766.25,0,0,SAUM_N_BRUV2_C1,ECM,34,Labridae,Choerodon,jordani,37384077,1,AD,Passing,
+SAUM_N_BRUV2_C1_03.MP4,62859,52.7469,Drop2_start,48.7292,632.92,962.63,0,0,SAUM_N_BRUV2_C1,ECM,34,Labridae,Pseudojuloides,sp,,1,AD,Passing,cerasinus
+SAUM_N_BRUV2_C1_04.MP4,900,53.1531,Drop2_start,49.1355,741.62,512,0,0,SAUM_N_BRUV2_C1,ECM,34,Labridae,Halichoeres,hartzfeldii,,1,AD,Passing,
+SAUM_N_BRUV2_C1_04.MP4,44695,65.3305,Drop2_start,61.3129,448.83,168.33,0,0,SAUM_N_BRUV2_C1,ECM,34,Labridae,Halichoeres,hartzfeldii,,3,AD,Passing,

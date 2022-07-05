@@ -1,0 +1,552 @@
+﻿Family,Species,a,b,Functional group,Transect size,
+Acanthuridae,Acanthurus albipectoralis,0.01622,3,Grazer,50 x 5,include
+Acanthuridae,Acanthurus bariene,0.02344,2.96,Grazer,50 x 5,include
+Acanthuridae,Acanthurus blochii,0.0251,3.032,Grazer,50 x 5,include
+Acanthuridae,Acanthurus dussumieri,0.0426,2.868,Grazer,50 x 5,include
+Acanthuridae,Acanthurus grammoptilus,0.01905,2.95,Grazer,50 x 5,include
+Acanthuridae,Acanthurus guttatus,0.028,2.983,Grazer,50 x 5,include
+Acanthuridae,Acanthurus lineatus,0.028,2.983,Grazer,50 x 5,include
+Acanthuridae,Acanthurus maculiceps,0.02344,2.96,Grazer,50 x 5,include
+Acanthuridae,Acanthurus mata,0.028,2.983,Planktivore,50 x 5,include
+Acanthuridae,Acanthurus nigricans,0.0263,2.93,Grazer,50 x 5,include
+Acanthuridae,Acanthurus nigricauda,0.0168,3.168,Grazer,50 x 5,include
+Acanthuridae,Acanthurus nigrofuscus,0.0264,3.028,Grazer,50 x 5,include
+Acanthuridae,Acanthurus nigroris,0.02291,2.96,Grazer,50 x 5,include
+Acanthuridae,Acanthurus olivaceus,0.028,2.983,Grazer,50 x 5,include
+Acanthuridae,Acanthurus pyroferus,0.028,2.983,Grazer,50 x 5,include
+Acanthuridae,Acanthurus thompsoni,0.028,2.983,Planktivore,50 x 5,include
+Acanthuridae,Acanthurus triostegus,0.0831,2.57,Grazer,50 x 5,include
+Acanthuridae,Acanthurus xanthopterus,0.0267,2.984,Grazer,50 x 5,include
+Acanthuridae,Ctenochaetus binotatus,0.0392,2.875,Grazer,50 x 5,include
+Acanthuridae,Ctenochaetus cyanocheilus,0.0392,2.875,Grazer,50 x 5,include
+Acanthuridae,Ctenochaetus striatus,0.0392,2.875,Grazer,50 x 5,include
+Acanthuridae,Naso annulatus,0.051,2.715,Planktivore,50 x 5,include
+Acanthuridae,Naso brachycentron,0.051,2.715,Browser,50 x 5,include
+Acanthuridae,Naso brevirostris,0.051,2.715,Planktivore,50 x 5,include
+Acanthuridae,Naso caesius,0.0202,2.956,Planktivore,50 x 5,include
+Acanthuridae,Naso hexacanthus,0.0202,2.956,Planktivore,50 x 5,include
+Acanthuridae,Naso lituratus,0.0085,3.25,Browser,50 x 5,include
+Acanthuridae,Naso lopezi,,,Planktivore,,
+Acanthuridae,Naso minor,,,Planktivore,,
+Acanthuridae,Naso sp,,,Planktivore,,
+Acanthuridae,Naso tonganus,0.0085,3.25,Browser,50 x 5,include
+Acanthuridae,Naso unicornis,0.0179,3.035,Browser,50 x 5,include
+Acanthuridae,Naso vlamingii,0.0085,3.25,Planktivore,50 x 5,include
+Acanthuridae,Paracanthurus hepatus,0.0301,2.946,Planktivore,50 x 5,include
+Acanthuridae,Prionurus maculatus,0.0301,2.946,Grazer,50 x 5,include
+Acanthuridae,Zebrasoma scopas,0.0291,2.993,Grazer,50 x 5,include
+Acanthuridae,Zebrasoma velifer,0.0343,2.866,Grazer,50 x 5,include
+Balistidae,Abalistes filamentosus,,,Benthic invertivore,,
+Balistidae,Abalistes stellatus,,,Benthic invertivore,,
+Balistidae,Balistapus undulatus,0.019,3.078,Benthic invertivore,50 x 5,include
+Balistidae,Balistoides conspicillum,0.0244,3.018,Benthic invertivore,50 x 5,include
+Balistidae,Balistoides viridescens,0.03236,2.97,Benthic invertivore,50 x 5,include
+Balistidae,Melichthys vidua,0.0263,3.05,Omnivore,50 x 5,include
+Balistidae,Odonus niger,0.02512,2.94,Planktivore,50 x 5,include
+Balistidae,Pseudobalistes flavimarginatus,0.03548,2.95,Benthic invertivore,50 x 5,include
+Balistidae,Pseudobalistes fuscus,0.03548,2.95,Benthic invertivore,50 x 5,include
+Balistidae,Rhinecanthus rectangulus,0.02512,2.92,Benthic invertivore,50 x 5,include
+Balistidae,Sufflamen bursa,0.02455,2.94,Benthic invertivore,50 x 5,include
+Balistidae,Sufflamen chrysopterum,,,Benthic invertivore,,
+Balistidae,Sufflamen chrysopterus,0.01995,2.95,Benthic invertivore,50 x 5,include
+Balistidae,Sufflamen fraenatum,,,Benthic invertivore,,
+Balistidae,Xanthichthys auromarginatus,,,Benthic invertivore,,
+Balistidae,Xanthichthys caeruleolineatus,,,Benthic invertivore,,
+Caesionidae,Caesio caerulaurea,0.0138,3.07,Planktivore,50 x 5,include
+Caesionidae,Caesio cuning,0.01479,3.06,Planktivore,50 x 5,include
+Caesionidae,Caesio lunaris,0.01622,3.09,Planktivore,50 x 5,include
+Caesionidae,Caesio teres,0.01288,3.12,Planktivore,50 x 5,include
+Caesionidae,Pterocaesio digramma,0.01122,3.15,Planktivore,50 x 5,include
+Caesionidae,Pterocaesio marri,0.01047,3.12,Planktivore,51 x 5,include
+Caesionidae,Pterocaesio tile,0.01096,3.11,Planktivore,50 x 5,include
+Caesionidae,Pterocaesio trilineata,0.01096,3.12,Planktivore,50 x 5,include
+Carangidae,Carangoides bajad,0.0257,2.93,Piscivore,50 x 5,include
+Carangidae,Carangoides ferdau,0.0257,2.93,Piscivore,50 x 5,include
+Carangidae,Carangoides fulvoguttatus,0.0123,2.94,Piscivore,50 x 5,include
+Carangidae,Carangoides oblongus,0.01905,2.94,Piscivore,,
+Carangidae,Carangoides orthogrammus,0.0123,2.94,Piscivore,50 x 5,include
+Carangidae,Carangoides plagiotaenia,0.01698,2.94,Carnivore,50 x 5,include
+Carangidae,Caranx ignobilis,0.0164,3.059,Piscivore,50 x 5,include
+Carangidae,Caranx lugubris,0.0164,3.059,Piscivore,50 x 5,include
+Carangidae,Caranx melampygus,0.0234,2.918,Piscivore,50 x 5,include
+Carangidae,Caranx papuensis,0.01738,2.96,Carnivore,50 x 5,include
+Carangidae,Caranx sexfasciatus,0.0234,2.918,Piscivore,50 x 5,include
+Carangidae,Caranx sp.,0.0234,2.918,Piscivore,50 x 5,include
+Carangidae,Decapterus macarellus,0.00783,3.14,Planktivore,,
+Carangidae,Elagatis bipinnulata,0.0845,2.556,Piscivore,,
+Carangidae,Elagatis bipinnulatus,0.0313,3.043,Piscivore,50 x 5,include
+Carangidae,Gnathanodon speciosus,0.0016908,2.926345,Piscivore,,
+Carangidae,Scomberoides lysan,0.01288,2.87,Piscivore,50 x 5,include
+Carangidae,Scomberoides sp,0.0109,2.923,Piscivore,50 x 5,include
+Carangidae,Selar crumenophthalmus,0.005496,3.259806,Planktivore,,
+Carangidae,Seriola rivoliana,0.00704,3.101803,Piscivore,,
+Carangidae,Trachinotus baillonii,0.01259,2.96,Piscivore,50 x 5,include
+Carangidae,Trachinotus blochii,0.02951,2.81,Benthic invertivore,50 x 5,include
+Carcharhinidae,Carcharhinus albimarginatus,0.0234,2.918,Piscivore,50 x 5,include
+Carcharhinidae,Carcharhinus amblyrhynchos,0.0023,3.373,Piscivore,50 x 5,include
+Carcharhinidae,Carcharhinus melanopterus,0.00457,3.04,Carnivore,50 x 5,include
+Carcharhinidae,Galeocerdo cuvier,0.00129,3.251,Carnivore,,
+Carcharhinidae,Negaprion acutidens,0.00479,3.09,Piscivore,50 x 5,include
+Carcharhinidae,Triaenodon obesus,0.00363,3.13,Piscivore,50 x 5,include
+Chaetodontidae,Chaetodon aureofasciatus,0.02291,3,Corallivore,50 x 4,include
+Chaetodontidae,Chaetodon auriga,0.0404,2.829,Omnivore,50 x 4,include
+Chaetodontidae,Chaetodon baronessa,0.0404,2.829,Corallivore,50 x 4,include
+Chaetodontidae,Chaetodon bennetti,0.02239,2.99,Corallivore,50 x 4,include
+Chaetodontidae,Chaetodon citrinellus,0.0353,2.834,Corallivore,50 x 4,include
+Chaetodontidae,Chaetodon ephippium,0.0225,3.061,Omnivore,50 x 4,include
+Chaetodontidae,Chaetodon flavirostris,0.0251,3.113,Corallivore,50 x 4,include
+Chaetodontidae,Chaetodon guentheri,0.02291,3.01,Benthic invertivore,,
+Chaetodontidae,Chaetodon kleinii,0.045,2.814,Corallivore,50 x 4,include
+Chaetodontidae,Chaetodon lineolatus,0.02291,2.95,Omnivore,50 x 4,include
+Chaetodontidae,Chaetodon lunula,0.045,2.814,Corallivore,50 x 4,include
+Chaetodontidae,Chaetodon lunulatus,0.045,2.814,Corallivore,50 x 4,include
+Chaetodontidae,Chaetodon melannotus,0.0267,3.049,Corallivore,50 x 4,include
+Chaetodontidae,Chaetodon mertensii,0.0043,3.793,Omnivore,50 x 4,include
+Chaetodontidae,Chaetodon meyeri,0.02344,3.01,Corallivore,50 x 4,include
+Chaetodontidae,Chaetodon ocellicaudus,0.02344,3.01,Corallivore,50 x 4,include
+Chaetodontidae,Chaetodon ornatissimus,0.02291,3.01,Corallivore,50 x 4,include
+Chaetodontidae,Chaetodon oxycephalus,0.02291,3.01,Corallivore,50 x 4,include
+Chaetodontidae,Chaetodon pelewensis,0.02098,3.02,Corallivore,50 x 4,include
+Chaetodontidae,Chaetodon plebeius,0.0606,2.628,Corallivore,50 x 4,include
+Chaetodontidae,Chaetodon punctatofasciatus,0.0606,2.628,Corallivore,50 x 4,include
+Chaetodontidae,Chaetodon rafflesi,0.02344,3.01,Corallivore,50 x 4,include
+Chaetodontidae,Chaetodon rainfordi,0.02344,3.01,Corallivore,50 x 4,include
+Chaetodontidae,Chaetodon reticulatus,0.02291,3.01,Corallivore,50 x 4,include
+Chaetodontidae,Chaetodon semeion,0.0664,2.693,Corallivore,50 x 4,include
+Chaetodontidae,Chaetodon speculum,0.0664,2.693,Corallivore,50 x 4,include
+Chaetodontidae,Chaetodon trifascialis,0.02138,2.96,Corallivore,50 x 4,include
+Chaetodontidae,Chaetodon ulietensis,0.0311,2.874,Corallivore,50 x 4,include
+Chaetodontidae,Chaetodon unimaculatus,0.0533,2.833,Corallivore,50 x 4,include
+Chaetodontidae,Chaetodon vagabundus,0.0278,2.973,Omnivore,50 x 4,include
+Chaetodontidae,Chelmon rostratus,0.01148,3.09,Benthic invertivore,50 x 4,include
+Chaetodontidae,Coradion altivelis,0.02188,3.01,Omnivore,50 x 4,include
+Chaetodontidae,Forcipiger flavissimus,0.02239,3.03,Benthic invertivore,50 x 4,include
+Chaetodontidae,Forcipiger longirostris,0.02239,3.03,Benthic invertivore,50 x 4,include
+Chaetodontidae,Hemitaurichthys polylepis,0.0247,3.106,Planktivore,50 x 4,include
+Chaetodontidae,Heniochus acuminatus,0.02138,3.05,Planktivore,50 x 4,include
+Chaetodontidae,Heniochus chrysostomus,0.0247,3.106,Corallivore,50 x 4,include
+Chaetodontidae,Heniochus diphreutes,0.02188,3.02,Planktivore,,
+Chaetodontidae,Heniochus monoceros,0.017,3.211,Benthic invertivore,50 x 4,include
+Chaetodontidae,Heniochus singularius,0.02188,3.01,Benthic invertivore,50 x 4,include
+Chaetodontidae,Heniochus varius,0.017,3.211,Corallivore,50 x 4,include
+Cirrhitidae,Cirrhitichthys falco,0.01259,2.99,Carnivore,50 x 4,remove
+Cirrhitidae,Cirrhitichthys oxycephalus,0.01413,3.02,Carnivore,50 x 4,remove
+Cirrhitidae,Cirrhitus pinnulatus,0.00912,3.07,Carnivore,50 x 4,remove
+Cirrhitidae,Cyprinocirrhites polyactis,0.01479,3.05,Carnivore,,
+Cirrhitidae,Neocirrhites armatus,0.01585,3.01,Benthic invertivore,50 x 4,remove
+Cirrhitidae,Paracirrhites arcatus,0.00933,3.07,Carnivore,50 x 4,remove
+Cirrhitidae,Paracirrhites forsteri,0.00933,3.07,Carnivore,50 x 4,remove
+Cirrhitidae,Paracirrhites hemistictus,0.0301,2.946,Carnivore,50 x 4,remove
+Congridae,Heteroconger hassi,0.00102,3.06,Planktivore,,
+Dasyatidae,Dasyatis kuhlii,0.01096,3.11,Benthic invertivore,50 x 5,remove
+Dasyatidae,Neotrygon kuhlii,0.0295,3.01,Benthic invertivore,,
+Dasyatidae,Pateobatis fai,0.00832,3.1,Carnivore,50 x 5,remove
+Dasyatidae,Taeniura lymma,0.01096,3.11,Benthic invertivore,50 x 5,remove
+Dasyatidae,Taeniura meyeni,0.01096,3.11,Benthic invertivore,50 x 5,remove
+Dasyatidae,Taeniurops meyeni,0.00776,3.02,Piscivore,,
+Diodontidae,Diodon hystrix,0.06761,2.84,Benthic invertivore,50 x 5,remove
+Echeneidae,Echeneis naucrates,0.000841,3.3348,Piscivore,,
+Echeneidae,Remora remora,0.00049,3.1,Benthic invertivore,,
+Ephippiidae,Platax batavianus,0.02692,2.93,Omnivore,50 x 5,include
+Ephippiidae,Platax pinnatus,0.02455,2.96,Omnivore,50 x 5,include
+Fistulariidae,Fistularia commersonii,0.00166,2.93,Benthic invertivore,50 x 5,remove
+Ginglymostomatidae,Nebrius ferrugineus,0.00417,3.08,Carnivore,50 x 5,include
+Haemulidae,Diagramma labiosum,0.01862,2.96,Carnivore,50 x 5,include
+Haemulidae,Plectorhinchus albovittatus,0.0145,3.13,Benthic invertivore,50 x 5,include
+Haemulidae,Plectorhinchus chaetodontoides,0.0173,3.04,Carnivore,50 x 5,include
+Haemulidae,Plectorhinchus chrysotaenia,0.0138,3,Carnivore,50 x 5,include
+Haemulidae,Plectorhinchus gibbosus,0.01995,2.93,Carnivore,50 x 5,include
+Haemulidae,Plectorhinchus lessoni,0.0195,2.96,Carnivore,50 x 5,include
+Haemulidae,Plectorhinchus lineatus,0.0195,2.96,Benthic invertivore,50 x 5,include
+Haemulidae,Plectorhinchus picus,0.01259,3.01,Carnivore,50 x 5,include
+Hemiscylliidae,Hemiscyllium ocellatum,0.00407,3.09,Benthic invertivore,50 x 5,include
+Kyphosidae,Kyphosus bigibbus,0.0166,2.98,Browser,50 x 5,include
+Kyphosidae,Kyphosus cinerascens,0.01862,3.02,Grazer,50 x 5,include
+Kyphosidae,Kyphosus vaigiensis,0.0129,3.151,Browser,50 x 5,include
+Labridae,Anampses caeruleopunctatus,0.0226,2.793,Benthic invertivore,50 x 4,include
+Labridae,Anampses femininus,0.01,3.06,Benthic invertivore,50 x 4,include
+Labridae,Anampses geographicus,0.01,3.07,Benthic invertivore,50 x 4,include
+Labridae,Anampses melanurus,,,Benthic invertivore,,
+Labridae,Anampses meleagrides,0.01072,3.04,Benthic invertivore,50 x 4,include
+Labridae,Anampses neoguinaicus,0.0226,2.793,Benthic invertivore,50 x 4,include
+Labridae,Anampses twistii,0.0226,2.793,Benthic invertivore,50 x 4,include
+Labridae,Bodianus anthioides,0.01202,3.05,Benthic invertivore,50 x 5,include
+Labridae,Bodianus axillaris,0.0108,3.173,Benthic invertivore,50 x 4,include
+Labridae,Bodianus bimaculatus,,,Benthic invertivore,,
+Labridae,Bodianus dictynna,0.0108,3.173,Benthic invertivore,50 x 4,include
+Labridae,Bodianus loxozonus,0.01202,3.06,Benthic invertivore,50 x 4,include
+Labridae,Bodianus mesothorax,0.0108,3.173,Benthic invertivore,50 x 4,include
+Labridae,Bodianus perditio,0.01175,3.05,Benthic invertivore,50 x 4,include
+Labridae,Cheilinus chlorourus,0.0197,2.993,Benthic invertivore,50 x 5,include
+Labridae,Cheilinus fasciatus,0.0197,2.993,Benthic invertivore,50 x 5,include
+Labridae,Cheilinus oxycephalus,0.0197,2.993,Benthic invertivore,50 x 5,include
+Labridae,Cheilinus trilobatus,0.01905,3,Benthic invertivore,50 x 5,include
+Labridae,Cheilinus undulatus,0.0113,3.136,Benthic invertivore,50 x 5,include
+Labridae,Choerodon anchorago,0.01905,3.08,Benthic invertivore,50 x 5,include
+Labridae,Choerodon cyanodus,0.01288,3.04,Benthic invertivore,50 x 5,include
+Labridae,Choerodon fasciatus,0.01288,3.04,Benthic invertivore,50 x 5,include
+Labridae,Choerodon graphicus,0.01698,3.03,Benthic invertivore,50 x 5,include
+Labridae,Choerodon jordani,,,Carnivore,,
+Labridae,Choerodon schoenleinii,0.01288,3.05,Benthic invertivore,50 x 5,include
+Labridae,Cirrhilabrus bathyphilus,,,Planktivore,,
+Labridae,Cirrhilabrus exquisitus,0.0166,2.95,Planktivore,50 x 4,include
+Labridae,Cirrhilabrus laboutei,0.0226,2.793,Planktivore,50 x 4,include
+Labridae,Cirrhilabrus lineatus,0.01585,2.96,Planktivore,50 x 4,include
+Labridae,Cirrhilabrus punctatus,0.0226,2.793,Planktivore,50 x 4,include
+Labridae,Cirrhilabrus scottorum,0.0166,2.95,Planktivore,50 x 4,include
+Labridae,Coris aygula,0.0166,2.95,Benthic invertivore,50 x 4,include
+Labridae,Coris batuensis,0.01047,3.05,Benthic invertivore,50 x 4,include
+Labridae,Coris dorsomacula,0.0166,2.95,Benthic invertivore,50 x 4,include
+Labridae,Coris gaimard,0.0065,3.254,Benthic invertivore,50 x 4,include
+Labridae,Coris pictoides,,,Benthic invertivore,,
+Labridae,Diproctacanthus xanthurus,0.00977,3.04,Benthic invertivore,50 x 4,include
+Labridae,Epibulus insidiator,0.0161,3.081,Carnivore,50 x 5,include
+Labridae,Gomphosus varius,0.0244,2.703,Benthic invertivore,50 x 4,include
+Labridae,Halichoeres biocellatus,0.016,2.987,Benthic invertivore,50 x 4,include
+Labridae,Halichoeres chloropterus,0.00776,3.02,Benthic invertivore,50 x 4,include
+Labridae,Halichoeres chrysus,0.01,3.08,Benthic invertivore,50 x 4,include
+Labridae,Halichoeres hartzfeldii,,,Benthic invertivore,,
+Labridae,Halichoeres hortulanus,0.016,2.987,Benthic invertivore,50 x 4,include
+Labridae,Halichoeres margaritaceus,0.016,2.987,Benthic invertivore,50 x 4,include
+Labridae,Halichoeres marginatus,0.016,2.987,Benthic invertivore,50 x 4,include
+Labridae,Halichoeres melanurus,0.01202,3.13,Benthic invertivore,50 x 4,include
+Labridae,Halichoeres melasmapomus,,,Benthic invertivore,,
+Labridae,Halichoeres miniatus,0.01,3.08,Benthic invertivore,50 x 4,include
+Labridae,Halichoeres nebulosus,0.01,3.08,Benthic invertivore,50 x 4,include
+Labridae,Halichoeres ornatissimus,0.016,2.987,Benthic invertivore,50 x 4,include
+Labridae,Halichoeres prosopeion,0.016,2.987,Benthic invertivore,50 x 4,include
+Labridae,Halichoeres trimaculatus,0.0275,2.736,Benthic invertivore,50 x 4,include
+Labridae,Hemigymnus fasciatus,0.0242,2.923,Benthic invertivore,50 x 5,include
+Labridae,Hemigymnus melapterus,0.01259,3.04,Benthic invertivore,50 x 5,include
+Labridae,Hologymnosus annulatus,0.01072,3.04,Benthic invertivore,50 x 5,include
+Labridae,Hologymnosus doliatus,0.0107,3.178,Benthic invertivore,50 x 5,include
+Labridae,Hologymnosus longipes,,,Benthic invertivore,,
+Labridae,Iniistius pavo,0.01047,3.07,Benthic invertivore,50 x 5,include
+Labridae,Labrichthys unilineatus,0.0059,3.231,Benthic invertivore,50 x 4,include
+Labridae,Labroides bicolor,0.0059,3.231,Benthic invertivore,50 x 4,include
+Labridae,Labroides dimidiatus,0.0059,3.231,Benthic invertivore,50 x 4,include
+Labridae,Labroides pectoralis,0.0059,3.231,Benthic invertivore,50 x 4,include
+Labridae,Labropsis australis,0.0059,3.231,Benthic invertivore,50 x 4,include
+Labridae,Labropsis xanthonota,0.0059,3.231,Benthic invertivore,50 x 4,include
+Labridae,Leptojulis cyanopleura,,,Planktivore,,
+Labridae,Macropharyngodon choati,0.01072,3.04,Benthic invertivore,50 x 4,include
+Labridae,Macropharyngodon kuiteri,0.01,3.06,Benthic invertivore,50 x 4,include
+Labridae,Macropharyngodon meleagris,0.0226,2.793,Benthic invertivore,50 x 4,include
+Labridae,Macropharyngodon negrosensis,0.01,3.06,Benthic invertivore,50 x 4,include
+Labridae,Novaculichthys taeniourus,0.02042,2.96,Benthic invertivore,50 x 5,include
+Labridae,Oxycheilinus bimaculatus,,,Carnivore,,
+Labridae,Oxycheilinus digramma,0.0155,3.058,Carnivore,50 x 5,include
+Labridae,Oxycheilinus nigromarginatus,,,Carnivore,,
+Labridae,Oxycheilinus orientalis,0.01778,2.93,Carnivore,50 x 5,include
+Labridae,Oxycheilinus unifasciatus,0.0155,3.058,Carnivore,50 x 5,include
+Labridae,Pseudocheilinus evanidus,0.01622,2.96,Benthic invertivore,50 x 4,include
+Labridae,Pseudocheilinus hexataenia,0.01622,2.96,Benthic invertivore,50 x 4,include
+Labridae,Pseudocheilinus octotaenia,0.01622,2.96,Benthic invertivore,50 x 4,include
+Labridae,Pseudocoris yamashiroi,0.01622,2.96,Benthic invertivore,50 x 4,include
+Labridae,Pseudodax moluccanus,0.01622,2.96,Benthic invertivore,50 x 4,include
+Labridae,Pseudojuloides cerasinus,,,Benthic invertivore,,
+Labridae,Pteragogus cryptus,0.0166,2.95,Benthic invertivore,50 x 4,include
+Labridae,Pteragogus sp.,0.0166,2.95,Benthic invertivore,50 x 4,include
+Labridae,Stethojulis bandanensis,0.0304,2.581,Benthic invertivore,50 x 4,include
+Labridae,Stethojulis interrupta,0.0304,2.581,Benthic invertivore,50 x 4,include
+Labridae,Stethojulis strigiventer,0.00891,2.98,Benthic invertivore,50 x 4,include
+Labridae,Stethojulis trilineata,0.01047,3.1,Benthic invertivore,50 x 4,include
+Labridae,Thalassoma amblycephalum,0.0123,3.097,Planktivore,50 x 4,include
+Labridae,Thalassoma hardwicke,0.0178,2.978,Carnivore,50 x 4,include
+Labridae,Thalassoma lunare,0.0211,2.832,Carnivore,50 x 4,include
+Labridae,Thalassoma lutescens,0.0211,2.832,Carnivore,50 x 4,include
+Labridae,Thalassoma nigrofasciatum,0.0123,3.097,Carnivore,50 x 4,include
+Labridae,Thalassoma purpureum,0.01318,3.05,Carnivore,50 x 4,include
+Labridae,Thalassoma quinquevittatum,0.0211,2.832,Benthic invertivore,50 x 4,include
+Labridae,Thalassoma trilobatum,0.00977,3.05,Benthic invertivore,50 x 4,include
+Labridae (Scarinae),Bolbometopon muricatum,0.01413,3.04,Excavator,50 x 5,include
+Labridae (Scarinae),Calotomus carolinus,0.0163,2.991,Browser,50 x 5,include
+Labridae (Scarinae),Cetoscarus ocellatus,0.01567,3,Excavator,50 x 5,include
+Labridae (Scarinae),Chlorurus bleekeri,0.01549,3.06,Excavator,50 x 5,include
+Labridae (Scarinae),Chlorurus frontalis,0.01047,3.09,Excavator,50 x 5,include
+Labridae (Scarinae),Chlorurus japanensis,0.01549,3.06,Excavator,50 x 5,include
+Labridae (Scarinae),Chlorurus microrhinos,0.01549,3.06,Excavator,50 x 5,include
+Labridae (Scarinae),Chlorurus sordidus,,,Excavator,,
+Labridae (Scarinae),Chlorurus spilurus,0.0243,2.969,Excavator,50 x 5,include
+Labridae (Scarinae),Hipposcarus longiceps,0.01413,3.04,Scraper,50 x 5,include
+Labridae (Scarinae),Scarus altipinnis,0.0184,3.029,Scraper,50 x 5,include
+Labridae (Scarinae),Scarus chameleon,0.0234,2.956,Scraper,50 x 5,include
+Labridae (Scarinae),Scarus dimidiatus,0.0234,2.956,Scraper,50 x 5,include
+Labridae (Scarinae),Scarus flavipectoralis,0.02138,3.05,Scraper,50 x 5,include
+Labridae (Scarinae),Scarus forsteni,0.01622,3.01,Scraper,50 x 5,include
+Labridae (Scarinae),Scarus frenatus,0.0234,2.956,Scraper,50 x 5,include
+Labridae (Scarinae),Scarus ghobban,0.01445,3.04,Scraper,50 x 5,include
+Labridae (Scarinae),Scarus globiceps,0.0234,2.956,Scraper,50 x 5,include
+Labridae (Scarinae),Scarus longipinnis,0.01445,3.04,Scraper,50 x 5,include
+Labridae (Scarinae),Scarus niger,0.0134,3.16,Scraper,50 x 5,include
+Labridae (Scarinae),Scarus oviceps,0.0234,2.956,Scraper,50 x 5,include
+Labridae (Scarinae),Scarus psittacus,0.0105,3.319,Scraper,50 x 5,include
+Labridae (Scarinae),Scarus rivulatus,0.01514,3.07,Scraper,50 x 5,include
+Labridae (Scarinae),Scarus rubroviolaceus,0.0234,2.956,Scraper,50 x 5,include
+Labridae (Scarinae),Scarus schlegeli,0.0231,2.969,Scraper,50 x 5,include
+Labridae (Scarinae),Scarus spinus,0.0234,2.956,Scraper,50 x 5,include
+Labridae (Scarinae),Scarus viridifucatus,0.0234,2.956,Scraper,50 x 5,include
+Labridae (Scarinae),Scarus xanthopleura,0.0234,2.956,Scraper,50 x 5,include
+Lethrinidae,Gnathodentex aureolineatus,0.01549,3.02,Benthic invertivore,50 x 5,include
+Lethrinidae,Gymnocranius euanus,0.0182,2.98,Benthic invertivore,50 x 5,include
+Lethrinidae,Gymnocranius grandoculis,,,Benthic invertivore,,
+Lethrinidae,Gymnocranius microdon,0.01698,2.99,Benthic invertivore,50 x 5,include
+Lethrinidae,Gymnocranius superciliosus,,,Benthic invertivore,,
+Lethrinidae,Lethrinus atkinsoni,0.01549,3.01,Carnivore,50 x 5,include
+Lethrinidae,Lethrinus erythracanthus,0.0123,2.98,Carnivore,50 x 5,include
+Lethrinidae,Lethrinus harak,0.0195,3.01,Carnivore,50 x 5,include
+Lethrinidae,Lethrinus lentjan,0.01514,2.98,Carnivore,50 x 5,include
+Lethrinidae,Lethrinus miniatus,0.0138,3,Piscivore,50 x 5,include
+Lethrinidae,Lethrinus nebulosus,0.0187,2.996,Carnivore,50 x 5,include
+Lethrinidae,Lethrinus obsoletus,0.01175,2.98,Benthic invertivore,50 x 5,include
+Lethrinidae,Lethrinus olivaceus,0.01698,2.93,Carnivore,50 x 5,include
+Lethrinidae,Lethrinus rubrioperculatus,,,Carnivore,,
+Lethrinidae,Lethrinus semicinctus,,,Benthic invertivore,,
+Lethrinidae,Lethrinus sp. 1,0.01175,2.98,Carnivore,50 x 5,include
+Lethrinidae,Lethrinus xanthocheilus,0.01698,2.93,Carnivore,50 x 5,include
+Lethrinidae,Monotaxis grandoculis,0.023,3.022,Benthic invertivore,50 x 5,include
+Lethrinidae,Monotaxis heterodon,0.023,3.022,Benthic invertivore,50 x 5,include
+Lutjanidae,Aphareus furca,0.01738,2.94,Piscivore,50 x 5,include
+Lutjanidae,Aprion virescens,0.01349,2.95,Piscivore,50 x 5,include
+Lutjanidae,Lutjanus adetii,0.01413,3.03,Carnivore,50 x 5,include
+Lutjanidae,Lutjanus argentimaculatus,0.0156,3.059,Carnivore,50 x 5,include
+Lutjanidae,Lutjanus bohar,0.0156,3.059,Piscivore,50 x 5,include
+Lutjanidae,Lutjanus carponotatus,0.01445,2.96,Carnivore,50 x 5,include
+Lutjanidae,Lutjanus fulviflamma,0.01585,2.98,Carnivore,50 x 5,include
+Lutjanidae,Lutjanus fulvus,0.0156,3.059,Carnivore,50 x 5,include
+Lutjanidae,Lutjanus gibbus,0.0131,3.138,Carnivore,50 x 5,include
+Lutjanidae,Lutjanus kasmira,0.0084,3.247,Carnivore,50 x 5,include
+Lutjanidae,Lutjanus monostigma,0.0222,2.913,Carnivore,50 x 5,include
+Lutjanidae,Lutjanus rivulatus,0.0222,2.913,Carnivore,50 x 5,include
+Lutjanidae,Lutjanus russellii,0.01318,2.99,Carnivore,50 x 5,include
+Lutjanidae,Lutjanus sebae,,,Carnivore,,
+Lutjanidae,Lutjanus semicinctus,0.0222,2.913,Carnivore,50 x 5,include
+Lutjanidae,Lutjanus vitta,0.01445,2.98,Carnivore,50 x 5,include
+Lutjanidae,Macolor macularis,0.0156,3.059,Planktivore,50 x 5,include
+Lutjanidae,Macolor niger,0.01738,2.99,Planktivore,50 x 5,include
+Lutjanidae,Pristipomoides filamentosus,,,Carnivore,,
+Lutjanidae,Symphorus nematophorus,0.0123,3.02,Carnivore,51 x 5,include
+Malacanthidae,Hoplolatilus starcki,,,Benthic invertivore,,
+Malacanthidae,Malacanthus brevirostris,,,Benthic invertivore,,
+Monacanthidae,Aluteres scriptus,0.0257,2.91,Benthic invertivore,50 x 2,remove
+Monacanthidae,Aluterus scriptus,,,Omnivore,,
+Monacanthidae,Cantherhines dumerili,0.0257,2.91,Benthic invertivore,50 x 2,remove
+Monacanthidae,Cantherhines pardalis,0.0166,2.92,Benthic invertivore,50 x 2,remove
+Monacanthidae,Oxymonacanthus longirostris,0.0182,2.9,Corallivore,50 x 2,remove
+Monacanthidae,Paraluteres prionurus,0.02138,2.92,Omnivore,50 x 2,remove
+Monacanthidae,Paramonacanthus curtorhynchos,,,Benthic invertivore,,
+Monacanthidae,Pervagor alternans,0.02138,2.92,Benthic invertivore,50 x 2,remove
+Monacanthidae,Pervagor janthinosoma,0.02089,2.92,Benthic invertivore,50 x 2,remove
+Monacanthidae,Pseudalutarius nasicornis,,,Benthic invertivore,,
+Mullidae,Mulloidichthys flavolineatus,0.01096,3.08,Benthic invertivore,50 x 5,include
+Mullidae,Mulloidichthys pfluegeri,,,Carnivore,,
+Mullidae,Mulloidichthys vanicolensis,0.01,3.04,Benthic invertivore,50 x 5,include
+Mullidae,Parupeneus barberinoides,0.01047,3.08,Benthic invertivore,50 x 5,include
+Mullidae,Parupeneus barberinus,0.0131,3.122,Benthic invertivore,50 x 5,include
+Mullidae,Parupeneus ciliatus,0.0116,3.22,Benthic invertivore,50 x 5,include
+Mullidae,Parupeneus crassilabris,0.0116,3.22,Benthic invertivore,50 x 5,include
+Mullidae,Parupeneus cyclostomus,0.0145,3.13,Benthic invertivore,50 x 5,include
+Mullidae,Parupeneus heptacanthus,0.0097,3.1139,Benthic invertivore,,
+Mullidae,Parupeneus multifasciatus,0.0114,3.211,Benthic invertivore,50 x 5,include
+Mullidae,Parupeneus pleurostigma,0.0145,3.13,Benthic invertivore,50 x 5,include
+Mullidae,Parupeneus spilurus,0.01288,3.04,Benthic invertivore,50 x 5,include
+Muraenidae,Gymnothorax favagineus,0.00035,3.26,Carnivore,50 x 5,remove
+Muraenidae,Gymnothorax javanicus,0.00182,3.12,Piscivore,50 x 5,remove
+Muraenidae,Gymnothorax meleagris,0.00059,3.32,Carnivore,50 x 5,remove
+Nemipteridae,Pentapodus aureofasciatus,0.01549,2.97,Carnivore,50 x 5,include
+Nemipteridae,Pentapodus nagasakiensis,,,Carnivore,,
+Nemipteridae,Scolopsis affinis,,,Carnivore,,
+Nemipteridae,Scolopsis bilineata,,,Carnivore,,
+Nemipteridae,Scolopsis bilineatus,0.0138,3.174,Benthic invertivore,50 x 5,include
+Nemipteridae,Scolopsis lineata,0.0166,2.98,Carnivore,50 x 5,include
+Nemipteridae,Scolopsis margaritifer,0.02089,3.01,Carnivore,50 x 5,include
+Orectolobidae,Orectolobus ornatus,,,Carnivore,,
+Ostraciidae,Ostracion cubicus,0.0537,2.76,Benthic invertivore,50 x 4,remove
+Ostraciidae,Ostracion meleagris,0.03631,2.81,Benthic invertivore,50 x 4,remove
+Pinguipedidae,Parapercis hexophthalma,,,Benthic invertivore,,
+Plotosidae,Plotosus lineatus,0.00708,3.1,Benthic invertivore,50 x 4,remove
+Pomacanthidae,Apolemichthys trimaculatus,0.0669,2.724,Omnivore,50 x 4,include
+Pomacanthidae,Centropyge bicolor,0.0745,2.577,Grazer,50 x 4,include
+Pomacanthidae,Centropyge bispinosa,,,Omnivore,,
+Pomacanthidae,Centropyge bispinosus,0.092,2.458,Grazer,50 x 4,include
+Pomacanthidae,Centropyge fisheri,0.0545,2.59,Grazer,50 x 4,include
+Pomacanthidae,Centropyge flavissima,,,Grazer,,
+Pomacanthidae,Centropyge flavissimus,0.0302,2.89,Grazer,50 x 4,include
+Pomacanthidae,Centropyge heraldi,0.0302,2.89,Grazer,50 x 4,include
+Pomacanthidae,Centropyge loricula,0.0302,2.89,Grazer,50 x 4,include
+Pomacanthidae,Centropyge smokey,0.0745,2.577,Grazer,50 x 4,include
+Pomacanthidae,Centropyge tibicen,0.0302,2.89,Grazer,50 x 4,include
+Pomacanthidae,Centropyge vrolikii,0.0745,2.577,Grazer,50 x 4,include
+Pomacanthidae,Chaetodontoplus meredithi,0.02512,2.9,Omnivore,50 x 4,include
+Pomacanthidae,Genicanthus melanospilos,,,Omnivore,,
+Pomacanthidae,Genicanthus watanabei,,,Omnivore,,
+Pomacanthidae,Paracentropyge multifasciata,0.0301,2.946,Omnivore,50 x 4,include
+Pomacanthidae,Pomacanthus imperator,0.03162,2.91,Benthic invertivore,50 x 5,include
+Pomacanthidae,Pomacanthus semicirculatus,0.02042,2.91,Benthic invertivore,50 x 5,include
+Pomacanthidae,Pomacanthus sexstriatus,0.03162,2.91,Benthic invertivore,50 x 5,include
+Pomacanthidae,Pomacanthus xanthometopon,0.03162,2.91,Benthic invertivore,50 x 5,include
+Pomacanthidae,Pygoplites diacanthus,0.0669,2.724,Benthic invertivore,50 x 4,include
+Pomacentridae,Abudefduf bengalensis,0.02399,3.01,Omnivore,50 x 2,include
+Pomacentridae,Abudefduf sexfasciatus,0.02138,3.04,Planktivore,50 x 2,include
+Pomacentridae,Abudefduf vaigiensis,0.0263,3.01,Planktivore,50 x 2,include
+Pomacentridae,Abudefduf whitleyi,0.0166,3.01,Planktivore,50 x 2,include
+Pomacentridae,Acanthochromis polyacanthus,0.0144,3.33,Planktivore,50 x 2,include
+Pomacentridae,Amblyglyphidodon aureus,0.02138,2.99,Planktivore,50 x 2,include
+Pomacentridae,Amblyglyphidodon curacao,0.0126,3.435,Planktivore,50 x 2,include
+Pomacentridae,Amblyglyphidodon leucogaster,0.0297,2.936,Omnivore,50 x 2,include
+Pomacentridae,Amphiprion akindynos,0.0316,2.93,Omnivore,50 x 2,include
+Pomacentridae,Amphiprion chrysopterus,0.0316,2.93,Omnivore,50 x 2,include
+Pomacentridae,Amphiprion clarkii,0.01905,2.98,Omnivore,50 x 2,include
+Pomacentridae,Amphiprion melanopus,0.0316,2.93,Omnivore,50 x 2,include
+Pomacentridae,Amphiprion perideraion,0.01905,2.98,Omnivore,50 x 2,include
+Pomacentridae,Chromis agilis,0.01778,2.99,Planktivore,50 x 2,include
+Pomacentridae,Chromis alpha,0.01778,2.99,Planktivore,50 x 2,include
+Pomacentridae,Chromis amboinensis,0.01778,2.99,Planktivore,50 x 2,include
+Pomacentridae,Chromis atripectoralis,0.0179,3.291,Planktivore,50 x 2,include
+Pomacentridae,Chromis atripes,0.0179,3.291,Planktivore,50 x 2,include
+Pomacentridae,Chromis chrysura,0.0228,3.222,Planktivore,50 x 2,include
+Pomacentridae,Chromis flavomaculata,0.0228,3.222,Planktivore,50 x 2,include
+Pomacentridae,Chromis fumea,0.01479,2.98,Planktivore,50 x 2,include
+Pomacentridae,Chromis iomelas,0.02188,3.04,Planktivore,50 x 2,include
+Pomacentridae,Chromis lepidolepis,0.02188,3.04,Planktivore,50 x 2,include
+Pomacentridae,Chromis margaritifer,0.0229,3.175,Planktivore,50 x 2,include
+Pomacentridae,Chromis nitida,0.01479,2.99,Planktivore,50 x 2,include
+Pomacentridae,Chromis retrofasciata ,0.01514,2.94,Planktivore,50 x 2,include
+Pomacentridae,Chromis ternatensis,0.016,3.408,Planktivore,50 x 2,include
+Pomacentridae,Chromis vanderbilti,0.01479,2.98,Planktivore,50 x 2,include
+Pomacentridae,Chromis viridis,0.01778,2.99,Planktivore,50 x 2,include
+Pomacentridae,Chromis weberi,0.01778,2.99,Planktivore,50 x 2,include
+Pomacentridae,Chromis xanthochira,0.01778,2.99,Planktivore,50 x 2,include
+Pomacentridae,Chromis xanthura,0.0166,2.95,Planktivore,50 x 2,include
+Pomacentridae,Chrysiptera biocellata,0.026,2.926,Farmer,50 x 2,include
+Pomacentridae,Chrysiptera brownriggii,0.026,2.926,Farmer,50 x 2,include
+Pomacentridae,Chrysiptera cyanea,0.01479,2.99,Omnivore,50 x 2,include
+Pomacentridae,Chrysiptera flavipinnis,0.01479,2.99,Omnivore,50 x 2,include
+Pomacentridae,Chrysiptera glauca,0.026,2.926,Omnivore,50 x 2,include
+Pomacentridae,Chrysiptera rex,0.01479,2.99,Farmer,50 x 2,include
+Pomacentridae,Chrysiptera rollandi,0.026,2.926,Planktivore,50 x 2,include
+Pomacentridae,Chrysiptera starcki,,,Omnivore,,
+Pomacentridae,Chrysiptera talboti,0.026,2.926,Planktivore,50 x 2,include
+Pomacentridae,Chrysiptera taupou,0.01738,2.96,Planktivore,50 x 2,include
+Pomacentridae,Chrysiptera tricincta,,,Omnivore,,
+Pomacentridae,Dascyllus aruanus,0.0311,3.133,Planktivore,50 x 2,include
+Pomacentridae,Dascyllus reticulatus,0.0311,3.133,Planktivore,50 x 2,include
+Pomacentridae,Dascyllus trimaculatus,0.0313,3.043,Omnivore,50 x 2,include
+Pomacentridae,Dischistodus melanotus,0.02344,3,Farmer,50 x 2,include
+Pomacentridae,Dischistodus perspicillatus,0.01479,2.99,Farmer,50 x 2,include
+Pomacentridae,Dischistodus prosopotaenia,0.01479,2.99,Farmer,50 x 2,include
+Pomacentridae,Dischistodus pseudochrysopoecilus,0.01479,2.99,Farmer,50 x 2,include
+Pomacentridae,Hemiglyphidodon plagiometopon,0.02089,2.99,Farmer,50 x 2,include
+Pomacentridae,Lepidozygus tapeinosoma,0.0209,3.191,Planktivore,50 x 2,include
+Pomacentridae,Neoglyphidodon melas,0.02089,2.99,Omnivore,50 x 2,include
+Pomacentridae,Neoglyphidodon nigroris,0.01778,3.01,Omnivore,50 x 2,include
+Pomacentridae,Neoglyphidodon polyacanthus,0.02344,3.03,Omnivore,50 x 2,include
+Pomacentridae,Neopomacentrus azysron,0.01862,2.96,Planktivore,50 x 2,include
+Pomacentridae,Neopomacentrus cf cyanomos,0.0258,2.933,Planktivore,50 x 2,include
+Pomacentridae,Plectroglyphidodon dickii,0.02455,2.99,Farmer,50 x 2,include
+Pomacentridae,Plectroglyphidodon imparipennis,0.01479,2.99,Omnivore,50 x 2,include
+Pomacentridae,Plectroglyphidodon johnstonianus,0.02344,2.95,Omnivore,50 x 2,include
+Pomacentridae,Plectroglyphidodon lacrymatus,0.0395,2.989,Farmer,50 x 2,include
+Pomacentridae,Plectroglyphidodon leucozonus,0.02089,2.99,Omnivore,50 x 2,include
+Pomacentridae,Plectroglyphidodon phoenixensis,0.0395,2.989,Omnivore,50 x 2,include
+Pomacentridae,Pomacentrus adelus,0.02138,3.04,Farmer,50 x 2,include
+Pomacentridae,Pomacentrus amboinensis,0.028,3.024,Omnivore,50 x 2,include
+Pomacentridae,Pomacentrus bankanensis,0.028,3.024,Farmer,50 x 2,include
+Pomacentridae,Pomacentrus brachialis,0.028,3.024,Omnivore,50 x 2,include
+Pomacentridae,Pomacentrus chrysurus,0.028,3.024,Farmer,50 x 2,include
+Pomacentridae,Pomacentrus coelestis,0.0166,2.92,Planktivore,50 x 2,include
+Pomacentridae,Pomacentrus grammorhynchus,0.02291,2.99,Farmer,50 x 2,include
+Pomacentridae,Pomacentrus imitator,0.01995,3.09,Omnivore,50 x 2,include
+Pomacentridae,Pomacentrus lepidogenys,0.01995,3.09,Planktivore,50 x 2,include
+Pomacentridae,Pomacentrus moluccensis,0.0305,3.012,Omnivore,50 x 2,include
+Pomacentridae,Pomacentrus nagasakiensis,0.01622,2.98,Planktivore,50 x 2,include
+Pomacentridae,Pomacentrus nigromarginatus,,,Planktivore,,
+Pomacentridae,Pomacentrus pavo,0.0305,3.012,Planktivore,50 x 2,include
+Pomacentridae,Pomacentrus philippinus,0.0182,2.96,Planktivore,50 x 2,include
+Pomacentridae,Pomacentrus vaiuli,0.02512,2.91,Omnivore,50 x 2,include
+Pomacentridae,Pomacentrus wardi,0.02291,2.99,Farmer,50 x 2,include
+Pomacentridae,Pomachromis richardsoni,0.01479,2.98,Planktivore,50 x 2,include
+Pomacentridae,Premnas biaculeatus,0.02692,3.01,Omnivore,50 x 2,include
+Pomacentridae,Stegastes apicalis,0.0195,2.99,Farmer,50 x 2,include
+Pomacentridae,Stegastes fasciolatus,0.0384,3.01,Farmer,50 x 2,include
+Pomacentridae,Stegastes gascoynei,0.0384,3.01,Farmer,50 x 2,include
+Pomacentridae,Stegastes nigricans,0.0384,3.01,Farmer,50 x 2,include
+Pseudochromidae,Ogilbyina queenslandiae,0.01148,3.01,Carnivore,50 x 4,include
+Pseudochromidae,Pseudochromis fuscus,0.00501,3.1,Carnivore,50 x 4,include
+Scombridae,Gymnosarda unicolor,0.01047,3.04,Piscivore,50 x 5,remove
+Scorpaenidae,Pterois volitans,0.0395,2.989,Carnivore,50 x 2,remove
+Serranidae,Aethaloperca rogaa,0.01349,3.1,Carnivore,50 x 5,include
+Serranidae,Anyperodon leucogrammicus,0.0226,2.793,Piscivore,50 x 5,include
+Serranidae,Belonoperca chabanaudi,0.00389,3.12,Carnivore,50 x 5,include
+Serranidae,Cephalopholis argus,0.0093,3.181,Piscivore,50 x 5,include
+Serranidae,Cephalopholis boenak,0.01288,3.05,Carnivore,50 x 5,include
+Serranidae,Cephalopholis cyanostigma,0.01318,3.02,Carnivore,50 x 5,include
+Serranidae,Cephalopholis leopardus,0.0115,3.109,Piscivore,50 x 5,include
+Serranidae,Cephalopholis microprion,0.01698,3.1,Carnivore,50 x 5,include
+Serranidae,Cephalopholis miniata,0.0107,3.114,Piscivore,50 x 5,include
+Serranidae,Cephalopholis sonnerati,0.013401,3.159,Carnivore,,
+Serranidae,Cephalopholis spiloparaea,0.0115,3.109,Piscivore,50 x 5,include
+Serranidae,Cephalopholis urodeta,0.0115,3.109,Piscivore,50 x 5,include
+Serranidae,Cromileptes altivelis,0.0138,3.13,Carnivore,50 x 5,include
+Serranidae,Diploprion bifasciatum,0.01698,3.03,Carnivore,50 x 5,include
+Serranidae,Epinephelus coeruleopunctatus,0.01175,3.04,Piscivore,50 x 5,include
+Serranidae,Epinephelus coioides,0.01175,3.04,Piscivore,50 x 5,include
+Serranidae,Epinephelus cyanopodus,0.01096,3.05,Carnivore,50 x 5,include
+Serranidae,Epinephelus fasciatus,0.0158,2.966,Carnivore,50 x 5,include
+Serranidae,Epinephelus fuscoguttatus,0.01047,3.03,Piscivore,50 x 5,include
+Serranidae,Epinephelus hexagonatus,0.01096,3.01,Carnivore,50 x 5,include
+Serranidae,Epinephelus howlandensis,0.0158,2.966,Carnivore,50 x 5,include
+Serranidae,Epinephelus lanceolatus,0.01047,3.02,Piscivore,50 x 5,include
+Serranidae,Epinephelus maculatus,0.01023,3.03,Carnivore,50 x 5,include
+Serranidae,Epinephelus melanostigma,0.01148,3.04,Carnivore,50 x 5,include
+Serranidae,Epinephelus merra,0.0158,2.966,Carnivore,50 x 5,include
+Serranidae,Epinephelus ongus,0.01148,3.02,Carnivore,50 x 5,include
+Serranidae,Epinephelus polyphekadion,0.01096,3.07,Carnivore,50 x 5,include
+Serranidae,Epinephelus quoyanus ,0.01122,3.02,Carnivore,50 x 5,include
+Serranidae,Epinephelus tauvina,0.01479,3.05,Carnivore,50 x 5,include
+Serranidae,Epinephelus tukula,0.01096,3.07,Piscivore,50 x 5,include
+Serranidae,Euthynnus affinis,0.00955,3.05,Carnivore,50 x 5,include
+Serranidae,Gracilla albomarginata,0.0244,2.703,Piscivore,50 x 5,include
+Serranidae,Grammistes sexlineatus,0.01148,3.06,Carnivore,50 x 4,include
+Serranidae,Luzonichthys sp,0.0134,3.031,Carnivore,50 x 5,include
+Serranidae,Plectropomus areolatus,0.0395,2.989,Piscivore,50 x 5,include
+Serranidae,Plectropomus laevis,0.0059,3.238,Piscivore,50 x 5,include
+Serranidae,Plectropomus leopardus,0.0118,3.06,Piscivore,50 x 5,include
+Serranidae,Plectropomus maculatus,0.01122,3.05,Piscivore,50 x 5,include
+Serranidae,Pseudanthias cooperi,0.01413,2.98,Planktivore,50 x 5,include
+Serranidae,Pseudanthias dispar,0.00955,2.97,Planktivore,50 x 5,include
+Serranidae,Pseudanthias hypselosoma,0.013,3.12,Planktivore,,
+Serranidae,Pseudanthias pascalus,0.0137,3.149,Planktivore,50 x 5,include
+Serranidae,Pseudanthias pictilis,0.00933,2.97,Planktivore,,
+Serranidae,Pseudanthias pleurotaenia,0.0137,3.149,Planktivore,50 x 5,include
+Serranidae,Pseudanthias squamipinnis,0.0137,3.149,Planktivore,50 x 5,include
+Serranidae,Pseudanthias tuka,0.0137,3.149,Planktivore,50 x 5,include
+Serranidae,Serranocirrhitus latus,0.0137,3.149,Planktivore,50 x 5,include
+Serranidae,Variola albimarginata,0.0187,3.12,Piscivore,,
+Serranidae,Variola louti,0.01047,3.04,Piscivore,50 x 5,include
+Siganidae,Siganus argenteus,0.0109,3.154,Grazer,50 x 5,include
+Siganidae,Siganus canaliculatus,0.01479,2.97,Grazer,50 x 5,include
+Siganidae,Siganus corallinus,0.0109,3.154,Grazer,50 x 5,include
+Siganidae,Siganus doliatus,0.0138,3.1,Grazer,50 x 5,include
+Siganidae,Siganus lineatus,0.01738,2.99,Grazer,50 x 5,include
+Siganidae,Siganus puellus,0.0109,3.154,Grazer,50 x 5,include
+Siganidae,Siganus punctatissimus,0.0145,3.122,Grazer,50 x 5,include
+Siganidae,Siganus punctatus,0.0145,3.122,Grazer,50 x 5,include
+Siganidae,Siganus spinus,0.0195,3.01,Grazer,50 x 5,include
+Siganidae,Siganus vulpinus,0.0109,3.154,Grazer,50 x 5,include
+Siganidae,Siganus woodlandi,0.0109,3.154,Grazer,50 x 5,include
+Sphyraenidae,Sphyraena barracuda,0.00832,2.93,Piscivore,50 x 5,include
+Sphyraenidae,Sphyraena flavicauda,0.00741,2.94,Piscivore,50 x 5,include
+Sphyraenidae,Sphyraena forsteri,0.00741,2.94,Piscivore,50 x 5,include
+Sphyraenidae,Sphyraena qenie,,,Piscivore,,
+Stegostomatidae,Stegostoma fasciatum,0.00389,3.12,Benthic invertivore,50 x 5,include
+Tetraodontidae,Arothron caeruleopunctatus,,,Benthic invertivore,,
+Tetraodontidae,Arothron nigropunctatus,0.02138,2.87,Benthic invertivore,50 x 5,remove
+Tetraodontidae,Arothron stellatus,0.04467,2.84,Benthic invertivore,50 x 5,remove
+Tetraodontidae,Canthigaster amboinensis,0.02818,2.94,Omnivore,50 x 4,remove
+Tetraodontidae,Canthigaster axiologus,0.02818,2.94,Benthic invertivore,50 x 4,remove
+Tetraodontidae,Canthigaster bennetti,0.02818,2.94,Omnivore,50 x 4,remove
+Tetraodontidae,Canthigaster janthinoptera,0.02818,2.94,Omnivore,50 x 4,remove
+Tetraodontidae,Canthigaster papua,0.03548,2.92,Omnivore,50 x 4,remove
+Tetraodontidae,Canthigaster valentini,0.0302,2.89,Benthic invertivore,50 x 4,remove
+Zanclidae,Zanclus cornutus,0.0147,3.37,Benthic invertivore,50 x 5,include

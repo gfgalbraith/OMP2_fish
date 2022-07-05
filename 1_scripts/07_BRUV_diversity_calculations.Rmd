@@ -1,0 +1,97 @@
+---
+title: "07_BRUV_diversity_calculations"
+output: html_document
+date: '2022-07-05'
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#HouseKeeping
+```{R}
+rm(list=ls())
+#dev.off()
+getwd()
+
+```
+
+#load libraries
+```{r}
+library(tidyverse)
+library(rfishbase)
+library(vegan)
+```
+
+# Data import
+```{r}
+fish <-read_csv("../2_outputs/BRUV_Fish_Final.csv")
+
+fish <- fish %>% mutate(
+  Reef=as.factor(Reef),
+  T_ID=as.factor(T_ID),
+  Survey=as.factor(Survey),
+  Site=as.factor(Site),
+  Comment = as.character(Comment),
+  Date = as.Date(Date),
+  Genus= as.factor(Genus),
+  Species= as.factor(Species),
+  Species_name = as.factor(Species_name),
+  Family = as.factor(Family),
+  `Trophic Group` = as.factor(`Trophic Group`),
+  `Functional Group` = as.factor (`Functional Group`),
+  `Functional Group.X` = as.factor(`Functional Group.X`),
+  Habitat = as.factor(Habitat),
+  Aspect = as.factor(Aspect))
+```
+
+# Create a species matrix in wide format for vegan functions and diversity indices
+
+```{r long to wide}
+# Select only the unique ID, .species and count
+fish.mat<-fish %>% select(T_ID, Species_name, MaxN)
+
+#fish.mat<-fish.mat %>% relocate(Number, .after = Species_name)
+
+fish.mat<-fish.mat %>% group_by(T_ID,Species_name) %>% 
+  summarise(Number=sum(MaxN)) %>% ungroup()
+
+fish.mat<-fish.mat %>% pivot_wider(names_from = Species_name, values_from = Number) %>% 
+  replace(is.na(.),0)
+```
+
+```{r Diversity indices}
+
+# Extract a species matrix - just species name and count
+spec.mat<-fish.mat[,-1]
+
+# use the species matrix to calculate the indices
+fish.mat$richness <- rowSums(spec.mat>0)
+fish.mat$abundance<- apply(spec.mat,1, sum)
+fish.mat$shannon <- diversity(spec.mat) # shannon is default
+fish.mat$simpson<-diversity(spec.mat, index = "simpson")
+
+```
+
+# Select diversity and TID
+```{r}
+diversity.data<-fish.mat %>% select(T_ID, richness,abundance, shannon,simpson)
+
+sites<-fish%>%select(T_ID, Survey, Reef, Site, Depth, Drop)%>%
+  distinct()
+
+drop.diversity<-left_join(diversity.data, sites,by = c("T_ID"))
+
+diversity.data<-left_join(fish, diversity.data, by="T_ID")
+
+```
+
+# Write CSV
+```{r}
+
+write.csv(diversity.data, file= "../2_outputs/BRUV_drop_diversity.csv", row.names = FALSE)
+write.csv(diversity.data, file= "../2_outputs/BRUV_fish_diversity.csv", row.names = FALSE)
+
+```
+

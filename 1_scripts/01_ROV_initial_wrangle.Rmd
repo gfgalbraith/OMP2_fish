@@ -79,7 +79,8 @@ merged <- data %>% mutate(
   Site=substring(Site,12),
   Transect=as.factor(Period),
   Length_mm=as.double(Length_mm),
-  Survey=as.factor(case_when(grepl("FEB2021", filename) ~ "Feb_21")),
+  Survey=as.factor(case_when(grepl("FEB2021", Filename) ~ "Feb_21",
+                             grepl("FEB2022", Filename) ~ "Feb_22")),
   Site=as.factor(Site))
 
 merged <- merged %>% mutate ( 
@@ -95,13 +96,13 @@ merged <- merged %>% mutate (
                    grepl("Ken", OpCode) ~ "Kenn",
                    grepl("Wrec", OpCode) ~ "Wreck",
                    grepl("Sau", OpCode) ~ "Saumarez",
+                   grepl("HerS", OpCode) ~ "Herald's Surprise",
                    grepl("Mar", OpCode) ~ "Marion",)))
 
 new.data<-select(merged,c(Survey,Reef,Site,Transect,Length_mm,Family,Genus,Species, Number,Comment))
 ```
 
 # Unique transect ID 
-First remove the "T" preceding each transect number, then concatenate with the site and survey for a unique transect ID.
 ```{r}
 
 new.data <- new.data %>% mutate(

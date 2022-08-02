@@ -82,7 +82,7 @@ levels(sites$Depth)
 levels(fish$T_ID)
 levels(fish$Site)
 levels(fish$Depth)
-#check matching TID
+#check matching TID - ALL OF THESE SHOULS RETURN ZERO ANTI-MATCHES
 anti_join(fish,sites, by ="T_ID")
 anti_join(fish,sites, by ="Survey")
 anti_join(fish,sites, by ="Site")
@@ -90,13 +90,14 @@ anti_join(fish,sites, by ="Reef")
 anti_join(fish,sites, by ="Drop")
 anti_join(fish,sites, by ="Depth")
 
+# Drops that were made but were not suitable for anlaysis /failed deployments - check against video analyses log
 anti_join(sites,fish, by ="T_ID")
 ```
 
 
 #Merge
 ```{r}
-merged.data<-left_join(fish, sites, by = c("Survey","Reef","Site","Drop","Depth","T_ID"))
+merged.data<-left_join(fish, sites, by = c("Survey","Reef","Site","Drop","T_ID"))
 
 merged.data%>%filter(is.na(Lat))
 is.na(merged.data$Habitat)
@@ -110,14 +111,14 @@ depths2<-subset(fish$Depth, sites$Depth)
 
 mismatches = subset(depths, depths$Depth.x != depths$Depth.y)
 
-# Two sites incorrect in BRUV csv files
+# Two sites incorrect in BRUV csv files - checked survey logs
 fish$Depth[fish$T_ID=="Feb_21_Flinders_S2_D3"] <-55
 fish$Depth[fish$T_ID=="Oct_21_Ashmore_2_D9"] <-37
 
 # Merge Again
 merged.data<-left_join(fish, sites, by = c("Survey","Reef","Site","Drop","Depth","T_ID"))
 
-merged.data%>%filter(is.na(Lat))
+merged.data%>%filter(is.na(Lat)) # all obs now match by the variables above
 merged.data%>%filter(is.na(Habitat))
 
 

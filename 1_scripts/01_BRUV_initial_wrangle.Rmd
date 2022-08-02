@@ -29,7 +29,7 @@ library(readr)
 
 
 #Import data
-Files need to have been saved as csv, all excel modifications made and renamed as per analysis instructions.
+Files need to have been saved as csv, all excel modifications made and renamed as per analysis SOP instructions.
 ```{r,echo=FALSE, results=FALSE, include=FALSE}
 # We need the reef, site name as a new variable to identify the source of the data
 # Pulls each file in, merges and creates a filename variable. 
@@ -129,8 +129,8 @@ points<-points %>%
 
 # Check for remaining NA values in points Species
 ```{r}
-points2<-points %>% filter(is.na(Species)) # 123 Na species
-points<-points %>% filter(!is.na(Species)) # 2165 # Non-na species
+points2<-points %>% filter(is.na(Species)) # 121 Na species
+points<-points %>% filter(!is.na(Species)) # 2167 # Non-na species
 ```
 
 # Addressing missing species issues in points2
@@ -150,7 +150,7 @@ points<-points%>%subset(Genus != 'Aipysurus')
 write.csv(snakes, file= "../0_data/BRUV_snake_data.csv", row.names = FALSE)
 
 # Check remaining NA values in points2
-points2 %>% filter(is.na(Species)) # 119 obs
+points2 %>% filter(is.na(Species)) # 117 obs
 points2 %>% distinct(Family, Genus, .keep_all = TRUE) # 38 unique
 points3<-points2 %>% distinct(Family, Genus, .keep_all = TRUE)
 

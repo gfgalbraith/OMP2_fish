@@ -463,7 +463,8 @@
 "Feb_21","Herald","Herald_1","D1",22117,"42",NA,"Carcharhinidae","Carcharhinus","albimarginatus",37018027,1,"Carcharhinus albimarginatus","Feb_21_Herald_1_D1","15/02/2021",16.97241,149.16846,"outer_reef",NA,NA
 "Feb_21","Herald","Herald_1","D1",17014,"42",NA,"Carcharhinidae","Carcharhinus","amblyrhynchos",37018030,1,"Carcharhinus amblyrhynchos","Feb_21_Herald_1_D1","15/02/2021",16.97241,149.16846,"outer_reef",NA,NA
 "Feb_21","Herald","Herald_1","D1",33438,"42",NA,"Labridae","Cheilinus","undulatus",37384038,1,"Cheilinus undulatus","Feb_21_Herald_1_D1","15/02/2021",16.97241,149.16846,"outer_reef",NA,NA
-"Feb_21","Herald","Herald_1","D1",39218,"42",NA,"Labridae","Choerodon","jordani",37384077,3,"Choerodon jordani","Feb_21_Herald_1_D1","15/02/2021",16.97241,149.16846,"outer_reef",NA,NA
+"Feb_21","Herald","Herald_1","D1",16531,"42",NA,"Labridae","Choerodon","jordani",37384077,1,"Choerodon jordani","Feb_21_Herald_1_D1","15/02/2021",16.97241,149.16846,"outer_reef",NA,NA
+"Feb_21","Herald","Herald_1","D1",39218,"42",NA,"Labridae","Halichoeres","hartzfeldii",NA,3,"Halichoeres hartzfeldii","Feb_21_Herald_1_D1","15/02/2021",16.97241,149.16846,"outer_reef",NA,NA
 "Feb_21","Herald","Herald_1","D1",45169,"42","longipes","Labridae","Hologymnosus","longipes",NA,4,"Hologymnosus longipes","Feb_21_Herald_1_D1","15/02/2021",16.97241,149.16846,"outer_reef",NA,NA
 "Feb_21","Herald","Herald_1","D1",44325,"42","euanus","Lethrinidae","Gymnocranius","euanus",NA,4,"Gymnocranius euanus","Feb_21_Herald_1_D1","15/02/2021",16.97241,149.16846,"outer_reef",NA,NA
 "Feb_21","Herald","Herald_1","D1",60587,"42",NA,"Lethrinidae","Lethrinus","olivaceus",37351004,1,"Lethrinus olivaceus","Feb_21_Herald_1_D1","15/02/2021",16.97241,149.16846,"outer_reef",NA,NA
@@ -472,7 +473,6 @@
 "Feb_21","Herald","Herald_1","D1",53058,"42",NA,"Lutjanidae","Lutjanus","bohar",37346029,3,"Lutjanus bohar","Feb_21_Herald_1_D1","15/02/2021",16.97241,149.16846,"outer_reef",NA,NA
 "Feb_21","Herald","Herald_1","D1",14136,"42",NA,"Malacanthidae","Malacanthus","brevirostris",37331009,1,"Malacanthus brevirostris","Feb_21_Herald_1_D1","15/02/2021",16.97241,149.16846,"outer_reef",NA,NA
 "Feb_21","Herald","Herald_1","D1",38358,"42",NA,"Sphyraenidae","Sphyraena","barracuda",37382008,1,"Sphyraena barracuda","Feb_21_Herald_1_D1","15/02/2021",16.97241,149.16846,"outer_reef",NA,NA
-"Feb_21","Herald","Herald_1","D1",43950,"42","longipes","Synodontidae","Synodus","longipes",NA,3,"Synodus longipes","Feb_21_Herald_1_D1","15/02/2021",16.97241,149.16846,"outer_reef",NA,NA
 "Feb_21","Herald","Herald_1","D2",42150,"52",NA,"Acanthuridae","Naso","tonganus",37437047,1,"Naso tonganus","Feb_21_Herald_1_D2","15/02/2021",16.97632,149.16705,"outer_reef",NA,NA
 "Feb_21","Herald","Herald_1","D2",35828,"52",NA,"Balistidae","Abalistes","stellatus",37465011,2,"Abalistes stellatus","Feb_21_Herald_1_D2","15/02/2021",16.97632,149.16705,"outer_reef",NA,NA
 "Feb_21","Herald","Herald_1","D2",11733,"52",NA,"Carangidae","Carangoides","orthogrammus",37337057,1,"Carangoides orthogrammus","Feb_21_Herald_1_D2","15/02/2021",16.97632,149.16705,"outer_reef",NA,NA
@@ -495,7 +495,7 @@
 "Feb_21","Herald","Herald_1","D3",18759,"71",NA,"Carcharhinidae","Carcharhinus","albimarginatus",37018027,1,"Carcharhinus albimarginatus","Feb_21_Herald_1_D3","15/02/2021",16.98023,149.16542,"outer_reef",NA,NA
 "Feb_21","Herald","Herald_1","D3",27243,"71",NA,"Carcharhinidae","Carcharhinus","amblyrhynchos",37018030,2,"Carcharhinus amblyrhynchos","Feb_21_Herald_1_D3","15/02/2021",16.98023,149.16542,"outer_reef",NA,NA
 "Feb_21","Herald","Herald_1","D3",45369,"71",NA,"Chaetodontidae","Heniochus","acuminatus",37365011,2,"Heniochus acuminatus","Feb_21_Herald_1_D3","15/02/2021",16.98023,149.16542,"outer_reef",NA,NA
-"Feb_21","Herald","Herald_1","D3",57963,"71",NA,"Labridae","Choerodon","jordani",37384077,2,"Choerodon jordani","Feb_21_Herald_1_D3","15/02/2021",16.98023,149.16542,"outer_reef",NA,NA
+"Feb_21","Herald","Herald_1","D3",57963,"71",NA,"Labridae","Halichoeres","hartzfeldii",NA,2,"Halichoeres hartzfeldii","Feb_21_Herald_1_D3","15/02/2021",16.98023,149.16542,"outer_reef",NA,NA
 "Feb_21","Herald","Herald_1","D3",41767,"71","euanus","Lethrinidae","Gymnocranius","euanus",NA,5,"Gymnocranius euanus","Feb_21_Herald_1_D3","15/02/2021",16.98023,149.16542,"outer_reef",NA,NA
 "Feb_21","Herald","Herald_1","D3",25005,"71",NA,"Lethrinidae","Lethrinus","rubrioperculatus",37351012,3,"Lethrinus rubrioperculatus","Feb_21_Herald_1_D3","15/02/2021",16.98023,149.16542,"outer_reef",NA,NA
 "Feb_21","Herald","Herald_1","D3",9022,"71",NA,"Lutjanidae","Lutjanus","bohar",37346029,2,"Lutjanus bohar","Feb_21_Herald_1_D3","15/02/2021",16.98023,149.16542,"outer_reef",NA,NA
@@ -943,7 +943,7 @@
 "Feb_21","Lihou","Lihou_S1","D4",27626,"61",NA,"Lethrinidae","Lethrinus","semicinctus",37351016,4,"Lethrinus semicinctus","Feb_21_Lihou_S1_D4","11/02/2021",17.57768,151.49419,"inner_reef",NA,NA
 "Feb_21","Lihou","Lihou_S1","D4",25828,"61",NA,"Lutjanidae","Aprion","virescens",37346027,1,"Aprion virescens","Feb_21_Lihou_S1_D4","11/02/2021",17.57768,151.49419,"inner_reef",NA,NA
 "Feb_21","Lihou","Lihou_S1","D4",28102,"61",NA,"Mullidae","Parupeneus","barberinoides",37355021,7,"Parupeneus barberinoides","Feb_21_Lihou_S1_D4","11/02/2021",17.57768,151.49419,"inner_reef",NA,NA
-"Feb_21","Lihou","Lihou_S1","D4",28350,"61",NA,"Nemipteridae","Pentapodus","nagasakiensis",37347012,3,"Pentapodus nagasakiensis","Feb_21_Lihou_S1_D4","11/02/2021",17.57768,151.49419,"inner_reef",NA,NA
+"Feb_21","Lihou","Lihou_S1","D4",53413,"61",NA,"Nemipteridae","Pentapodus","nagasakiensis",37347012,4,"Pentapodus nagasakiensis","Feb_21_Lihou_S1_D4","11/02/2021",17.57768,151.49419,"inner_reef",NA,NA
 "Feb_21","Lihou","Lihou_S1","D4",57184,"61","tricincta","Pomacentridae","Chrysiptera","tricincta",NA,1,"Chrysiptera tricincta","Feb_21_Lihou_S1_D4","11/02/2021",17.57768,151.49419,"inner_reef",NA,NA
 "Feb_21","Lihou","Lihou_S1","D5",51558,"61",NA,"Balistidae","Abalistes","stellatus",37465011,1,"Abalistes stellatus","Feb_21_Lihou_S1_D5","11/02/2021",17.57343,151.49193,"inner_reef",NA,NA
 "Feb_21","Lihou","Lihou_S1","D5",19245,"61",NA,"Labridae","Oxycheilinus","bimaculatus",37384063,3,"Oxycheilinus bimaculatus","Feb_21_Lihou_S1_D5","11/02/2021",17.57343,151.49193,"inner_reef",NA,NA
@@ -1062,6 +1062,7 @@
 "Feb_21","Saumarez","Saumarez_N1","D1",50000,"33","laboutei","Labridae","Cirrhilabrus","laboutei",NA,30,"Cirrhilabrus laboutei","Feb_21_Saumarez_N1_D1","6/02/2021",21.71056,153.77492,"channel",NA,NA
 "Feb_21","Saumarez","Saumarez_N1","D1",19344,"33",NA,"Labridae","Coris","dorsomacula",37384093,1,"Coris dorsomacula","Feb_21_Saumarez_N1_D1","6/02/2021",21.71056,153.77492,"channel",NA,NA
 "Feb_21","Saumarez","Saumarez_N1","D1",39076,"33",NA,"Labridae","Halichoeres","biocellatus",37384107,1,"Halichoeres biocellatus","Feb_21_Saumarez_N1_D1","6/02/2021",21.71056,153.77492,"channel",NA,NA
+"Feb_21","Saumarez","Saumarez_N1","D1",53318,"33",NA,"Labridae","Halichoeres","hartzfeldii",NA,1,"Halichoeres hartzfeldii","Feb_21_Saumarez_N1_D1","6/02/2021",21.71056,153.77492,"channel",NA,NA
 "Feb_21","Saumarez","Saumarez_N1","D1",19344,"33",NA,"Labridae","Labroides","dimidiatus",37384028,1,"Labroides dimidiatus","Feb_21_Saumarez_N1_D1","6/02/2021",21.71056,153.77492,"channel",NA,NA
 "Feb_21","Saumarez","Saumarez_N1","D1",26400,"33",NA,"Labridae","Macropharyngodon","negrosensis",37384137,1,"Macropharyngodon negrosensis","Feb_21_Saumarez_N1_D1","6/02/2021",21.71056,153.77492,"channel",NA,NA
 "Feb_21","Saumarez","Saumarez_N1","D1",21271,"33","cerasinus","Labridae","Pseudojuloides","cerasinus",NA,1,"Pseudojuloides cerasinus","Feb_21_Saumarez_N1_D1","6/02/2021",21.71056,153.77492,"channel",NA,NA
@@ -1078,7 +1079,6 @@
 "Feb_21","Saumarez","Saumarez_N1","D1",23918,"33",NA,"Scaridae","Scarus","chameleon",37386012,1,"Scarus chameleon","Feb_21_Saumarez_N1_D1","6/02/2021",21.71056,153.77492,"channel",NA,NA
 "Feb_21","Saumarez","Saumarez_N1","D1",28931,"33",NA,"Scaridae","Scarus","dimidiatus",37386013,1,"Scarus dimidiatus","Feb_21_Saumarez_N1_D1","6/02/2021",21.71056,153.77492,"channel",NA,NA
 "Feb_21","Saumarez","Saumarez_N1","D1",34086,"33","cooperi","Serranidae","Pseudanthias","cooperi",NA,12,"Pseudanthias cooperi","Feb_21_Saumarez_N1_D1","6/02/2021",21.71056,153.77492,"channel",NA,NA
-"Feb_21","Saumarez","Saumarez_N1","D1",9645,"33","laboutei","Synodontidae","Synodus","laboutei",NA,25,"Synodus laboutei","Feb_21_Saumarez_N1_D1","6/02/2021",21.71056,153.77492,"channel",NA,NA
 "Feb_21","Saumarez","Saumarez_N1","D1",36785,"33",NA,"Tetraodontidae","Arothron","caeruleopunctatus",37467066,1,"Arothron caeruleopunctatus","Feb_21_Saumarez_N1_D1","6/02/2021",21.71056,153.77492,"channel",NA,NA
 "Feb_21","Saumarez","Saumarez_N1","D2",42676,"34",NA,"Balistidae","Sufflamen","chrysopterum",37465079,1,"Sufflamen chrysopterum","Feb_21_Saumarez_N1_D2","6/02/2021",21.70951,153.78659,"channel",NA,NA
 "Feb_21","Saumarez","Saumarez_N1","D2",4726,"34",NA,"Chaetodontidae","Chaetodon","kleinii",37365040,1,"Chaetodon kleinii","Feb_21_Saumarez_N1_D2","6/02/2021",21.70951,153.78659,"channel",NA,NA
@@ -1118,7 +1118,6 @@
 "Feb_21","Saumarez","Saumarez_N1","D3",19892,"36",NA,"Mullidae","Parupeneus","pleurostigma",37355027,1,"Parupeneus pleurostigma","Feb_21_Saumarez_N1_D3","6/02/2021",21.71169,153.79146,"channel",NA,NA
 "Feb_21","Saumarez","Saumarez_N1","D3",34347,"36",NA,"Serranidae","Variola","louti",37311166,1,"Variola louti","Feb_21_Saumarez_N1_D3","6/02/2021",21.71169,153.79146,"channel",NA,NA
 "Feb_21","Saumarez","Saumarez_N1","D3",50700,"36",NA,"Siganidae","Siganus","argenteus",37438007,4,"Siganus argenteus","Feb_21_Saumarez_N1_D3","6/02/2021",21.71169,153.79146,"channel",NA,NA
-"Feb_21","Saumarez","Saumarez_N1","D3",29526,"36","euanus","Synodontidae","Synodus","euanus",NA,1,"Synodus euanus","Feb_21_Saumarez_N1_D3","6/02/2021",21.71169,153.79146,"channel",NA,NA
 "Feb_21","Willis","Willis_1","D1",16242,"34",NA,"Balistidae","Balistoides","viridescens",37465048,1,"Balistoides viridescens","Feb_21_Willis_1_D1","14/02/2021",16.32439,149.95982,"outer_reef",NA,NA
 "Feb_21","Willis","Willis_1","D1",12988,"34","pfluegeri","Balistidae","Melichthys","vidua",37465058,2,"Melichthys vidua","Feb_21_Willis_1_D1","14/02/2021",16.32439,149.95982,"outer_reef",NA,NA
 "Feb_21","Willis","Willis_1","D1",5712,"34",NA,"Balistidae","Sufflamen","chrysopterum",37465079,1,"Sufflamen chrysopterum","Feb_21_Willis_1_D1","14/02/2021",16.32439,149.95982,"outer_reef",NA,NA
@@ -1271,7 +1270,7 @@
 "Feb_21","Wreck","Wreck_W1","D3",19953,"44",NA,"Carcharhinidae","Carcharhinus","albimarginatus",37018027,2,"Carcharhinus albimarginatus","Feb_21_Wreck_W1_D3","7/02/2021",22.19887,155.1788,"outer_reef",NA,NA
 "Feb_21","Wreck","Wreck_W1","D3",55330,"44",NA,"Carcharhinidae","Carcharhinus","amblyrhynchos",37018030,1,"Carcharhinus amblyrhynchos","Feb_21_Wreck_W1_D3","7/02/2021",22.19887,155.1788,"outer_reef",NA,NA
 "Feb_21","Wreck","Wreck_W1","D3",40343,"44",NA,"Echeneidae","Remora","remora",37336002,1,"Remora remora","Feb_21_Wreck_W1_D3","7/02/2021",22.19887,155.1788,"outer_reef",NA,NA
-"Feb_21","Wreck","Wreck_W1","D3",57761,"44",NA,"Labridae","Leptojulis","cyanopleura",NA,2,"Leptojulis cyanopleura","Feb_21_Wreck_W1_D3","7/02/2021",22.19887,155.1788,"outer_reef",NA,NA
+"Feb_21","Wreck","Wreck_W1","D3",57761,"44",NA,"Labridae","Halichoeres","hartzfeldii",NA,2,"Halichoeres hartzfeldii","Feb_21_Wreck_W1_D3","7/02/2021",22.19887,155.1788,"outer_reef",NA,NA
 "Feb_21","Wreck","Wreck_W1","D3",40443,"44",NA,"Labridae","Novaculichthys","taeniourus",37384140,2,"Novaculichthys taeniourus","Feb_21_Wreck_W1_D3","7/02/2021",22.19887,155.1788,"outer_reef",NA,NA
 "Feb_21","Wreck","Wreck_W1","D3",27640,"44","euanus","Lethrinidae","Gymnocranius","euanus",NA,5,"Gymnocranius euanus","Feb_21_Wreck_W1_D3","7/02/2021",22.19887,155.1788,"outer_reef",NA,NA
 "Feb_21","Wreck","Wreck_W1","D3",30341,"44",NA,"Lethrinidae","Lethrinus","rubrioperculatus",37351012,17,"Lethrinus rubrioperculatus","Feb_21_Wreck_W1_D3","7/02/2021",22.19887,155.1788,"outer_reef",NA,NA

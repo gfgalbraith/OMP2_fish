@@ -116,7 +116,11 @@ fish$`Functional Group`[fish$Species_name == "Gymnocranius euanus"] <- "macro-in
 ```
 
 # Check for NAs again
-cccc
+```{r}
+fish%>%
+  filter(is.na(`Trophic Group`))%>%
+  distinct(Species_name, .keep_all = TRUE)
+```
 
 # Apply monitoring functional groups
 ```{r}
@@ -170,7 +174,7 @@ fish3 %>%
 ```
 
 # FAMILY DISCREPANCIES
-When merging the monitoring species list for functional groups, joinging by family would generate NA values. This makes me think that we have discrepancies between the family designations. Maybe Family vs subfamily? E.g. Epinephelus sp, Serranidae vs Epinephelidae?
+When merging the monitoring species list for functional groups, joining by family would generate NA values. This makes me think that we have discrepancies between the family designations. Maybe Family vs subfamily? E.g. Epinephelus sp, Serranidae vs Epinephelidae?
 
 
 # Check for NA values in Family
@@ -207,13 +211,14 @@ The other disagreements are Family/subfamily divisions
 Scaridae / Labridae (Scarinae)
 Epinephelidae/ Serranidae
 
-Chosen to use Family designation from now corrected monitoring_GFG species list
+Chosen to use Family designation from now corrected monitoring_GFG species list (family.y)
 
 ```{r}
 
-fish3<-fish3%>%select(-Family, -Family.x)
 
-fish3<-fish3%>%rename(Family = Family.y)
+fish3<-fish3%>%rename (Family = Family.y)
+
+fish3<-fish3%>%select( -Family.x)
 
 ```
 

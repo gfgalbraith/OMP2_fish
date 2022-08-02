@@ -1,0 +1,248 @@
+---
+title: "09_BRUV_depth_reef_figures"
+output: html_document
+date: '2022-07-06'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+#HouseKeeping
+```{R}
+rm(list=ls())
+#dev.off()
+getwd()
+
+```
+
+#load libraries
+```{r}
+library(tidyverse)
+library(rfishbase)
+library(vegan)
+library(glmmTMB)
+library(sjPlot)
+library(DHARMa)
+library(car)
+library(emmeans)
+library(tidyverse)
+library(broom.mixed)
+library(ggpubr)
+library(gridExtra)
+library(svglite)
+library(lubridate)
+library(viridis)  
+library(RColorBrewer)
+library(unikn)
+```
+
+# My colours FOR CSMP ROV/BRUV Depth comparisons - 3 bands
+#F0C165 - CREAM CAN
+#F3A292 - WEWAK
+# 65BAC4 - FOUNTAIN BLUE
+#7AAEB2 - GULF STREAM
+#4C6274 - BLUE BAYOUX
+#95ACBE - NEPAL
+
+
+```{r, colours}
+
+region.cols <- c("#F3A292","#F0C165", "#65BAC4")
+depth.cols <-  c("#95ACBE","#7AAEB2", "#4C6274" )
+depth.cols2 <- c( "#7AAEB2","#4C6274")
+
+seecol(depth.cols, 
+       col_brd = "black", lwd_brd = 2, 
+       title = "See the colors, HEX codes, and RGB values of my.cols") 
+```
+
+# Data import
+```{r,data}
+fish <-read_csv("../2_outputs/BRUV_fish_diversity.csv")
+drops <-read_csv("../2_outputs/BRUV_drop_diversity.csv")
+
+fish <- fish %>% mutate(
+  Reef=as.factor(Reef),
+  T_ID=as.factor(T_ID),
+  Survey=as.factor(Survey),
+  Site=as.factor(Site),
+  Date = as.Date(Date),
+  Genus = as.factor(Genus),
+  Family = as.factor(Family),
+  Species_name = as.factor(Species_name),
+  Habitat = as.factor(Habitat),
+  Aspect = as.factor(Aspect))
+
+drops<- drops %>% mutate( Reef=as.factor(Reef),
+  T_ID=as.factor(T_ID),
+  Survey=as.factor(Survey),
+  Site=as.factor(Site))
+
+```
+
+# Quick EDA
+```{r}
+summary(fish)
+glimpse(fish)
+
+
+```
+
+# apply Region grouping by reef
+```{r}
+levels(fish$Reef)
+
+fish <- fish %>% mutate ( 
+  Region = as.factor(case_when(grepl("Lihou", Reef) ~ "Central Coral Sea",
+                   grepl("Flinders", Reef) ~ "Central Coral Sea",
+                   grepl("Bougainville", Reef) ~ "Northern Coral Sea",
+                   grepl("Osprey", Reef) ~ "Northern Coral Sea",
+                   grepl("Ashmore", Reef) ~ "Northern Coral Sea",
+                   grepl("Chilcott", Reef) ~ "Central Coral Sea",
+                   grepl("Herald", Reef) ~ "Central Coral Sea",
+                   grepl("Holmes", Reef) ~ "Central Coral Sea",
+                   grepl("Willis", Reef) ~ "Central Coral Sea",
+                   grepl("Frederick", Reef) ~ "Southern Coral Sea",
+                   grepl("Kenn", Reef) ~ "Southern Coral Sea",
+                   grepl("Wreck", Reef) ~ "Southern Coral Sea",
+                   grepl("Saumarez", Reef) ~ "Southern Coral Sea",
+                   grepl("Marion", Reef) ~ "Central Coral Sea",)))
+
+unique(fish$Region)
+# Should just be three levels
+
+# Ordered factor for Region
+fish <-fish %>% mutate(
+  Region = factor(Region, levels= c("Southern Coral Sea","Central Coral Sea","Northern Coral Sea"),ordered = TRUE))
+```
+
+# Assign Depth grouping (3 levels)
+```{r}
+fish <- fish %>% mutate(
+  Depth_bin = as.factor(case_when(Depth < 30 ~ "Shallow",
+                                  Depth > 30 & Depth < 65 ~ "Mid",
+                                  TRUE ~ "Deep"))
+)
+
+unique(fish$Depth_bin)
+
+# Ordered factor for depth
+fish <-fish %>% mutate(
+  Depth_bin = factor(Depth_bin, levels= c("Shallow","Mid","Deep"),
+                                         ordered = TRUE))
+```
+
+# Assign Depth grouping (2 levels)
+```{r}
+fish <- fish %>% mutate(
+  Depth_bin2 = as.factor(case_when(Depth < 30 ~ "Shallow",
+                                   TRUE ~ "Deep")))
+
+unique(fish$Depth_bin2)
+
+# Ordered factor for depth
+fish <-fish %>% mutate(
+  Depth_bin2 = factor(Depth_bin2, levels= c("Shallow","Deep"),
+                                         ordered = TRUE))
+```
+# Assign Depth grouping (2 levels - different limits)
+```{r}
+fish <- fish %>% mutate(
+  Depth_bin3 = as.factor(case_when(Depth < 40 ~ "Shallow",
+                                   TRUE ~ "Deep"))
+)
+
+unique(fish$Depth_bin3)
+
+# Ordered factor for depth
+fish <-fish %>% mutate(
+  Depth_bin3 = factor(Depth_bin3, levels= c("Shallow","Deep"),
+                                         ordered = TRUE))
+```
+
+
+# Figure - Richness by Reefs
+```{r}
+ggplot(fish, aes(y=richness, x=Reef, fill = Region)) + 
+  geom_boxplot(outlier.colour="black", outlier.shape=16,
+             outlier.size=2, notch=FALSE)+
+  scale_fill_manual(values = region.cols)+
+    scale_y_continuous(expand = c(0, 0), limits = c(0, 60))+ 
+  ylab("Richness (taxa.drop-1)")+
+  xlab("")+
+  facet_grid(cols = vars(Region), scales = "free", space ="free",labeller = labeller(Region = label_wrap_gen(width = 10)))+
+  theme_classic()+
+  theme_classic()+
+  theme(axis.text.x = element_text(size=12, color="black", angle = 45, vjust = 0.6),
+        axis.text.y = element_text(size=12, color="black"),
+        axis.title.y = element_text(size=14, vjust=2),
+        axis.title.x = element_text(size=14, vjust=-1),
+        legend.position = "none",
+        strip.background = element_blank(),
+        plot.margin=unit(c(15,5,5,10),"mm"))
+```
+
+# Figure - Abundance by depth and Reefs
+```{r}
+ggplot(fish, aes(y=abundance, x=Reef, fill = Region)) + 
+  geom_boxplot(outlier.colour="black", outlier.shape=16,
+             outlier.size=2, notch=FALSE)+
+  scale_fill_manual(values = region.cols)+
+   # scale_y_continuous(expand = c(0, 0), limits = c(0, 60))+ 
+  ylab("Density (individuals.drop-1)")+
+  xlab("")+
+   facet_grid(cols = vars(Region), scales = "free", space ="free",labeller = labeller(Region = label_wrap_gen(width = 10)))+
+  theme_classic()+
+  theme(axis.text.x = element_text(size=12, color="black", angle = 45, vjust = 0.6),
+        axis.text.y = element_text(size=12, color="black"),
+        axis.title.y = element_text(size=14, vjust=2),
+        axis.title.x = element_text(size=14, vjust=-1),
+        legend.position = "none",
+        strip.background = element_blank(),
+        plot.margin=unit(c(15,5,5,10),"mm"))
+```
+# Figure - Shannon Diversity by depth and Reefs
+```{r}
+ggplot(fish, aes(y=shannon, x=Reef, fill = Region)) + 
+  geom_boxplot(outlier.colour="black", outlier.shape=16,
+             outlier.size=2, notch=FALSE)+
+  scale_fill_manual(values = region.cols)+
+  scale_y_continuous(expand = c(0, 0), limits = c(0, 5))+ 
+  ylab("Diversity (Shannon H'.drop-1)")+
+  xlab("")+
+  facet_grid(cols = vars(Region), scales = "free", space ="free",labeller = labeller(Region = label_wrap_gen(width = 10)))+
+  theme_classic()+
+  theme_classic()+
+  theme(axis.text.x = element_text(size=12, color="black", angle = 45, vjust = 0.6),
+        axis.text.y = element_text(size=12, color="black"),
+        axis.title.y = element_text(size=14, vjust=2),
+        axis.title.x = element_text(size=14, vjust=-1),
+        legend.position = "none",
+        strip.background = element_blank(),
+        plot.margin=unit(c(15,5,5,10),"mm"))
+```
+# Figure - Richness by Reefs and Depth (2 bands)
+```{r}
+ggplot(fish, aes(y=richness, x=Depth_bin2, fill = Depth_bin2)) + 
+  geom_boxplot(outlier.colour="black", outlier.shape=16,
+             outlier.size=2, notch=FALSE)+
+  scale_fill_manual(values = depth.cols2)+
+    scale_y_continuous(expand = c(0, 0), limits = c(0, 60))+ 
+  ylab("Richness (taxa.drop-1)")+
+  xlab("")+
+  facet_grid(cols = vars(Region, Reef), scales = "free", space ="free",labeller = labeller(Region = label_wrap_gen(width = 10)))+
+  theme_classic()+
+  theme_classic()+
+  theme(axis.text.x = element_text(size=12, color="black", angle = 45, vjust = 0.6),
+        axis.text.y = element_text(size=12, color="black"),
+        axis.title.y = element_text(size=14, vjust=2),
+        axis.title.x = element_text(size=14, vjust=-1),
+        legend.position = "none",
+        strip.background = element_blank(),
+        plot.margin=unit(c(15,5,5,10),"mm"))
+```
+
+
+    

@@ -8,10 +8,9 @@ date: '2022-07-04'
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-BRUV Fish Data - apply a and b constants
+BRUV Fish Data - although applying a and b constants are not necessary for observations without length estimates, matching via the mermaid and or rfishbase species list is very helpful for checking correct species names are present in the data. It also allows you to apply lots of other useful variables like trophic group, functional group etc to your species.
 
-After initial cleaning and wrangle, some observations remain at family or genus level. Apply the fish-families or fish-genera data from MERMAID to assign approximate a and b values for these species.
-
+After initial cleaning and wrangle, some observations remain at family or genus level. 
 #HouseKeeping
 ```{R}
 rm(list=ls())
@@ -43,6 +42,7 @@ fish <- fish %>% mutate(
 
 
 # Match with MERMAID database for LW constants
+Note I am using a modified file that I keep updated with changes to accepted names, removed duplicates, added extra species as I come across them in various projects.
 ```{r}
 
 mermaid.species <-read_csv("../0_data/MERMAID_data/fish-species_GFG.csv")
@@ -62,7 +62,7 @@ fish2<-fish %>% anti_join(mermaid.species, by = "Species_name")
 ```{r}
 unique(fish2$Species_name)
 # Species here all now added to GFG_mermaid species list. Unaccepted names in mermaid changed
-# 23 obs to resolve
+# 20 obs to resolve
 ```
 # Paramonacanthus curtorhynchos - ADDED
 Monacanthidae
@@ -79,8 +79,6 @@ fish <- fish %>%
                         TRUE ~ as.character(Species)),
     Genus = case_when(Comment == "Heteroconger hassi" ~ "Heteroconger",
                         TRUE ~ as.character(Genus)))
-  
-
 ```
 
 # Zebrasoma veliferum - unaccepted name from eventmeasure - change in fish df
@@ -144,7 +142,7 @@ fish <- fish %>%
 
 ```
 
-# Synodus longipes - Hologymnosus longipes ?
+# Synodus longipes - Hologymnosus longipes ? UPDATE 6/7/22 Eva fixed in EM obs and csv
 ```{r}
 fish <- fish %>% 
   mutate(

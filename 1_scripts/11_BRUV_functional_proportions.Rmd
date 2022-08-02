@@ -1,0 +1,225 @@
+---
+title: "11_BRUV_functional_proportion_figures"
+output: html_document
+date: '2022-07-06'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+#HouseKeeping
+```{R}
+rm(list=ls())
+#dev.off()
+getwd()
+
+```
+
+#load libraries
+```{r}
+library(tidyverse)
+library(rfishbase)
+library(vegan)
+library(glmmTMB)
+library(sjPlot)
+library(DHARMa)
+library(car)
+library(emmeans)
+library(tidyverse)
+library(broom.mixed)
+library(ggpubr)
+library(gridExtra)
+library(svglite)
+library(lubridate)
+library(viridis)  
+library(RColorBrewer)
+library(unikn)
+library(ggh4x)
+```
+
+# My colours FOR CSMP ROV/BRUV Depth comparisons - 3 bands
+#F0C165 - CREAM CAN
+#F3A292 - WEWAK
+# 65BAC4 - FOUNTAIN BLUE
+#7AAEB2 - GULF STREAM
+#4C6274 - BLUE BAYOUX
+#95ACBE - NEPAL
+
+
+```{r, colours}
+
+region.cols <- c("#F3A292","#F0C165", "#65BAC4")
+depth.cols <-  c("#95ACBE","#7AAEB2", "#4C6274" )
+depth.cols2 <- c( "#7AAEB2","#4C6274")
+
+seecol(depth.cols, 
+       col_brd = "black", lwd_brd = 2, 
+       title = "See the colors, HEX codes, and RGB values of my.cols") 
+```
+
+# Data import
+```{r,data}
+fish <-read_csv("../2_outputs/BRUV_figure_data.csv")
+drops <-read_csv("../2_outputs/BRUV_drop_diversity.csv")
+
+fish <- fish %>% mutate(
+  Reef=as.factor(Reef),
+  T_ID=as.factor(T_ID),
+  Survey=as.factor(Survey),
+  Site=as.factor(Site),
+  Date = as.Date(Date),
+  Genus = as.factor(Genus),
+  Family = as.factor(Family),
+  Species_name = as.factor(Species_name),
+  Habitat = as.factor(Habitat),
+  `Functional Group.X`=as.factor(`Functional Group.X`),
+  Aspect = as.factor(Aspect))
+
+drops<- drops %>% mutate( Reef=as.factor(Reef),
+  T_ID=as.factor(T_ID),
+  Survey=as.factor(Survey),
+  Site=as.factor(Site))
+
+```
+
+# Average diversity metrics per site
+```{r}
+site.means<-drops%>%group_by(Reef)%>%
+  summarise(mean.rich = mean(richness),
+            sd.rich = sd(richness),
+            n = n(),
+            se.rich = sd.rich / sqrt(n),
+            mean.abund = mean(abundance),
+            sd.abund = sd(abundance),
+            se.abund = sd.abund/sqrt(n),
+            mean.shan = mean(shannon),
+            sd.shan = sd(shannon),
+            se.shan = sd.shan/sqrt(n),
+            mean.simp = mean(simpson),
+            sd.simp = sd(simpson),
+            se.simp = sd.simp/sqrt(n))
+            
+```
+
+# Average functional groups per site
+```{r}
+fun.fish<-fish%>%select(T_ID,Reef,Site,Depth,Depth_bin,Depth_bin2,Depth_bin3,`Functional Group.X`, MaxN, richness, abundance)
+
+fun.fish<-fun.fish%>%group_by(T_ID, `Functional Group.X`, .drop = FALSE)%>%
+  summarise(fun.abund = sum(MaxN),
+            fun.rich = sum(MaxN > 0, na.rm = TRUE))
+
+```
+
+```{r}
+# Add Reef and site back to fun.fish
+reefs<-fish%>%select(T_ID,Reef, Site)%>%
+  unique()
+
+fun.fish<-left_join(fun.fish, reefs, by = "T_ID")
+
+```
+# Avergae proportions of functional groups
+```{r}
+mean.fun.fish<-fun.fish%>%group_by(Reef,`Functional Group.X`)%>%
+  summarise(mean.f.abund = mean(fun.abund),
+            mean.f.rich = mean(fun.rich))
+
+```
+# subset site.means for easier merge
+```{r}
+site.means2<-site.means%>% select(Reef, mean.rich, mean.abund)
+
+```
+
+
+# Combine site means with functional proportion means for plotting
+```{r}
+plot.means <- left_join(mean.fun.fish, site.means2, by ="Reef")
+
+```
+
+# Proportional Richness
+```{r}
+
+ggplot(plot.means, aes(fill=mean.f.rich, y=mean.rich, x=Reef)) + 
+    geom_bar(position="stack", stat="identity")+
+  ylim(0,120)+
+  ylab(expression(Richness~(taxa.drop^-1)))+
+  xlab("")+
+  # facet_nested(~ Reef, scales = "free", space = "free") +
+  theme_classic()+
+  theme(strip.background  = element_blank()) 
+```
+
+```{r}
+
+
+ggplot(plot.means, aes(fill=`Functional Group.X`, y=mean.f.rich, x=Reef)) + 
+    geom_bar(position="stack", stat="identity")+
+  ylim(0,35)+
+  ylab(expression(Richness~(taxa.drop^-1)))+
+  xlab("")+
+  labs( fill = "Functional Group")+
+  # facet_nested(~ Reef, scales = "free", space = "free") +
+  theme_classic()+ 
+  theme(axis.text.x = element_text(size=10, color="black", angle =45, vjust = 0.6),
+        axis.text.y = element_text(size=10, color="black"),
+        axis.title.y = element_text(size=12, vjust=2),
+        axis.title.x = element_text(size=12, vjust=-1),
+        strip.text = element_text(size = 10),
+        strip.background = element_blank(),
+        plot.margin=unit(c(15,5,5,10),"mm"))
+
+```
+```{r}
+
+ggplot(plot.means, aes(fill=`Functional Group.X`, y=mean.f.abund, x=Reef)) + 
+    geom_bar(position="stack", stat="identity")+
+  ylim(0,100)+
+  ylab(expression(Abundance~(drop^-1)))+
+  xlab("")+
+  labs( fill = "Functional Group")+
+  # facet_nested(~ Reef, scales = "free", space = "free") +
+  theme_classic()+ 
+  theme(axis.text.x = element_text(size=10, color="black", angle =45, vjust = 0.6),
+        axis.text.y = element_text(size=10, color="black"),
+        axis.title.y = element_text(size=12, vjust=2),
+        axis.title.x = element_text(size=12, vjust=-1),
+        strip.text = element_text(size = 10),
+        strip.background = element_blank(),
+        plot.margin=unit(c(15,5,5,10),"mm"))
+
+```
+
+```
+# Matrix for richness, abundance by functional group
+
+```{r long to wide}
+# Select only the unique ID, fun.group and maxn
+fish.mat<-fun.fish %>% select(T_ID, `Functional Group.X`, MaxN)
+
+
+fish.mat<-fish.mat %>% group_by(T_ID,`Functional Group.X`) %>% 
+  summarise(Number=sum(MaxN)) %>% ungroup()
+
+fish.mat<-fish.mat %>% pivot_wider(names_from = `Functional Group.X`, values_from = Number) %>% 
+  replace(is.na(.),0)
+```
+
+```{r Diversity indices}
+
+# Extract a species matrix - just species name and count
+spec.mat<-fish.mat[,-1]
+
+# use the species matrix to calculate the indices
+fish.mat$richness <- rowSums(spec.mat>0)
+fish.mat$abundance<- apply(spec.mat,1, sum)
+fish.mat$shannon <- diversity(spec.mat) # shannon is default
+fish.mat$simpson<-diversity(spec.mat, index = "simpson")
+
+```
+
+

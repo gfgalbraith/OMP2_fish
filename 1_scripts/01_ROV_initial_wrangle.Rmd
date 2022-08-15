@@ -59,7 +59,7 @@ which(is.na(data$Period))
 data %>% filter(is.na(Period))
 # The two still showing are some observations of cool stuff.
 
-# Many NA values - requires going into the csv files and checking what's going on. May even require looking at the videos. Some are genuine observations made outside of any particular transect but these shouldn't be included in the statistical analysis.
+# Many NA values - requires going into the csv files and checking what's going on. May even require looking at the videos. Some are genuine observations made outside of any particular transect but these shouldn't be included in the statistical analysis if they we not record on a transect.
 
 # NA values typically corrected directly in csv files
 ```
@@ -72,16 +72,28 @@ Would like to select the site name from the file name variable using regex event
 #Tidy up to remove unwanted variables and create a site name variable, Reef variable and a survey date.
 # NB. extra survey dates will be added to the case_when code line as and when more videos from other survey trips are added to data.
 
-unique(data$OpCode) # shows that some OpCodes have not been named correctly. Use 'filename' to apply SURVEY and maybe REEF.
+unique(data$OpCode) # shows that some OpCodes have not been named correctly. Use 'filename' to apply SURVEY and maybe REEF. Edna and Juliette Cay require a bit of special attention using the OpCode variable. We also need to specify whether the survey was stereo or not. Refer to ROV transect full summary csv.
 
 merged <- data %>% mutate(
   Site=str_sub(filename,9,-13),
   Site=substring(Site,12),
+  Site = case_when(OpCode == "Edna_1_JUL2021" ~ "EdnaCay_1",
+                   OpCode == "Edna_2_JUL2021" ~ "EdnaCay_2",
+                   OpCode == "Edna_3_JUL2021" ~ "EdnaCay_3",
+                   OpCode == "Juliette1_July2021" ~ "JulCay_1",
+                   TRUE ~ Site),
+  Video = case_when(str_detect(Site, c("Edna|Jul")) ~ "Single",
+          TRUE ~ "Stereo"),        
   Transect=as.factor(Period),
   Length_mm=as.double(Length_mm),
-  Survey=as.factor(case_when(grepl("FEB2021", Filename) ~ "Feb_21",
-                             grepl("FEB2022", Filename) ~ "Feb_22")),
+  Survey=as.factor(case_when(grepl("FEB2021", filename) ~ "Feb_21",
+                             grepl("FEB2022", filename) ~ "Feb_22",
+                             grepl("JUL2021", filename)~ "Jul_21")),
   Site=as.factor(Site))
+
+# Edna is three sites that have been analysed in one eventmeasure file - some manual edits done to the csv but still needs some attention here. Use OpCode which has been manual edited to reflect the three different sites.
+
+# Get Reef names
 
 merged <- merged %>% mutate ( 
   Reef = as.factor(case_when(grepl("Li", OpCode) ~ "Lihou",
@@ -89,6 +101,8 @@ merged <- merged %>% mutate (
                    grepl("Bou", OpCode) ~ "Bougainville",
                    grepl("Osp", OpCode) ~ "Osprey",
                    grepl("Chil", OpCode) ~ "Chillcot",
+                   grepl("Edna", OpCode) ~ "Lihou",
+                   grepl("Jul", OpCode) ~ "Lihou",
                    grepl("Hera", OpCode) ~ "Herald",
                    grepl("Holm", OpCode) ~ "Holmes",
                    grepl("Wil", OpCode) ~ "Willis",
@@ -99,8 +113,10 @@ merged <- merged %>% mutate (
                    grepl("HerS", OpCode) ~ "Herald's Surprise",
                    grepl("Mar", OpCode) ~ "Marion",)))
 
-new.data<-select(merged,c(Survey,Reef,Site,Transect,Length_mm,Family,Genus,Species, Number,Comment))
+new.data<-select(merged,c(Survey,Reef,Site,Transect,Length_mm,Family,Genus,Species, Number,Comment, Video))
 ```
+
+
 
 # Unique transect ID 
 ```{r}
@@ -115,7 +131,7 @@ new.data <- new.data %>% mutate(
 # Separate fish, trash, cucumbers and cool stuff
 At this stage we need to pull out the fish observations from other notable things spotted on the transects. Create new data frames for each thing.
 
-For fish this is easy as only fish observations will at least have "Family", "Genus" and/or "Species". Use this as a filter.
+For fish this is easy as only fish observations will at least have "Family", "Genus" and/or "Species". Use this as a filter. NB making sure you at least ID a fish to family level is key.
 
 Fish
 ```{r, fish} 
@@ -140,9 +156,9 @@ write.csv(cucs, file= "../0_data/ROV_cucumber_data.csv", row.names = FALSE)
 
 # Alternatively a partial match for the word cucumber if there may be variations of this spelling in the data
 
-cucs<- data %>% filter(
-  str_detect(Comment, "cumber"))%>% 
-  select(- Family, - Genus,- Species)
+# cucs<- data %>% filter(
+# str_detect(Comment, "cumber"))%>% 
+# select(- Family, - Genus,- Species)
   
   
 
@@ -167,7 +183,7 @@ distinct(trash, Comment)
 # "fishing_line" and "trash" are our only marine debris cats so far. Check for multiple spellings e.f. "Fishing Line" by including partial string match.
 
 trash <- trash %>% filter(
-  str_detect(Comment, "ishing") | str_detect(Comment, "trash"))
+  str_detect(Comment, "ishing") | str_detect(Comment, "trash" | str_detect(Comment, "Fishing Line")))
   # select(-Length_mm, -Number)
 
 write.csv(trash, file= "../0_data/ROV_trash_data.csv", row.names = FALSE)
@@ -180,7 +196,13 @@ Because the comments feature is the only flexible option for noting other observ
 
 ```{r, coolstuff}
 coolstuff <-data %>% filter(
-  is.na(Family) & is.na(Species) & !str_detect(Comment, c("cumber|fishing_line|trash")))%>% 
+  is.na(Family) & is.na(Species) & !str_detect(Comment, c("cumber|fishing_line|trash|Fishing Line|Fishing line")))%>% 
   select(-Family, -Genus, -Species)
+
+coolstuff
+
+# Check that there's nothing in here that shouldn't be in the other subsets
+
+
 ```
 

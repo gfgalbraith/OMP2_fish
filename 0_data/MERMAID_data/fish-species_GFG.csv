@@ -2970,7 +2970,6 @@ Anguilla,rostrata,Anguillidae,Anguilla rostrata,0.00034,3.47,1,152,total length,
 Seriola,hippos,Carangidae,Seriola hippos,0.0137,3,1,150,total length,4.6,70,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,piscivore,piscivore,small group
 Jenkinsia,lamprotaenia,Clupeidae,Jenkinsia lamprotaenia,0.0029,3.6081,1,7.5,total length,3.6,10,Tropical Atlantic,,planktivore,planktivore,large group
 Amphiprion,chrysopterus,Pomacentridae,Amphiprion chrysopterus,0.02291,2.99,1,17,total length,2.66,16.48,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,planktivore,planktivore,small group
-,,,,,,,,,,,,,,,
 Chaetodon,mertensii,Chaetodontidae,Chaetodon mertensii,0.004261,3.800466,1,12.5,total length,2.95,10,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,invertivore-mobile,micro-invertivore,pair
 Crenimugil,seheli,Mugilidae,Crenimugil seheli,0.021,2.79,1,60,total length,2.3,40,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,herbivore-detritivore,detritivore,large group
 Wetmorella,nigropinnata,Labridae,Wetmorella nigropinnata,0.01995,3,1,8,total length,3.5,14.21,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,invertivore-mobile,micro-invertivore,solitary
@@ -3303,9 +3302,10 @@ Pteragogus,guttatus,Labridae,Pteragogus guttatus,0.0166,2.95,1,9,total length,3.
 Prognathodes,guyanensis,Chaetodontidae,Prognathodes guyanensis,0.02188,3.02,1,13.6,total length,2.9,11,Tropical Atlantic,,invertivore-sessile,spongivore,solitary
 Chaetodon,modestus,Chaetodontidae,Chaetodon modestus,0.02291,3.01,1,,,,,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,,,
 Meiacanthus,mossambicus,Blenniidae,Meiacanthus mossambicus,0.00537,3.05,1,10,total length,3.4,20.93,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,planktivore,planktivore,solitary
-Pseudanthias,ventralis,Serranidae,Pseudanthias ventralis,0.01259,3.01,,7,total length,3.3,,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",planktivore,planktivore,,
-Paramonacanthus,curtorhynchos,Monacanthidae,Paramonacanthus curtorhynchos,0.02089,2.92,,11.3,total length,3.1,,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",invertivore-mobile,micro-invertivore,,
-Parapercis,hexophthalma,Pinguipedidae,Parapercis hexophthalma,0.00759,3.14,,29,total length,3.6,,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",invertivore-mobile,macro-invertivore,,
-Pristipomoides,filamentosus,Lutjanidae,Pristipomoides filamentosus,0.01072,2.93,,100,total length,4.2,,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",piscivore,piscivore,,
-Cyprinocirrhites,polyactis,Cirrhitidae,Cyprinocirrhites polyactis,0.01479,3.05,,15,total length,3.2,,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",invertivore-mobile,micro-invertivore,,
-Cirrhilabrus,bathyphilus,Labridae,Cirrhilabrus bathyphilus,0.01622,2.95,,7.6,total length,3.3,,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",planktivore,planktivore,,
+Pseudanthias,ventralis,Serranidae,Pseudanthias ventralis,0.01259,3.01,1,7,total length,3.3,,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,planktivore,planktivore,
+Paramonacanthus,curtorhynchos,Monacanthidae,Paramonacanthus curtorhynchos,0.02089,2.92,1,11.3,total length,3.1,,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,invertivore-mobile,micro-invertivore,
+Parapercis,hexophthalma,Pinguipedidae,Parapercis hexophthalma,0.00759,3.14,1,29,total length,3.6,,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,invertivore-mobile,macro-invertivore,
+Pristipomoides,filamentosus,Lutjanidae,Pristipomoides filamentosus,0.01072,2.93,1,100,total length,4.2,,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,piscivore,piscivore,
+Cyprinocirrhites,polyactis,Cirrhitidae,Cyprinocirrhites polyactis,0.01479,3.05,1,15,total length,3.2,,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,invertivore-mobile,micro-invertivore,
+Cirrhilabrus,bathyphilus,Labridae,Cirrhilabrus bathyphilus,0.01622,2.95,1,7.6,total length,3.3,,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,planktivore,planktivore,
+Pseudanthias,engelhardorum,Serranidae,Pseudanthias engelhardorum,0.01259,3.01,1,10,total length,3.3,,"Central Indo-Pacific,Eastern Indo-Pacific,Western Indo-Pacific",,planktivore,planktivore,

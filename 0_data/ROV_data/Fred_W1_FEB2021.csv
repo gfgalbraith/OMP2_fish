@@ -1,38 +1,38 @@
-﻿Filename,Frame,Time (HMS),Period,Period time (HMS),Length (mm),Precision (mm),RMS (mm),Range (mm),Direction (deg),Horz. Dir. (deg),Vert. Dir. (deg),Mid X (mm),Mid Y (mm),Mid Z (mm),OpCode,TapeReader,Depth,Family,Genus,Species,Code,Number,Stage,Activity,Comment
-PL_L_FRED_9-2-21_P02.MP4,4630,04:46.0,T1,,1205.432,29.99,46.804,2062.665,15.617,70.721,1.205,402.31,-382.741,-1986.516,Frederick_2021,GFG,35m,Carcharhinidae,Carcharhinus,albimarginatus,37018027,1,AD,Passing,
-PL_L_FRED_9-2-21_P02.MP4,4771,04:50.7,T1,,443.48,18.685,8.379,2302.482,18.872,47.386,41.041,-741.473,69.885,-2178.705,Frederick_2021,GFG,35m,Acanthuridae,Naso,vlamingii,37437032,2,AD,Passing,
-PL_L_FRED_9-2-21_P02.MP4,6552,05:50.1,T1,00:11.6,989.102,46.035,95.947,4078.945,13.824,25.99,12.073,-156.607,-961.984,-3960.789,Frederick_2021,GFG,35m,Lutjanidae,Aprion,virescens,37346027,1,AD,Passing,
-PL_L_FRED_9-2-21_P02.MP4,6552,05:50.1,T1,00:11.6,107.805,36.798,75.985,2965.733,20.529,47.992,15.627,327.797,-987.022,-2777.392,Frederick_2021,GFG,35m,Labridae,Labroides,dimidiatus,37384028,2,AD,Passing,
-PL_L_FRED_9-2-21_P02.MP4,7321,06:15.8,T1,00:37.2,231.693,51.317,58.777,3339.712,22.274,54.873,1.416,112.401,-1260.846,-3090.519,Frederick_2021,GFG,35m,Acanthuridae,Acanthurus,pyroferus,37437017,1,AD,Passing,
-PL_L_FRED_9-2-21_P02.MP4,7496,06:21.6,T1,00:43.1,78.88,16.512,47.231,2386.518,17.672,29.129,15.032,212.4,-692.631,-2273.899,Frederick_2021,GFG,35m,Pomacentridae,Chromis,ternatensis,37372051,5,AD,Passing,
-PL_L_FRED_9-2-21_P02.MP4,7563,06:23.9,T1,00:45.3,230.036,11.831,27.862,1614.074,25.173,58.471,16.817,-50.343,-684.715,-1460.776,Frederick_2021,GFG,35m,Holocentridae,Myripristis,kuntee,37261011,1,AD,Passing,
-PL_L_FRED_9-2-21_P02.MP4,7563,06:23.9,T1,00:45.3,211.81,24.163,33.757,2196.785,22.917,64.718,17.6,-846.751,-121.369,-2023.4,Frederick_2021,GFG,35m,Balistidae,Sufflamen,,,1,AD,Passing,bursa
-PL_L_FRED_9-2-21_P02.MP4,7592,06:24.8,T1,00:46.3,172.688,19.212,36.795,2218.768,18.961,45.021,24.966,-262.185,-671.576,-2098.374,Frederick_2021,GFG,35m,Holocentridae,Myripristis,kuntee,37261011,1,AD,Passing,
-PL_L_FRED_9-2-21_P02.MP4,7592,06:24.8,T1,00:46.3,137.033,17.676,30.802,2016.785,20.945,57.08,29.604,13.143,-720.821,-1883.525,Frederick_2021,GFG,35m,Acanthuridae,Acanthurus,pyroferus,37437017,1,AD,Passing,
-PL_L_FRED_9-2-21_P02.MP4,7592,06:24.8,T1,00:46.3,119.811,14.281,48.345,2551.934,20.826,21.914,40.17,-157.489,-893.538,-2385.194,Frederick_2021,GFG,35m,Pomacanthidae,Centropyge,,,2,AD,Passing,heraldi
-PL_L_FRED_9-2-21_P02.MP4,7635,06:26.3,T1,00:47.7,68.954,4.538,8.291,1159.441,28.364,34.333,8.296,-396.832,-381.991,-1020.25,Frederick_2021,GFG,35m,Pomacentridae,Chromis,ternatensis,37372051,12,AD,Passing,
-PL_L_FRED_9-2-21_P02.MP4,7635,06:26.3,T1,00:47.7,91.939,10.889,15.67,2009.488,27.078,27.561,10.986,-449.549,-796.64,-1789.221,Frederick_2021,GFG,35m,Pomacanthidae,Genicanthus,,,12,F,Passing,watanabei
-PL_L_FRED_9-2-21_P02.MP4,7738,06:29.7,T1,00:51.1,118.652,13.985,13.347,2439.733,26.381,8.873,25.293,-1005.106,-406.167,-2185.655,Frederick_2021,GFG,35m,Pomacentridae,Chromis,weberi,37372054,3,AD,Passing,
-PL_L_FRED_9-2-21_P02.MP4,7776,06:31.0,T1,00:52.4,73.613,6.311,13.613,1366.063,30.713,50.734,40.596,-512.315,-473.633,-1174.451,Frederick_2021,GFG,35m,Labridae,Labroides,dimidiatus,37384028,1,AD,Passing,
-PL_L_FRED_9-2-21_P02.MP4,8409,06:52.1,T1,01:13.5,832.652,58.659,30.125,3246.186,26.058,86.923,11.319,-1413.439,-188.781,-2916.209,Frederick_2021,GFG,35m,Serranidae,Plectropomus,laevis,37311079,1,AD,Passing,
-PL_L_FRED_9-2-21_P02.MP4,9144,07:16.6,T1,01:38.1,708.975,82.831,95.354,5218.586,25.523,20.701,4.601,-2183.688,-536.158,-4709.318,Frederick_2021,GFG,35m,Monacanthidae,Aluterus,scriptus,37465045,1,AD,Passing,
-PL_L_FRED_9-2-21_P02.MP4,9605,07:32.0,T1,01:53.5,1660.018,156.71,173.876,5219.826,24.117,76.145,3.998,1439.382,-1573.837,-4764.221,Frederick_2021,GFG,35m,Carcharhinidae,Carcharhinus,albimarginatus,37018027,1,AD,Passing,
-PL_L_FRED_9-2-21_P02.MP4,5974,05:30.8,T1,,225.67,217.59,0,0,,,,,,,Frederick_2021,GFG,35m,,,,,1,AD,Passing,Fishing Line
-PL_L_FRED_9-2-21_P02.MP4,7035,06:06.2,T1,00:27.7,1044.74,1284.29,0,0,,,,,,,Frederick_2021,GFG,35m,Acanthuridae,Acanthurus,olivaceus,37437016,1,AD,Passing,
-PL_L_FRED_9-2-21_P02.MP4,7135,06:09.6,T1,00:31.0,874.48,572.17,0,0,,,,,,,Frederick_2021,GFG,35m,Pomacentridae,Chromis,,,10,AD,Passing,iomelas
-PL_L_FRED_9-2-21_P02.MP4,7321,06:15.8,T1,00:37.2,870.95,1015.76,0,0,,,,,,,Frederick_2021,GFG,35m,Pomacentridae,Chromis,ternatensis,37372051,8,AD,Passing,
-PL_L_FRED_9-2-21_P02.MP4,7496,06:21.6,T1,00:43.1,965.15,1130.74,0,0,,,,,,,Frederick_2021,GFG,35m,Acanthuridae,Acanthurus,pyroferus,37437017,1,AD,Passing,
-PL_L_FRED_9-2-21_P02.MP4,7496,06:21.6,T1,00:43.1,697.16,669.37,0,0,,,,,,,Frederick_2021,GFG,35m,Scaridae,Scarus,sp,,4,J,Passing,
-PL_L_FRED_9-2-21_P02.MP4,7601,06:25.1,T1,00:46.6,983.28,860.27,0,0,,,,,,,Frederick_2021,GFG,35m,Pomacanthidae,Centropyge,,,2,AD,Passing,heraldi
-PL_L_FRED_9-2-21_P02.MP4,7601,06:25.1,T1,00:46.6,850.3,604.41,0,0,,,,,,,Frederick_2021,GFG,35m,Pomacanthidae,Genicanthus,,,8,AD,Passing,watanabei
-PL_L_FRED_9-2-21_P02.MP4,7636,06:26.3,T1,00:47.7,818.06,475.47,0,0,,,,,,,Frederick_2021,GFG,35m,,,,,1,AD,Passing,Fishing line
-PL_L_FRED_9-2-21_P02.MP4,7853,06:33.5,T1,00:55.0,1035.67,584.26,0,0,,,,,,,Frederick_2021,GFG,35m,Pomacentridae,Chromis,ternatensis,37372051,15,AD,Passing,
-PL_L_FRED_9-2-21_P02.MP4,7853,06:33.5,T1,00:55.0,481.57,221.62,0,0,,,,,,,Frederick_2021,GFG,35m,Pomacentridae,Chromis,,,18,AD,Passing,iomelas
-PL_L_FRED_9-2-21_P02.MP4,10396,07:58.4,T1,02:19.8,771.72,130.95,0,0,,,,,,,Frederick_2021,GFG,35m,Pomacanthidae,Genicanthus,,,1,AD,Passing,watanabei
-PL_L_FRED_9-2-21_P02.MP4,10585,08:04.7,T1,02:26.1,874.48,1285.37,0,0,,,,,,,Frederick_2021,GFG,35m,Cirrhitidae,Paracirrhites,forsteri,37374010,1,AD,Passing,
-PL_L_FRED_9-2-21_P03.MP4,4480,14:41.6,T2,00:01.2,638.73,1686.3,0,0,,,,,,,Frederick_2021,GFG,35m,Carcharhinidae,Carcharhinus,amblyrhynchoides,37018033,1,AD,Passing,
-PL_L_FRED_9-2-21_P03.MP4,5106,15:02.5,T2,00:22.1,753.58,580.23,0,0,,,,,,,Frederick_2021,GFG,35m,,,,,1,AD,Passing,Fishing Line
-PL_L_FRED_9-2-21_P03.MP4,5246,15:07.1,T2,00:26.8,396.94,554.04,0,0,,,,,,,Frederick_2021,GFG,35m,Carcharhinidae,Carcharhinus,amblyrhynchos,37018030,1,AD,Passing,
-PL_L_FRED_9-2-21_P03.MP4,5726,15:23.2,T2,00:42.8,1040.53,653.78,0,0,,,,,,,Frederick_2021,GFG,35m,Chaetodontidae,Chaetodon,,,1,AD,Passing,martensii
-PL_L_FRED_9-2-21_P03.MP4,6135,15:36.8,T2,00:56.5,690.49,221.49,0,0,,,,,,,Frederick_2021,GFG,35m,Carcharhinidae,Carcharhinus,amblyrhynchos,37018030,1,AD,Passing,
-PL_L_FRED_9-2-21_P03.MP4,7816,16:32.9,T2,01:52.6,481.57,876.39,0,0,,,,,,,Frederick_2021,GFG,35m,Carcharhinidae,Carcharhinus,amblyrhynchos,37018030,1,AD,Passing,
+﻿Filename,Period,Length_mm,OpCode,Family,Genus,Species,Number,Comment
+PL_L_FRED_9-2-21_P02.MP4,T1,1205.432,Frederick_2021,Carcharhinidae,Carcharhinus,albimarginatus,1,
+PL_L_FRED_9-2-21_P02.MP4,T1,443.48,Frederick_2021,Acanthuridae,Naso,vlamingii,2,
+PL_L_FRED_9-2-21_P02.MP4,T1,989.102,Frederick_2021,Lutjanidae,Aprion,virescens,1,
+PL_L_FRED_9-2-21_P02.MP4,T1,107.805,Frederick_2021,Labridae,Labroides,dimidiatus,2,
+PL_L_FRED_9-2-21_P02.MP4,T1,231.693,Frederick_2021,Acanthuridae,Acanthurus,pyroferus,1,
+PL_L_FRED_9-2-21_P02.MP4,T1,78.88,Frederick_2021,Pomacentridae,Chromis,ternatensis,5,
+PL_L_FRED_9-2-21_P02.MP4,T1,230.036,Frederick_2021,Holocentridae,Myripristis,kuntee,1,
+PL_L_FRED_9-2-21_P02.MP4,T1,211.81,Frederick_2021,Balistidae,Sufflamen,,1,bursa
+PL_L_FRED_9-2-21_P02.MP4,T1,172.688,Frederick_2021,Holocentridae,Myripristis,kuntee,1,
+PL_L_FRED_9-2-21_P02.MP4,T1,137.033,Frederick_2021,Acanthuridae,Acanthurus,pyroferus,1,
+PL_L_FRED_9-2-21_P02.MP4,T1,119.811,Frederick_2021,Pomacanthidae,Centropyge,,2,heraldi
+PL_L_FRED_9-2-21_P02.MP4,T1,68.954,Frederick_2021,Pomacentridae,Chromis,ternatensis,12,
+PL_L_FRED_9-2-21_P02.MP4,T1,91.939,Frederick_2021,Pomacanthidae,Genicanthus,,12,watanabei
+PL_L_FRED_9-2-21_P02.MP4,T1,118.652,Frederick_2021,Pomacentridae,Chromis,weberi,3,
+PL_L_FRED_9-2-21_P02.MP4,T1,73.613,Frederick_2021,Labridae,Labroides,dimidiatus,1,
+PL_L_FRED_9-2-21_P02.MP4,T1,832.652,Frederick_2021,Serranidae,Plectropomus,laevis,1,
+PL_L_FRED_9-2-21_P02.MP4,T1,708.975,Frederick_2021,Monacanthidae,Aluterus,scriptus,1,
+PL_L_FRED_9-2-21_P02.MP4,T1,1660.018,Frederick_2021,Carcharhinidae,Carcharhinus,albimarginatus,1,
+PL_L_FRED_9-2-21_P02.MP4,T1,225.67,Frederick_2021,,,,1,Fishing Line
+PL_L_FRED_9-2-21_P02.MP4,T1,1044.74,Frederick_2021,Acanthuridae,Acanthurus,olivaceus,1,
+PL_L_FRED_9-2-21_P02.MP4,T1,874.48,Frederick_2021,Pomacentridae,Chromis,,10,iomelas
+PL_L_FRED_9-2-21_P02.MP4,T1,870.95,Frederick_2021,Pomacentridae,Chromis,ternatensis,8,
+PL_L_FRED_9-2-21_P02.MP4,T1,965.15,Frederick_2021,Acanthuridae,Acanthurus,pyroferus,1,
+PL_L_FRED_9-2-21_P02.MP4,T1,697.16,Frederick_2021,Scaridae,Scarus,sp,4,
+PL_L_FRED_9-2-21_P02.MP4,T1,983.28,Frederick_2021,Pomacanthidae,Centropyge,,2,heraldi
+PL_L_FRED_9-2-21_P02.MP4,T1,850.3,Frederick_2021,Pomacanthidae,Genicanthus,,8,watanabei
+PL_L_FRED_9-2-21_P02.MP4,T1,818.06,Frederick_2021,,,,1,Fishing line
+PL_L_FRED_9-2-21_P02.MP4,T1,1035.67,Frederick_2021,Pomacentridae,Chromis,ternatensis,15,
+PL_L_FRED_9-2-21_P02.MP4,T1,481.57,Frederick_2021,Pomacentridae,Chromis,,18,iomelas
+PL_L_FRED_9-2-21_P02.MP4,T1,771.72,Frederick_2021,Pomacanthidae,Genicanthus,,1,watanabei
+PL_L_FRED_9-2-21_P02.MP4,T1,874.48,Frederick_2021,Cirrhitidae,Paracirrhites,forsteri,1,
+PL_L_FRED_9-2-21_P03.MP4,T2,638.73,Frederick_2021,Carcharhinidae,Carcharhinus,amblyrhynchoides,1,
+PL_L_FRED_9-2-21_P03.MP4,T2,753.58,Frederick_2021,,,,1,Fishing Line
+PL_L_FRED_9-2-21_P03.MP4,T2,396.94,Frederick_2021,Carcharhinidae,Carcharhinus,amblyrhynchos,1,
+PL_L_FRED_9-2-21_P03.MP4,T2,1040.53,Frederick_2021,Chaetodontidae,Chaetodon,,1,martensii
+PL_L_FRED_9-2-21_P03.MP4,T2,690.49,Frederick_2021,Carcharhinidae,Carcharhinus,amblyrhynchos,1,
+PL_L_FRED_9-2-21_P03.MP4,T2,481.57,Frederick_2021,Carcharhinidae,Carcharhinus,amblyrhynchos,1,

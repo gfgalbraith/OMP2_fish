@@ -21,6 +21,7 @@ rm(list=ls())
 ```{r}
 library(tidyverse)
 library(rfishbase)
+library(lubridate)
 ```
 
 #Import fish data
@@ -33,6 +34,7 @@ fish <- fish %>% mutate(
   T_ID=as.factor(T_ID),
   Length_mm=as.double(Length_mm),
   Survey=as.factor(Survey),
+  Video = as.factor(Video),
   Site=as.factor(Site))
 
 ```
@@ -41,7 +43,7 @@ fish <- fish %>% mutate(
 Take the output file "transect_summary_data" and merge by TID. This now assigns the details e.g. depth, temp, complexity etc to each observation
 
 ```{r}
-transect_data <-read_csv("../0_data/ROV_Transect_Summary.csv")
+transect_data <-read_csv("../0_data/ROV_Transect_Summary_Analysis.csv")
 
 transect_data<-select(transect_data,c(-Day_no, -Dive_no, -Trash, -Cucumbers,- Notes))
 
@@ -55,19 +57,22 @@ transect_data <- transect_data %>% mutate(
   Date=as.Date(Date, format = "%d/%m/%Y"),
   Habitat=as.factor(Habitat),
   Aspect=as.factor(Aspect),
-  Survey=as.factor("Feb_21"),
+  Survey=as.factor(case_when(month(Date) ==2 & year(Date) == 2021 ~ "Feb_21",
+                             month(Date) ==2 & year(Date) == 2022 ~ "Feb_22",
+                             month(Date) == 7 & year(Date) == 2021 ~ "Jul_21")),
   Site=as.factor(Site),
   T_ID = paste(Survey,Site,Transect, sep = '_'),
   T_ID=as.factor(T_ID))
+
 ```
 
 #Merge fish and transect data - prechecks for matching transects
 ```{r}
 
 #  check you have correct merge by unique values for T_ID - this is critical
-distinct(transect_data, T_ID) # 135 transects
-distinct(fish, T_ID) #128 rows - some transects had no fish so this is fine
-# Check fish observations that don't have a transect number
+distinct(transect_data, T_ID) # 163 transects
+distinct(fish, T_ID) #156 rows - some transects had no fish so this is fine for now
+# Check fish observations that don't have a transect number - 0 all good
 which(is.na(fish$Transect))
 
 fish %>% filter(is.na(Transect))
@@ -76,14 +81,15 @@ fish %>% filter(is.na(T_ID))
 # There were some NA values - I had to manually go back through the csv files and videos to check.
 
 levels(fish$T_ID)
-unique(fish$T_ID) #128 unique transect IDs in the fish
-unique(transect_data$T_ID) #135 transects in the transect_data
+unique(fish$T_ID) #155 unique transect IDs in the fish
+unique(transect_data$T_ID) #163 transects in the transect_data
 # This means we have 7 transects analysed which had no fish, could be lagoons ect
 # Needs to be checked, do this using an anti-join - will select all rows from df1 (transect_data) that are not present in df2 (fish)
 
 transect_data %>% anti_join(fish, by = "T_ID")
 fish %>% anti_join(transect_data, by = "T_ID")
 levels(transect_data$T_ID)
+levels(fish$T_ID)
 
 # 26/05/22 Saumarez, Wreck, Kenn, Marion and Frederick data are not yet in the project. Others in lagoon habitat are likely true zero observation transects. This should be made note of in the transect summary as the video anlaysis is done.
 
@@ -149,15 +155,18 @@ data<-data %>% filter(
 
 data3
 
-# Paracentropyge
+# Paracentropyge multifasciata was named incorrectly
 data3$Genus[2] <- "Paracentropyge"
 data3$Species[2] <- "multifasciata"
 data3$Family[2] <- "Pomacentridae"
 
-
-
+data3
+# everything else here just needs "sp" adding to the species column
+# All NA species get "sp"
+data3$Species[is.na(data3$Species)]<- "sp"
 ```
 
+# wokring on subset data2
 ```{r}
 
 # Most follow the "species_length.est" pattern but there are some funky entries. Split data2 again.
@@ -185,6 +194,8 @@ data2<- data2 %>% separate(
   temp.length=as.double(temp.length)
 )
 
+# Missing pieces here are a random depth observation for H.marcosi and a funky trout.
+
 # temp.lengths are all in cm - convert to mm
 data2<- data2 %>% mutate(
   temp.length = temp.length*10)
@@ -194,8 +205,9 @@ data2 %>% filter(
 )
 
 # Random missing length for a trout - check video
-data2$Length_mm[116] <- 200
-data2$temp.species[116] <- NA
+data2$Length_mm[117] <- 200
+data2$temp.species[117] <- "leopardus"
+data2$temp.length[117] <- 200
 
 # COALESCE temp.species and temp.length to fill NA values
 data2 <- data2 %>% mutate(
@@ -222,11 +234,22 @@ https://stackoverflow.com/questions/70868379/replace-one-column-with-another-usi
 ```{r}
 
 funky_data
-funky_data
 
-funky_data$Genus[6] <- "Paracentropyge"
-funky_data$Species[6] <- "multifasciata"
-funky_data$Length_mm[6] <- 103
+funky_data$Genus[38] <- "Paracentropyge"
+funky_data$Species[38] <- "multifasciata"
+funky_data$Length_mm[38] <- 103
+funky_data$Length_mm[34] <- 115
+
+
+funky_data<-funky_data %>% mutate(
+  Genus = case_when(Comment == "Neoniphon sammara" ~ "Neoniphon",
+                    Comment == "Neoniphon opercularis" ~ "Neoniphon",
+                    TRUE ~ Genus),
+  Species = case_when(Comment == "Neoniphon sammara" ~ "sammara",
+                      Comment == "Neoniphon opercularis" ~ "opercularis",
+                      Comment == "ALBIPECTORALIS" ~ "albipectoralis",
+  TRUE ~ Species))
+
 
 funky_data
 
@@ -234,7 +257,7 @@ funky_data
 
 # Row bind corrected single species and funky data back to main data
 ```{r}
-fin.data<-rbind(data,data2,single.species,funky_data)
+fin.data<-rbind(data,data2,data3,single.species,funky_data)
 # Check that your final data here has the same observations as "fish" df that you started with. Otherwise you have lost some in the cleaning processes above :?
 
 # All NA species get "sp"

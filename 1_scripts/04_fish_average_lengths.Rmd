@@ -39,6 +39,17 @@ fish <- fish %>% mutate(
 
 ```
 
+# Remove dives where no stereo was taken
+- Herald's surprise
+- Juliette Cay
+- Edna Cay
+
+```{r}
+
+
+
+```
+
 # DF of average length for all species with length estimates
 ```{r}
 
@@ -95,7 +106,7 @@ fish.2<-fish.2 %>% filter(!is.na(Length_mm))
 Could calculate these based on the in-situ data? Otherwise apply an estimate?
 
 - Option 1 - Manual Entry
-```{r}
+```{r #}
 unique(no.values$Species_name)
 
 null.species<-unique(no.values$Species_name)

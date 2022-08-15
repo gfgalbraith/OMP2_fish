@@ -194,6 +194,20 @@ fish <- fish %>%
                         TRUE ~ as.character(Genus))
   )
 
+# Cephalopholis leopardus < missing genus
+fish <- fish %>% 
+  mutate(
+    Genus = case_when(Family == "Serranidae" & Species == "leopardus" ~ "Cephalopholis",
+                        TRUE ~ as.character(Genus))
+  )
+
+
+# Chlorurus  spilurus should be used instead of C.sordidus
+fish <- fish %>% 
+  mutate(
+    Species = case_when(Genus == "Chlorurus" & Species == "sordidus" ~ "spilurus",
+                        TRUE ~ as.character(Species))
+  )
 ```
 
 # Pre merge second check
@@ -248,8 +262,9 @@ fish<-fish %>% mutate(
 
 fish %>% anti_join(fishbase.data, by = "Species_name")
 
-# All that remains should be ovservations only identified as "sp"
-
+# All that remains should be observations only identified as "sp"
+# Chlorurus spilurus is an issue
+# Pseudanthias englehardorum is an issue
 
 ```
 
@@ -264,7 +279,7 @@ unique(fish)
 # Merge with mermaid data
 The fishbase data set was good for validating accepted species names, further spelling checks etc but had some issues with assigning the correct a and b constants. Firstly, there are multiple values for a given species - which is correct? They also seemed very different from the Mermaid ones and often the ones given on the fish's page on fishbase.org. For these reasons using the mermaid database.
 
-```{r}
+```{#r}
 # MERMAID merge for a and b constants
 
 merged.data <- fish %>% 
@@ -292,6 +307,7 @@ add.data<-merged.data %>% filter(is.na(`Biomass Constant A`)) %>% distinct(Speci
 add.data$Species_name %>% str_subset(pattern = "sp$", negate = TRUE)
 
 # \s is regex for white space - could also us that
+
 
 
 # Check missing constants

@@ -126,6 +126,7 @@ fish <- fish %>% mutate(
                                   TRUE ~ "Deep"))
 )
 
+# check levels are good
 unique(fish$Depth_bin)
 
 # Ordered factor for depth

@@ -1,0 +1,177 @@
+"Species_name","Depth","DepthRangeDeep","Reef","Site","Method","Trophic Group","Functional Group","depth_increase"
+"Chromis margaritifer",94.1,20,"Osprey","Osp_N1","ROV","omnivore","Planktivore",74.1
+"Chaetodon plebeius",67.8,10,"Bougainville","BVille_1","ROV","invertivore-sessile","Corallivore",57.8
+"Lethrinus miniatus",85,30,"Holmes","Holmes_1","BRUV","piscivore","Piscivore",55
+"Labroides dimidiatus",94.1,40,"Osprey","Osp_N1","ROV","invertivore-mobile","Benthic invertivore",54.1
+"Neoniphon opercularis",79,25,"Lihou","EdnaCay_1","ROV","invertivore-mobile","Benthic invertivore",54
+"Genicanthus melanospilos",97.2,45,"Osprey","Osp_N1","ROV","planktivore","Omnivore",52.2
+"Gymnocranius euanus",98,50,"Lihou","JulCay_1","ROV","invertivore-mobile","Benthic invertivore",48
+"Scarus niger",67.8,20,"Bougainville","BVille_1","ROV","herbivore-detritivore","Scraper",47.8
+"Pentapodus aureofasciatus",79,35,"Lihou","EdnaCay_1","ROV","invertivore-mobile","Carnivore",44
+"Acanthurus albipectoralis",63,20,"Lihou","EdnaCay_1","ROV","planktivore","Grazer",43
+"Chrysiptera flavipinnis",80.6,38,"Osprey","Osp_N1","ROV","omnivore","Omnivore",42.6
+"Ostracion meleagris",71.6,30,"Osprey","Osp_N1","ROV","omnivore","Benthic invertivore",41.6
+"Cephalopholis leopardus",80.6,40,"Osprey","Osp_N1","ROV","piscivore","Piscivore",40.6
+"Choerodon jordani",70,30,"Lihou","JulCay_1","ROV","invertivore-mobile","Carnivore",40
+"Neoniphon sammara",86,46,"Lihou","EdnaCay_1","ROV","piscivore","Benthic invertivore",40
+"Chromis agilis",87.6,48,"Osprey","Osp_N1","ROV","omnivore","Planktivore",39.6
+"Thalassoma lunare",58.1,20,"Bougainville","BVille_1","ROV","invertivore-mobile","Carnivore",38.1
+"Chaetodon pelewensis",67.3,30,"Bougainville","BVille_1","ROV","invertivore-mobile","Corallivore",37.3
+"Anampses geographicus",62,25,"Willis","Willis_1","BRUV","invertivore-mobile","Benthic invertivore",37
+"Scarus chameleon",66.7,30,"Bougainville","BVille_1","ROV","herbivore-detritivore","Scraper",36.7
+"Hologymnosus longipes",65,30,"Wreck","Wreck_W1","BRUV","invertivore-mobile","Benthic invertivore",35
+"Naso lopezi",85,50,"Holmes","Holmes_1","BRUV","planktivore","Planktivore",35
+"Naso vlamingii",85,50,"Holmes","Holmes_1","BRUV","planktivore","Planktivore",35
+"Oxycheilinus nigromarginatus",62,27,"Willis","Willis_1","BRUV","invertivore-mobile","Carnivore",35
+"Pomacentrus moluccensis",48.9,14,"Lihou","Lihou_S1","ROV","planktivore","Omnivore",34.9
+"Chromis iomelas",67.8,35,"Bougainville","BVille_1","ROV","planktivore","Planktivore",32.8
+"Gomphosus varius",67.8,35,"Bougainville","BVille_1","ROV","invertivore-mobile","Benthic invertivore",32.8
+"Siganus woodlandi",47,15,"Flinders","Flinders_S1","BRUV","herbivore-detritivore","Grazer",32
+"Acanthurus blochii",46.4,15,"Lihou","Lihou_S1","ROV","herbivore-detritivore","Grazer",31.4
+"Balistoides viridescens",81,50,"Herald","Herald_1","BRUV","invertivore-mobile","Benthic invertivore",31
+"Malacanthus brevirostris",81,50,"Herald","Herald_1","BRUV","invertivore-mobile","Benthic invertivore",31
+"Odonus niger",71,40,"Herald","Herald_1","BRUV","planktivore","Planktivore",31
+"Pseudobalistes flavimarginatus",81,50,"Herald","Herald_1","BRUV","invertivore-mobile","Benthic invertivore",31
+"Pseudobalistes fuscus",81,50,"Herald","Herald_1","BRUV","invertivore-mobile","Benthic invertivore",31
+"Rhinecanthus rectangulus",50.1,20,"Lihou","Lihou_N1","ROV","invertivore-mobile","Benthic invertivore",30.1
+"Sufflamen chrysopterum",60.1,30,"Willis","Willis_N1","ROV","invertivore-mobile","Benthic invertivore",30.1
+"Ctenochaetus striatus",65,35,"Wreck","Wreck_W1","BRUV","omnivore","Grazer",30
+"Hologymnosus doliatus",65,35,"Wreck","Wreck_W1","BRUV","invertivore-mobile","Benthic invertivore",30
+"Monotaxis heterodon",54.6,25,"Osprey","Osp_N1","ROV","invertivore-mobile","Benthic invertivore",29.6
+"Myripristis murdjan",79,50,"Lihou","EdnaCay_1","ROV","planktivore","Planktivore",29
+"Pseudanthias tuka",67.8,40,"Bougainville","BVille_1","ROV","planktivore","Planktivore",27.8
+"Ptereleotris evides",42.3,15,"Willis","Willis_N1","ROV","planktivore","Planktivore",27.3
+"Thalassoma amblycephalum",42.3,15,"Willis","Willis_N1","ROV","planktivore","Planktivore",27.3
+"Chromis amboinensis",97.2,70,"Osprey","Osp_N1","ROV","omnivore","Planktivore",27.2
+"Acanthurus auranticavus",46.2,20,"Lihou","Lihou_S1","ROV","herbivore-detritivore","Grazer",26.2
+"Lutjanus adetii",46.2,20,"Lihou","Lihou_S1","ROV","invertivore-mobile","Carnivore",26.2
+"Acanthurus nigrofuscus",51,25,"Willis","Willis_1","BRUV","herbivore-detritivore","Grazer",26
+"Lethrinus semicinctus",61,35,"Lihou","Lihou_S1","BRUV","piscivore","Benthic invertivore",26
+"Pseudanthias engelhardi",96,70,"Lihou","EdnaCay_1","ROV","planktivore","Planktivore",26
+"Sargocentron diadema",86,60,"Lihou","EdnaCay_1","ROV","invertivore-mobile","Benthic invertivore",26
+"Acanthurus nigricauda",55,30,"Flinders","Flinders_S2","BRUV","herbivore-detritivore","Grazer",25
+"Anampses melanurus",65,40,"Wreck","Wreck_W1","BRUV","invertivore-mobile","Benthic invertivore",25
+"Chaetodon guentheri",65,40,"Wreck","Wreck_W1","BRUV","invertivore-mobile","Benthic invertivore",25
+"Chromis flavomaculata",65,40,"Wreck","Wreck_W1","BRUV","planktivore","Planktivore",25
+"Labroides bicolor",65,40,"Wreck","Wreck_W1","BRUV","invertivore-mobile","Benthic invertivore",25
+"Pseudanthias pictilis",65,40,"Wreck","Wreck_W1","BRUV","planktivore","Planktivore",25
+"Chaetodon melannotus",44.4,20,"Willis","Willis_N1","ROV","invertivore-sessile","Corallivore",24.4
+"Plectroglyphidodon johnstonianus",42,18,"Kenn","Kenn_1","BRUV","herbivore-detritivore","Omnivore",24
+"Scarus longipinnis",79,55,"Lihou","EdnaCay_1","ROV","herbivore-detritivore","Scraper",24
+"Balistoides conspicillum",98,75,"Lihou","JulCay_1","ROV","invertivore-mobile","Benthic invertivore",23
+"Naso thynnoides",63,40,"Lihou","EdnaCay_1","ROV","planktivore","Planktivore",23
+"Centropyge bicolor",47.6,25,"Herald's Surprise","HerSurp_1","ROV","herbivore-detritivore","Grazer",22.6
+"Acanthochromis polyacanthus",87.6,65,"Osprey","Osp_N1","ROV","omnivore","Planktivore",22.6
+"Chrysiptera taupou",32.5,10,"Lihou","Lihou_N1","ROV","planktivore","Planktivore",22.5
+"Gymnocranius superciliosus",42,20,"Lihou","Lihou_N1","BRUV","invertivore-sessile","Benthic invertivore",22
+"Scarus frenatus",46.6,25,"Lihou","Lihou_S1","ROV","herbivore-detritivore","Scraper",21.6
+"Pterocaesio marri",51,30,"Lihou","Lihou_N1","BRUV","planktivore","Planktivore",21
+"Bodianus anthioides",80.6,60,"Osprey","Osp_N1","ROV","invertivore-mobile","Benthic invertivore",20.6
+"Centropyge bispinosa",80.6,60,"Osprey","Osp_N1","ROV","herbivore-detritivore","Omnivore",20.6
+"Naso annulatus",80.6,60,"Osprey","Osp_N1","ROV","planktivore","Planktivore",20.6
+"Scarus psittacus",45.5,25,"Bougainville","BVille_1","ROV","herbivore-detritivore","Scraper",20.5
+"Chaetodon lunulatus",50.4,30,"Willis","Willis_N1","ROV","invertivore-sessile","Corallivore",20.4
+"Chlorurus spilurus",50.4,30,"Willis","Willis_N1","ROV","omnivore","Excavator",20.4
+"Gnathodentex aureolineatus",50.4,30,"Willis","Willis_N1","ROV","invertivore-mobile","Benthic invertivore",20.4
+"Chromis chrysura",65,45,"Wreck","Wreck_W1","BRUV","planktivore","Planktivore",20
+"Acanthurus pyroferus",79,60,"Lihou","EdnaCay_1","ROV","herbivore-detritivore","Grazer",19
+"Novaculichthys taeniourus",44,25,"Wreck","Wreck_W1","BRUV","invertivore-mobile","Benthic invertivore",19
+"Pseudanthias flavicauda",80,61,"Lihou","JulCay_1","ROV","planktivore","Planktivore",19
+"Chromis xanthochira",66.7,48,"Bougainville","BVille_1","ROV","planktivore","Planktivore",18.7
+"Ctenochaetus binotatus",71.6,53,"Osprey","Osp_N1","ROV","omnivore","Grazer",18.6
+"Chaetodon kleinii",79,61,"Lihou","EdnaCay_1","ROV","omnivore","Corallivore",18
+"Chlorurus microrhinos",68,50,"Osprey","Osp_N1","ROV","herbivore-detritivore","Excavator",18
+"Heniochus monoceros",48,30,"Lihou","Lihou_S1","BRUV","invertivore-mobile","Benthic invertivore",18
+"Siganus argenteus",58,40,"Kenn","Kenn_1","BRUV","herbivore-detritivore","Grazer",18
+"Stegastes fasciolatus",47.7,30,"Lihou","Lihou_S1","ROV","herbivore-detritivore","Farmer",17.7
+"Pseudodax moluccanus",77.2,60,"Osprey","Osp_N1","ROV","invertivore-mobile","Benthic invertivore",17.2
+"Labrichthys unilineatus",37.1,20,"Flinders","Flinders_S1","ROV","invertivore-sessile","Benthic invertivore",17.1
+"Scarus oviceps",37.1,20,"Herald","Herald_1","ROV","herbivore-detritivore","Scraper",17.1
+"Hemigymnus fasciatus",42,25,"Willis","Willis_N1","ROV","invertivore-mobile","Benthic invertivore",17
+"Scarus dimidiatus",42,25,"Willis","Willis_N1","ROV","herbivore-detritivore","Scraper",17
+"Centropyge vrolikii",41.7,25,"Herald","Herald_1","ROV","herbivore-detritivore","Grazer",16.7
+"Thalassoma hardwicke",31.5,15,"Wreck","Wreck_E1","ROV","invertivore-mobile","Carnivore",16.5
+"Chromis ternatensis",52.3,36,"Willis","Willis_N1","ROV","planktivore","Planktivore",16.3
+"Thalassoma lutescens",46.2,30,"Lihou","Lihou_S1","ROV","invertivore-mobile","Carnivore",16.2
+"Halichoeres biocellatus",51,35,"Willis","Willis_1","BRUV","invertivore-mobile","Benthic invertivore",16
+"Hoplolatilus marcosi",96,80,"Lihou","EdnaCay_1","ROV","planktivore","Planktivore",16
+"Genicanthus watanabei",96,81,"Lihou","EdnaCay_1","ROV","planktivore","Omnivore",15
+"Naso caesius",65,50,"Wreck","Wreck_W1","BRUV","planktivore","Planktivore",15
+"Pseudanthias hypselosoma",65,50,"Wreck","Wreck_W1","BRUV","planktivore","Planktivore",15
+"Scarus rubroviolaceus",51,36,"Holmes","Holmes_1","BRUV","herbivore-detritivore","Scraper",15
+"Arothron mappa",44.8,30,"Willis","Willis_N1","ROV","omnivore","Benthic invertivore",14.8
+"Chromis weberi",54.7,40,"Bougainville","BVille_1","ROV","planktivore","Planktivore",14.7
+"Naso brachycentron",44,30,"Chilcott","Chilcott_1","BRUV","herbivore-macroalgae","Browser",14
+"Nemateleotris magnifica",84,70,"Osprey","Osp_N1","ROV","planktivore","Planktivore",14
+"Anampses femininus",43.3,30,"Flinders","Flinders_N1","ROV","invertivore-mobile","Benthic invertivore",13.3
+"Hipposcarus longiceps",53,40,"Wreck","Wreck_W1","BRUV","omnivore","Scraper",13
+"Meiacanthus atrodorsalis",42.3,30,"Willis","Willis_N1","ROV","invertivore-mobile","Omnivore",12.3
+"Scarus flavipectoralis",52.3,40,"Willis","Willis_N1","ROV","herbivore-detritivore","Scraper",12.3
+"Anampses neoguinaicus",42,30,"Kenn","Kenn_1","BRUV","invertivore-mobile","Benthic invertivore",12
+"Anampses twistii",42,30,"Willis","Willis_N1","ROV","invertivore-mobile","Benthic invertivore",12
+"Balistapus undulatus",62,50,"Willis","Willis_1","BRUV","invertivore-mobile","Benthic invertivore",12
+"Bodianus bimaculatus",72,60,"Kenn","Kenn_1","BRUV","invertivore-mobile","Benthic invertivore",12
+"Chaetodon trifascialis",42,30,"Kenn","Kenn_1","BRUV","invertivore-sessile","Corallivore",12
+"Chaetodon ulietensis",42,30,"Kenn","Kenn_1","BRUV","invertivore-sessile","Corallivore",12
+"Gymnocranius microdon",62,50,"Willis","Willis_1","BRUV","invertivore-mobile","Benthic invertivore",12
+"Naso tonganus",52,40,"Herald","Herald_1","BRUV","herbivore-macroalgae","Browser",12
+"Cheilinus fasciatus",71.6,60,"Osprey","Osp_N1","ROV","invertivore-mobile","Benthic invertivore",11.6
+"Plectropomus areolatus",31.2,20,"Holmes","Holmes_2","ROV","piscivore","Piscivore",11.2
+"Coris dorsomacula",51,40,"Lihou","Lihou_N1","BRUV","invertivore-mobile","Benthic invertivore",11
+"Halichoeres hartzfeldii",81,70,"Herald","Herald_1","BRUV","invertivore-mobile","Benthic invertivore",11
+"Amblyglyphidodon aureus",55.6,45,"Lihou","Lihou_N1","ROV","planktivore","Planktivore",10.6
+"Chaetodon flavirostris",40.4,30,"Herald","Herald_1","ROV","invertivore-sessile","Corallivore",10.4
+"Pomacanthus semicirculatus",50.1,40,"Lihou","Lihou_N1","ROV","invertivore-sessile","Benthic invertivore",10.1
+"Chaetodon vagabundus",40,30,"Lihou","Lihou_N1","ROV","invertivore-mobile","Omnivore",10
+"Coris pictoides",65,55,"Wreck","Wreck_W1","BRUV","invertivore-mobile","Benthic invertivore",10
+"Dascyllus trimaculatus",65,55,"Wreck","Wreck_W1","BRUV","planktivore","Omnivore",10
+"Labropsis australis",65,55,"Wreck","Wreck_W1","BRUV","invertivore-sessile","Benthic invertivore",10
+"Pomacentrus pavo",28,18,"Ashmore","Ashmore_1","BRUV","planktivore","Planktivore",10
+"Macropharyngodon meleagris",39.6,30,"Herald's Surprise","HerSurp_1","ROV","invertivore-mobile","Benthic invertivore",9.6
+"Cirrhilabrus exquisitus",49.3,40,"Lihou","JulCay_1","ROV","planktivore","Planktivore",9.3
+"Acanthurus olivaceus",55.2,46,"Lihou","Lihou_N1","ROV","herbivore-detritivore","Grazer",9.2
+"Halichoeres melasmapomus",65,56,"Wreck","Wreck_W1","BRUV","invertivore-mobile","Benthic invertivore",9
+"Plectorhinchus chaetodonoides",39,30,"Lihou","EdnaCay_2","ROV","piscivore","Carnivore",9
+"Scarus forsteni",39,30,"Lihou","EdnaCay_2","ROV","herbivore-detritivore","Scraper",9
+"Amphiprion chrysopterus",48.9,40,"Lihou","Lihou_S1","ROV","planktivore","Omnivore",8.9
+"Chaetodon ornatissimus",44.8,36,"Lihou","Lihou_N1","ROV","invertivore-sessile","Corallivore",8.8
+"Centropyge heraldi",98,90,"Lihou","JulCay_1","ROV","herbivore-detritivore","Grazer",8
+"Pomacentrus brachialis",48,40,"Lihou","Lihou_S1","BRUV","herbivore-detritivore","Omnivore",8
+"Oxycheilinus digramma",67.3,60,"Bougainville","BVille_1","ROV","piscivore","Carnivore",7.3
+"Macolor niger",97.2,90,"Osprey","Osp_N1","ROV","planktivore","Planktivore",7.2
+"Chromis fumea",79,72,"Lihou","EdnaCay_1","ROV","planktivore","Planktivore",7
+"Cirrhilabrus lineatus",62,55,"Willis","Willis_1","BRUV","planktivore","Planktivore",7
+"Naso minor",62,55,"Willis","Willis_1","BRUV","planktivore","Planktivore",7
+"Scolopsis bilineata",32,25,"Ashmore","Ashmore_3","BRUV","invertivore-mobile","Carnivore",7
+"Epinephelus fuscoguttatus",66.7,60,"Bougainville","BVille_1","ROV","piscivore","Piscivore",6.7
+"Rhinecanthus lunula",36.5,30,"Wreck","Wreck_E1","ROV","invertivore-mobile","Benthic invertivore",6.5
+"Chaetodon speculum",36.4,30,"Bougainville","BVille_1","ROV","invertivore-sessile","Corallivore",6.4
+"Cirrhilabrus scottorum",46.4,40,"Lihou","Lihou_S1","ROV","planktivore","Planktivore",6.4
+"Siganus punctatissimus",36.4,30,"Bougainville","BVille_1","ROV","herbivore-detritivore","Grazer",6.4
+"Pomacentrus vaiuli",51,45,"Willis","Willis_1","BRUV","planktivore","Omnivore",6
+"Pseudalutarius nasicornis",61,55,"Lihou","Lihou_S1","BRUV","invertivore-sessile","Benthic invertivore",6
+"Pseudocoris yamashiroi",36,30,"Lihou","Lihou_N1","BRUV","planktivore","Benthic invertivore",6
+"Heniochus chrysostomus",45.5,40,"Bougainville","BVille_1","ROV","invertivore-mobile","Corallivore",5.5
+"Cetoscarus ocellatus",35,30,"Herald","Herald_1","BRUV","herbivore-detritivore","Excavator",5
+"Epinephelus polyphekadion",51,46,"Holmes","Holmes_1","BRUV","piscivore","Carnivore",5
+"Scarus schlegeli",55,50,"Lihou","Lihou_S1","BRUV","herbivore-detritivore","Scraper",5
+"Paracirrhites forsteri",39.6,35,"Herald's Surprise","HerSurp_1","ROV","piscivore","Carnivore",4.6
+"Macropharyngodon negrosensis",36,32,"Lihou","Lihou_N1","BRUV","invertivore-mobile","Benthic invertivore",4
+"Pseudocheilinus evanidus",65,61,"Wreck","Wreck_W1","BRUV","invertivore-mobile","Benthic invertivore",4
+"Chromis alpha",98,95,"Lihou","JulCay_1","ROV","planktivore","Planktivore",3
+"Chromis atripes",42.3,40,"Willis","Willis_N1","ROV","omnivore","Planktivore",2.3
+"Amblyglyphidodon curacao",42,40,"Kenn","Kenn_1","BRUV","omnivore","Planktivore",2
+"Cephalopholis argus",42,40,"Kenn","Kenn_1","BRUV","piscivore","Piscivore",2
+"Chromis xanthura",42,40,"Kenn","Kenn_1","BRUV","planktivore","Planktivore",2
+"Pomachromis richardsoni",27,25,"Ashmore","Ashmore_2","BRUV","planktivore","Planktivore",2
+"Amblyglyphidodon leucogaster",46.6,45,"Holmes","Holmes_2","ROV","planktivore","Omnivore",1.6
+"Centropyge flavissima",51.5,50,"Willis","Willis_N1","ROV","herbivore-detritivore","Grazer",1.5
+"Dascyllus reticulatus",51.5,50,"Willis","Willis_N1","ROV","omnivore","Planktivore",1.5
+"Halichoeres hortulanus",31.5,30,"Wreck","Wreck_E1","ROV","invertivore-mobile","Benthic invertivore",1.5
+"Chrysiptera starcki",61.3,60,"Herald's Surprise","HerSurp_1","ROV","planktivore","Omnivore",1.3
+"Carangoides ferdau",61,60,"Flinders","Flinders_N1","BRUV","piscivore","Piscivore",1
+"Cheilinus chlorourus",31,30,"Wreck","Wreck_W1","BRUV","invertivore-mobile","Benthic invertivore",1
+"Coris aygula",31,30,"Wreck","Wreck_W1","BRUV","invertivore-mobile","Benthic invertivore",1
+"Pomacentrus nagasakiensis",36,35,"Lihou","Lihou_N1","BRUV","planktivore","Planktivore",1
+"Pomacentrus nigromarginatus",51,50,"Holmes","Holmes_1","BRUV","planktivore","Planktivore",1
+"Arothron caeruleopunctatus",50.1,50,"Willis","Willis_N1","ROV","invertivore-sessile","Benthic invertivore",0.100000000000001

@@ -194,7 +194,10 @@ data2<- data2 %>% separate(
   temp.length=as.double(temp.length)
 )
 
+
 # Missing pieces here are a random depth observation for H.marcosi and a funky trout.
+
+# NOTE these length ests are in cm - converrt to mm to keep consistent with EM estimates! Will stuff uop your biomass later on.
 
 # temp.lengths are all in cm - convert to mm
 data2<- data2 %>% mutate(

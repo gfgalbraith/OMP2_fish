@@ -68,18 +68,19 @@ seecol(depth.cols,
 
 # Data import
 ```{r}
-diversity <-read_csv("../0_data/fish_diversity.csv")
-biomass <-read_csv("../0_data/fish_biomass.csv")
+diversity <-read_csv("../2_outputs/ROV_fish_diversity.csv")
+biomass <-read_csv("../2_outputs/ROV_transect_biomass.csv")
 biomass<-biomass %>% select(T_ID, Total_Biomass_g)
 
 fish<-left_join(diversity, biomass, by="T_ID")
+
+anti_join(diversity,biomass, by = "T_ID")
 
 fish <- fish %>% mutate(
   Reef=as.factor(Reef),
   T_ID=as.factor(T_ID),
   Survey=as.factor(Survey),
   Site=as.factor(Site),
-  Date = as.Date(Date),
   Habitat = as.factor(Habitat),
   Aspect = as.factor(Aspect),
   Total_biomass_KG = as.double(Total_Biomass_g/1000))
@@ -89,6 +90,9 @@ fish <- fish %>% mutate(
 
 # apply Region grouping by reef
 ```{r}
+
+levels(fish$Reef)
+
 fish <- fish %>% mutate ( 
   Region = as.factor(case_when(grepl("Lihou", Reef) ~ "Central Coral Sea",
                    grepl("Flinders", Reef) ~ "Central Coral Sea",
@@ -96,6 +100,7 @@ fish <- fish %>% mutate (
                    grepl("Osprey", Reef) ~ "Northern Coral Sea",
                    grepl("Chillcot", Reef) ~ "Central Coral Sea",
                    grepl("Herald", Reef) ~ "Central Coral Sea",
+                    grepl("Herald's Surprise", Reef) ~ "Central Coral Sea",
                    grepl("Holmes", Reef) ~ "Central Coral Sea",
                    grepl("Willis", Reef) ~ "Central Coral Sea",
                    grepl("Frederick", Reef) ~ "Southern Coral Sea",
@@ -117,8 +122,7 @@ fish <-fish %>% mutate(
 fish <- fish %>% mutate(
   Depth_bin = as.factor(case_when(Depth < 30 ~ "Shallow",
                                   Depth > 30 & Depth < 65 ~ "Mid",
-                                  TRUE ~ "Deep"))
-)
+                                  TRUE ~ "Deep")))
 
 unique(fish$Depth_bin)
 
@@ -134,8 +138,8 @@ fish <-fish %>% mutate(
 P1<-ggplot(fish, aes(y=richness, x=Reef, fill =Depth_bin)) + 
   geom_boxplot(outlier.colour="black", outlier.shape=16,
              outlier.size=2, notch=FALSE)+
-  scale_fill_manual(values = depth.cols, name = "Depth Bin")+
-  ylab(expression(Richness~("Species 150m"^-2 %+-%SE)))+
+  scale_fill_manual(values = depth.cols, name = "")+
+  ylab(expression(Richness~("Species 150m"^-2)))+
   xlab("")+
   scale_y_continuous(expand = c(0, 0), limits = c(0, 50))+ 
   facet_grid(cols = vars(Region), scales = "free", space ="free")+
@@ -150,11 +154,17 @@ theme_classic()+
         strip.text = element_text(size = 14, colour = "black", face = "bold"),
         strip.background = element_blank())
 
-
-ggsave(filename = "../3_figures/depth_REEF_richness.png", plot= P1,
-       width =300, height=150 , units = "mm", dpi = 500, device = "png" )
+P1
 
 
+ggsave(filename = "../3_figures/ROV_fish_REEF_richness.png", plot= P1,
+       width =322, height=140 , units = "mm", dpi = 500, device = "png" )
+
+
+ggsave(filename = "../3_figures/ROV_fish_REEF_richness.svg", plot= P1,
+       width =322, height=140 , units = "mm", dpi = 500, device = "svg" )
+
+#  %+-%SE is plus/minus standard error sign
 ```
 
 # ABUNDANCE/DENSITY boxplots
@@ -163,8 +173,8 @@ ggsave(filename = "../3_figures/depth_REEF_richness.png", plot= P1,
 P2<-ggplot(fish, aes(y=abundance, x=Reef, fill =Depth_bin)) + 
   geom_boxplot(outlier.colour="black", outlier.shape=16,
              outlier.size=2, notch=FALSE)+
-  scale_fill_manual(values = depth.cols, name = "Depth Bin")+
-  ylab(expression(Density~("n 150m"^-2 %+-%SE)))+
+  scale_fill_manual(values = depth.cols, name = "")+
+  ylab(expression(Density~("n 150m"^-2)))+
   xlab("")+
   scale_y_continuous(expand = c(0, 0), limits = c(0, 500))+ 
   facet_grid(cols = vars(Region), scales = "free", space ="free")+
@@ -181,8 +191,8 @@ theme_classic()+
 
 P2
 
-ggsave(filename = "../3_figures/depth_REEF_abundance.png", plot= P2,
-       width =300, height=150 , units = "mm", dpi = 500, device = "png" )
+ggsave(filename = "../3_figures/ROV_fish_REEF_abundance.svg", plot= P2,
+       width =322, height=140 , units = "mm", dpi = 500, device = "svg" )
 
 
 ```
@@ -193,8 +203,8 @@ ggsave(filename = "../3_figures/depth_REEF_abundance.png", plot= P2,
 P3<-ggplot(fish, aes(y=shannon, x=Reef, fill =Depth_bin)) + 
   geom_boxplot(outlier.colour="black", outlier.shape=16,
              outlier.size=2, notch=FALSE)+
-  scale_fill_manual(values = depth.cols, name = "Depth Bin")+
-  ylab(expression(Diversity~("H' 150m"^-2 %+-%SE)))+
+  scale_fill_manual(values = depth.cols, name = "")+
+  ylab(expression(Diversity~("H' 150m"^2)))+
   xlab("")+
   scale_y_continuous(expand = c(0, 0), limits = c(0, 5))+ 
   facet_grid(cols = vars(Region), scales = "free", space ="free")+
@@ -211,8 +221,8 @@ theme_classic()+
 
 P3
 
-ggsave(filename = "../3_figures/depth_REEF_diversity.png", plot= P3,
-       width =300, height=150 , units = "mm", dpi = 500, device = "png" )
+ggsave(filename = "../3_figures/ROV_fish_REEF_diversity.svg", plot= P3,
+       width =322, height=140 , units = "mm", dpi = 500, device = "svg" )
 
 
 ```
@@ -223,8 +233,8 @@ ggsave(filename = "../3_figures/depth_REEF_diversity.png", plot= P3,
 P4<-ggplot(fish, aes(y=Total_biomass_KG, x=Reef, fill =Depth_bin)) + 
   geom_boxplot(outlier.colour="black", outlier.shape=16,
              outlier.size=2, notch=FALSE)+
-  scale_fill_manual(values = depth.cols, name = "Depth Bin")+
-  ylab(expression(Biomass~("Kg 150m"^-2 %+-%SE)))+
+  scale_fill_manual(values = depth.cols, name = "")+
+  ylab(expression(Biomass~("Kg 150m"^-2)))+
   xlab("")+
   scale_y_continuous(expand = c(0, 0), limits = c(0, 300))+ 
   facet_grid(cols = vars(Region), scales = "free", space ="free")+
@@ -241,14 +251,20 @@ theme_classic()+
 
 P4
 
-ggsave(filename = "../3_figures/depth_REEF_diversity.png", plot= P3,
-       width =300, height=150 , units = "mm", dpi = 500, device = "png" )
+ggsave(filename = "../3_figures/ROV_REEF_biomass.svg", plot= P4,
+       width =322, height=140 , units = "mm", dpi = 500, device = "pdf" )
 
+
+```
+ 
+# Look at individual biomass to identify outliers
+```{r}
+indi.fish<-read_csv("../2_outputs/ROV_fish_biomass.csv")
 
 ```
  
 # Combined Figure - needs text size tweaking and only one REGION header
 ```{r}
-ggarrange(P1,P2, ncol = 1, lables = c("A","B"))
+ggarrange(P1,P2,P3,P4, ncol = 1, lables = c("A","B","C","D"))
 
 ```

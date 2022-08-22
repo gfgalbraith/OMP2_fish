@@ -208,6 +208,7 @@ fish <- fish %>%
     Species = case_when(Genus == "Chlorurus" & Species == "sordidus" ~ "spilurus",
                         TRUE ~ as.character(Species))
   )
+
 ```
 
 # Pre merge second check
@@ -263,10 +264,45 @@ fish<-fish %>% mutate(
 fish %>% anti_join(fishbase.data, by = "Species_name")
 
 # All that remains should be observations only identified as "sp"
-# Chlorurus spilurus is an issue
-# Pseudanthias englehardorum is an issue
+
+# Pseudanthias englehardorum is an issue - should be englehardi?
+fish <- fish %>% 
+  mutate(
+    Species = case_when(Genus == "Pseudanthias" & Species == "englehardorum" ~ "engelhardi",
+                        Genus == "Pseudanthias" & Species == "engelhardorum" ~ "engelhardi",
+                        TRUE ~ as.character(Species))
+  )
+
+# Naso thynoides
+fish <- fish %>% 
+  mutate(
+    Species = case_when(Genus == "Naso" & Species == "thynoides" ~ "thynnoides",
+                        TRUE ~ as.character(Species))
+  )
+
+# Refresh species names
+fish<-fish %>% mutate(
+  Species_name = paste(Genus,Species, sep = " ")
+)
+
+
+fish %>% anti_join(fishbase.data, by = "Species_name")
+```
+# NA sp needs modifying
+```{r}
+
+fish <- fish %>% mutate(
+  Species_name = case_when(Species_name == "NA sp" ~ paste(Family, Species, sep= " "),
+                           TRUE ~ Species_name))
+
+# Check again
+fish %>% anti_join(fishbase.data, by = "Species_name")
+
+# All that remains should be observations only identified as "sp"
 
 ```
+
+
 
 # If duplicates have been generated check
 ```{r}
@@ -278,6 +314,8 @@ unique(fish)
 
 # Merge with mermaid data
 The fishbase data set was good for validating accepted species names, further spelling checks etc but had some issues with assigning the correct a and b constants. Firstly, there are multiple values for a given species - which is correct? They also seemed very different from the Mermaid ones and often the ones given on the fish's page on fishbase.org. For these reasons using the mermaid database.
+
+KEEP YOUR MERMAID DATABASE UPTO DATE! If you need to add species, look up their a and b constants and enter manually to the csv. Keep this version up to date in all locations.
 
 ```{#r}
 # MERMAID merge for a and b constants
@@ -341,16 +379,16 @@ mermaid.family<- mermaid.family %>% select(Family,`Biomass Constant A`,`Biomass 
 #Check missing species
 # Inspect the species variable and identify na or "sp" values 
 merged.data %>% filter(
-  is.na(Species) | Species == "sp")
+  is.na(Species) | Species == "sp" | Species == "sp2")
 
 # Extract these observations as a separate df
 sp.data<-merged.data %>% filter(
-  is.na(Species)| Species == "sp")
+  is.na(Species)| Species == "sp"| Species == "sp2")
 
 # Remove from original merged.data df - rebind later once corrected
 #fish.1<-merged.data %>% filter(Species != "sp") 
 merged.data <- merged.data %>% filter(Species != "sp") 
-
+merged.data <- merged.data %>% filter(Species != "sp2") 
 ```
 
 # Mising genera
@@ -399,7 +437,7 @@ merged.sp <- sp.data %>%
   left_join(mermaid.genus, by =c("Family","Genus")) %>% 
               mutate(`Biomass Constant A` = coalesce (`Biomass Constant A.x`, `Biomass Constant A.y`),
                      `Biomass Constant B` = coalesce (`Biomass Constant B.x`, `Biomass Constant B.y`)) %>% 
- select(-c(21,22,26,27))
+ select(-c(22,23,27,28))
 ```
 
 # Merge with MERMAID attribute data for misiing genera
@@ -408,7 +446,7 @@ merged.genera <- genus.data %>%
   left_join(mermaid.family, by = "Family") %>% 
               mutate(`Biomass Constant A` = coalesce (`Biomass Constant A.x`, `Biomass Constant A.y`),
                      `Biomass Constant B` = coalesce (`Biomass Constant B.x`, `Biomass Constant B.y`)) %>% 
- select(-c(21,22,26,27))
+ select(-c(22,23,27,28))
 ```
 
 # Row bind all data back together
@@ -419,6 +457,15 @@ fish.1<- rbind(merged.data, merged.genera, merged.sp)
 # Final check that every observation has a and or b constants - ALL should be false
 summary(is.na(fish.1$`Biomass Constant A`))
 fish.1 %>% filter(is.na(`Biomass Constant A`))
+
+
+# Check again, ensuring any missing values are just observations of family or genus level
+missing.data<-fish.1 %>% filter(is.na(`Biomass Constant A`)) %>% distinct(Species_name)
+missing.data$Species_name %>% str_subset(pattern = "sp$", negate = TRUE)
+```
+
+```{r}
+# Write to csv
 
 write.csv(fish.1, file= "../2_outputs/R0V_Fish_ab.csv", row.names = FALSE)
 

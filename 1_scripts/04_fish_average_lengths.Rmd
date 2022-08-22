@@ -46,9 +46,17 @@ fish <- fish %>% mutate(
 
 ```{r}
 
+# Check correct sites are being pulled
+fish %>% filter(Video == "Single") %>% distinct(Site)
 
+# Extract these observations as a separate df
+singles<-fish %>% filter(Video == "Single")
+
+# Remove from original fish - rebind later once mean lengths have been calculated
+fish <- fish %>% filter(Video == "Stereo")
 
 ```
+
 
 # DF of average length for all species with length estimates
 ```{r}
@@ -114,42 +122,7 @@ null.species
 
 # est.mean.lengths applied as "common length" from fishbase.se
 
-no.values$Length_mm[no.values$Species_name == "Rhabdamia gracilis"] <- 50
-no.values$Length_mm[no.values$Species_name == "Aluterus scriptus"] <- 500
-no.values$Length_mm[no.values$Species_name == "Halichoeres chrysus"] <- 100
-no.values$Length_mm[no.values$Species_name == "Siganus argenteus"] <- 250
-no.values$Length_mm[no.values$Species_name == "Thalassoma hardwicke"] <- 150
-no.values$Length_mm[no.values$Species_name == "Pseudanthias pictilis"] <- 110
-no.values$Length_mm[no.values$Species_name == "Rhinecanthus aculeatus"] <- 150
-no.values$Length_mm[no.values$Species_name == "Chromis chrysura"] <- 100
-no.values$Length_mm[no.values$Species_name == "Lutjanus adetii"] <- 300
-no.values$Length_mm[no.values$Species_name == "Balistapus undulatus"] <- 260
-no.values$Length_mm[no.values$Species_name == "Diagramma pictum"] <-  550
-no.values$Length_mm[no.values$Species_name == "Acanthurus nigricauda"] <- 270
-no.values$Length_mm[no.values$Species_name == "Stegastes fasciolatus"] <- 110
-no.values$Length_mm[no.values$Species_name == "Cirrhilabrus scottorum"] <- 120  
-no.values$Length_mm[no.values$Species_name == "Cirrhilabrus punctatus"] <- 120  
-no.values$Length_mm[no.values$Species_name == "Cephalopholis miniata"] <-  300
-no.values$Length_mm[no.values$Species_name == "Amphiprion chrysopterus"] <-  130
-no.values$Length_mm[no.values$Species_name == "Chilomycterus reticulatus"] <-  300
-no.values$Length_mm[no.values$Species_name == "Centropyge tibicen"] <-   150
-no.values$Length_mm[no.values$Species_name == "Paracirrhites arcatus"] <-  150
-no.values$Length_mm[no.values$Species_name == "Coris pictoides"] <-  130
-no.values$Length_mm[no.values$Species_name == "Naso hexacanthus"] <- 500 
-no.values$Length_mm[no.values$Species_name == "Arothron stellatus"] <-  540
-no.values$Length_mm[no.values$Species_name == "Naso tonganus"] <-  500
-no.values$Length_mm[no.values$Species_name == "Meiacanthus atrodorsalis"] <-  100
-no.values$Length_mm[no.values$Species_name == "Chrysiptera tricincta"] <-  55
-no.values$Length_mm[no.values$Species_name == "Halichoeres hortulanus"] <- 200
-no.values$Length_mm[no.values$Species_name == "Aulostomus chinensis"] <-  600
-no.values$Length_mm[no.values$Species_name == "Gymnosarda unicolor"] <- 1900 
-no.values$Length_mm[no.values$Species_name == "Epibulus insidiator"] <-  450
-no.values$Length_mm[no.values$Species_name == "Pseudocaranx dentex"] <- 400
-no.values$Length_mm[no.values$Species_name == "Gymnocranius superciliosus"] <- 400
-no.values$Length_mm[no.values$Species_name == "Rhinecanthus lunula"] <- 220
-no.values$Length_mm[no.values$Species_name == "Dipterygonotus balteatus"] <- 120
-no.values$Length_mm[no.values$Species_name == "Synodus sp"] <- 200
-no.values$Length_mm[no.values$Species_name == "Chrysiptera taupou"] <- 70
+
 
 ```
 
@@ -188,7 +161,53 @@ fish %>% filter(is.na(`Biomass Constant A`))
 fish %>% filter(is.na(`Biomass Constant B`))
 fish %>% filter(is.na(Length_mm))
 
-# fishbase list is still missing some values for common lengths. Missing species added manually as per above option 1.
+# fishbase list is still missing some values for common lengths. Missing species added manually.
+no.values$Length_mm[no.values$Species_name == "Rhabdamia gracilis"] <- 50
+no.values$Length_mm[no.values$Species_name == "Aluterus scriptus"] <- 500
+no.values$Length_mm[no.values$Species_name == "Halichoeres chrysus"] <- 100
+no.values$Length_mm[no.values$Species_name == "Siganus argenteus"] <- 250
+no.values$Length_mm[no.values$Species_name == "Thalassoma hardwicke"] <- 150
+no.values$Length_mm[no.values$Species_name == "Pseudanthias pictilis"] <- 110
+no.values$Length_mm[no.values$Species_name == "Rhinecanthus aculeatus"] <- 150
+no.values$Length_mm[no.values$Species_name == "Chromis chrysura"] <- 100
+no.values$Length_mm[no.values$Species_name == "Lutjanus adetii"] <- 300
+no.values$Length_mm[no.values$Species_name == "Balistapus undulatus"] <- 260
+no.values$Length_mm[no.values$Species_name == "Diagramma pictum"] <-  550
+no.values$Length_mm[no.values$Species_name == "Acanthurus nigricauda"] <- 270
+no.values$Length_mm[no.values$Species_name == "Stegastes fasciolatus"] <- 110
+no.values$Length_mm[no.values$Species_name == "Cirrhilabrus scottorum"] <- 120  
+no.values$Length_mm[no.values$Species_name == "Cirrhilabrus punctatus"] <- 120  
+no.values$Length_mm[no.values$Species_name == "Cephalopholis miniata"] <-  300
+no.values$Length_mm[no.values$Species_name == "Amphiprion chrysopterus"] <-  130
+no.values$Length_mm[no.values$Species_name == "Chilomycterus reticulatus"] <-  300
+no.values$Length_mm[no.values$Species_name == "Centropyge tibicen"] <-   150
+no.values$Length_mm[no.values$Species_name == "Paracirrhites arcatus"] <-  150
+no.values$Length_mm[no.values$Species_name == "Coris pictoides"] <-  130
+no.values$Length_mm[no.values$Species_name == "Naso hexacanthus"] <- 500 
+no.values$Length_mm[no.values$Species_name == "Arothron stellatus"] <-  540
+no.values$Length_mm[no.values$Species_name == "Naso tonganus"] <-  500
+no.values$Length_mm[no.values$Species_name == "Meiacanthus atrodorsalis"] <-  100
+no.values$Length_mm[no.values$Species_name == "Chrysiptera tricincta"] <-  55
+no.values$Length_mm[no.values$Species_name == "Halichoeres hortulanus"] <- 200
+no.values$Length_mm[no.values$Species_name == "Aulostomus chinensis"] <-  600
+no.values$Length_mm[no.values$Species_name == "Gymnosarda unicolor"] <- 1900 
+no.values$Length_mm[no.values$Species_name == "Epibulus insidiator"] <-  450
+no.values$Length_mm[no.values$Species_name == "Pseudocaranx dentex"] <- 400
+no.values$Length_mm[no.values$Species_name == "Gymnocranius superciliosus"] <- 400
+no.values$Length_mm[no.values$Species_name == "Rhinecanthus lunula"] <- 220
+no.values$Length_mm[no.values$Species_name == "Dipterygonotus balteatus"] <- 120
+no.values$Length_mm[no.values$Species_name == "Synodus sp"] <- 200
+no.values$Length_mm[no.values$Species_name == "Chrysiptera taupou"] <- 70
+no.values$Length_mm[no.values$Species_name == "Labroides sp"] <- 100
+
+# Check again
+no.values %>% filter(is.na(Length_mm))
+
+# remerge
+fish<-rbind(fish.2, no.values) %>% 
+  select(-Mean_length)
+
+fish %>% filter(is.na(Length_mm))
 
 ```
 
@@ -204,10 +223,17 @@ fish <- fish %>%
 
 ```
 
+# Bind the single video surveys back in
+```{r}
+fish<-rbind(fish, singles)
+
+
+```
+
 # Write csv
 
 ```{r}
 
-write.csv(fish, file= "../2_outputs/ROV_Fish_Final.csv", row.names = FALSE)
+write.csv(fish, file= "../2_outputs/ROV_Fish_lengths.csv", row.names = FALSE)
 
 ```

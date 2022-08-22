@@ -38,6 +38,7 @@ fish <- fish %>% mutate(
   Comment = as.character(Comment),
   Date = as.Date(Date),
   `Trophic Group` = as.factor(`Trophic Group`),
+  `Functional Group` = as.factor(`Functional Group`),
   Habitat = as.factor(Habitat),
   Aspect = as.factor(Aspect))
 ```

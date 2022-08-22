@@ -1,0 +1,155 @@
+---
+title: "13_new_depths"
+author: "GF Galbraith"
+date: '2022-08-17'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#Housekeeping
+```{}
+rm(list=ls())
+#dev.off()
+getwd()
+```
+
+#Libraries
+```{r}
+library(tidyverse)
+library(readr)
+```
+
+# Data import
+
+```{r}
+rov.fish <-read_csv("../2_outputs/ROV_Fish_Final.csv")  # ROV fish data including site info
+bruv.fish <-read_csv("../2_outputs/BRUV_Fish_Final.csv")  # BRUV fish data including site info
+
+rov.fish <- rov.fish %>%select(T_ID,Survey, Reef, Site, Depth, Family, Genus, Species, Species_name, `Trophic Group`,`Functional Group`)%>%mutate(
+  Reef=as.factor(Reef),
+  Survey=as.factor(Survey),
+  Site=as.factor(Site),
+  T_ID = as.factor(T_ID),
+  Depth = as.double(Depth),
+  Species_name = as.factor(Species_name),
+  Method = as.factor("ROV"))
+
+bruv.fish<- bruv.fish %>% select(T_ID,Survey, Reef, Site, Depth, Family, Genus, Species, Species_name,`Trophic Group`,`Functional Group.X`)%>% mutate(
+  Reef=as.factor(Reef),
+  Survey=as.factor(Survey),
+  Site=as.factor(Site),
+  T_ID = as.factor(T_ID),
+  Depth = as.double(Depth),
+  Species_name = as.factor(Species_name),
+  Method = as.factor("BRUV")) %>% rename(
+      `Functional Group` = `Functional Group.X`)
+
+
+fish<-rbind(rov.fish,bruv.fish)
+
+```
+
+# Species totals
+```{r}
+bruv.fish %>%  distinct(Species_name)
+rov.fish %>%  distinct(Species_name)
+fish %>%  distinct(Species_name)
+
+
+```
+
+# Fishbase depth records
+```{r}
+fishbase<-read_csv("../0_data/fishbase_data/fishbase_species.csv")
+
+fishbase<-fishbase %>% select(Species, DepthRangeShallow,DepthRangeDeep,DepthRangeComShallow, DepthRangeComDeep) %>% 
+  rename(Species_name = Species)
+
+```
+
+
+
+# Join observed species with fishbase species
+```{r}
+merged.fish<-left_join(fish, fishbase, by = "Species_name")
+
+# Where is max depth na?
+
+merged.fish %>% filter(is.na(DepthRangeDeep)
+                      ) %>% distinct(Species_name)
+
+
+# Chlorurus spilurus
+merged.fish$DepthRangeDeep[merged.fish$Species_name == "Chlorurus spilurus"] <- 30
+
+
+
+# Monotaxis heterodon
+merged.fish$DepthRangeDeep[merged.fish$Species_name == "Monotaxis heterodon"] <- 25
+
+merged.fish %>% distinct(Species_name)
+
+
+
+```
+
+# ROV fish 
+Find where observed depth exceeds fishbase data
+```{r}
+
+deep.fish<-merged.fish %>% filter(
+  Depth > DepthRangeDeep)
+
+```
+
+# Depth records
+```{r}
+# All fish
+
+new.records<-deep.fish %>% select(Species_name, Depth, DepthRangeDeep, Reef, Site, Method, `Trophic Group`,`Functional Group`) %>% mutate(
+  depth_increase = as.double(Depth - DepthRangeDeep),
+  `Trophic Group` = as.factor(`Trophic Group`),
+  `Functional Group` = as.factor(`Functional Group`)
+)
+
+new.records<-new.records %>% group_by(Species_name) %>% 
+  slice_max(Depth, with_ties =FALSE) %>% arrange(desc(depth_increase))
+
+
+write.csv(new.records, file= "../2_outputs/depth_records.csv", row.names = FALSE)
+
+```
+
+# Select herbivores
+```{r}
+levels(new.records$`Trophic Group`)
+levels(new.records$`Functional Group`)
+
+herbs<-new.records %>% filter(
+ str_detect( `Trophic Group`,"herb") | str_detect(`Functional Group`, "Browser|Excav|Farmer|Grazer|Scraper")
+)
+
+```
+
+# Total species observed
+```{r}
+unique.species<-fish %>% filter(!str_detect(Species_name, pattern = "\\bsp\\b"), !str_detect(Species_name, pattern = "\\bsp2\\b" )) %>% 
+  distinct(Species_name)
+  
+# The above removed any species_names that are just sp or sp2 etc
+
+# 361
+
+
+```
+
+# % Depth extensions
+```{r}
+percent.increases<-new.records %>% mutate(
+  percent.inc = as.double(depth_increase/DepthRangeDeep*100)
+) %>% filter(percent.inc > 50)
+
+```

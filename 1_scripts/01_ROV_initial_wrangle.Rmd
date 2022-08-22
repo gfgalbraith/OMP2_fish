@@ -82,7 +82,7 @@ merged <- data %>% mutate(
                    OpCode == "Edna_3_JUL2021" ~ "EdnaCay_3",
                    OpCode == "Juliette1_July2021" ~ "JulCay_1",
                    TRUE ~ Site),
-  Video = case_when(str_detect(Site, c("Edna|Jul")) ~ "Single",
+  Video = case_when(str_detect(Site, c("Edna|Jul|HerSurp")) ~ "Single",
           TRUE ~ "Stereo"),        
   Transect=as.factor(Period),
   Length_mm=as.double(Length_mm),

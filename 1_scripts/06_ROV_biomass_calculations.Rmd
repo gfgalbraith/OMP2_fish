@@ -1,0 +1,159 @@
+---
+title: "05_biomass_calculations"
+author: "Gemma Galbraith"
+date: "30/05/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Uses the "ROV_Fish_Final" data to calculate the biomass of each fish observation.
+
+#HouseKeeping
+```{R}
+rm(list=ls())
+#dev.off()
+getwd()
+
+```
+
+#load libraries
+```{r}
+library(tidyverse)
+library(rfishbase)
+library(lubridate)
+```
+
+# Data import
+```{r}
+fish <-read_csv("../2_outputs/ROV_Fish_Final.csv")
+
+fish <- fish %>% mutate(
+  Transect=as.factor(Transect),
+  Reef=as.factor(Reef),
+  T_ID=as.factor(T_ID),
+  Length_mm=as.double(Length_mm),
+  Survey=as.factor(Survey),
+  Site=as.factor(Site),
+  Video = as.factor(Video),
+  Comment = as.character(Comment),
+  Habitat = as.factor(Habitat),
+  Aspect = as.factor(Aspect))
+
+```
+
+# Validate large individuals
+Looks like there have been some errors with measuring a bunch of Chromis sp, and other smaller fish. These needs to be filtered out and changed.
+
+The error seems to stem from some observations being entered in cm and some in mm. Therefore, the Length_mm variable is actually a mixture of mm and cm.
+
+
+```{r}
+
+# Convert our lengths from mm to cm by dividing by 10
+fish<- fish %>% mutate(
+  Length_cm= Length_mm/10)
+
+# If observed length exceeds max length, assign max length
+fish2<-fish %>% mutate(
+  Length_cm = case_when(Length_cm > `Max Length (cm)` ~ `Max Length (cm)`,
+                        TRUE ~ (Length_cm))
+)
+
+
+# Clear that some lengths are cm and should be x 10. If length_cm is less than 15% of max length x10 
+fish2<-fish2 %>% mutate(
+  fifteen.per.length  = as.double((`Max Length (cm)`/100)*15),
+  Length_cm = case_when(Length_cm < fifteen.per.length ~ (Length_cm)*10,
+                        TRUE ~ (Length_cm))
+)
+
+
+# Deal with NAs - this should only apply to Stereo surveys and not to Poms and Chromis species BUT don't apply to anything bigger than 5cm
+fish2<-fish2 %>% mutate(
+  Length_cm = case_when(is.na(`Max Length (cm)`) & Video == "Stereo" & (grep("Pomacentrus sp|Chromis sp",Species_name, invert = TRUE) & Length_cm <=5)  ~ (Length_cm)*10, TRUE ~ (Length_cm)))
+
+# Random massive labrid - clearly an error
+
+fish2<-fish2 %>% mutate(
+  Length_cm = case_when(Length_mm == 1022.5700 & Species_name == "Labridae sp" ~ 10.2,
+                        TRUE ~ (Length_cm))
+)
+
+
+```
+
+# Another way to look at what needs fixing
+
+fish3<-fish2 %>% filter(is.na(`Max Length (cm)`)) # the bad stuff that needs fixing
+fish4<-fish2 %>% filter(!is.na(`Max Length (cm)`)) # the good stuff
+
+fish3<-fish3 %>% mutate(
+  Length_cm = case_when(Video == "Stereo" & (grep("Pomacentrus sp|Chromis sp",Species_name, invert = TRUE)) ~ (Length_cm)*10, TRUE ~ (Length_cm))
+)
+
+Then left join back together
+
+
+
+# Biomass calcuation for each observation
+This takes into account the a and b constants, length in mm and the number of fish/individuals in the observation
+
+W = a x Lb
+The units of length and weight in FishBase are centimeter and gram, respectively. Thus when length-weight relationships are not in cm-g, the intercept 'a' is transformed as follows:
+
+a’(cm, g) = a (mm, g)*10^b
+a’(cm, g) = a (cm, kg)*1000 
+a’(cm, g) = a (mm, mg)*10^b/1000 
+a’(cm, g) = a (mm, kg)*10^b*1000
+
+```{r}
+
+# Column for biomass calculation  W = aL^b
+fish2<-fish2 %>% mutate(weight_g = (`Biomass Constant A`*Length_cm^`Biomass Constant B`))
+
+# multiply by number of individuals observed
+fish2<-fish2 %>% mutate(Total_Biomass_g = Number*weight_g)
+
+```
+
+
+# Check and write csv for observation level biomass
+```{r}
+# check each stereo video observation has a biomass value, if all good, write to CSV
+fish2 %>% filter(is.na(Total_Biomass_g) & Video == "Stereo") 
+
+fish2<-fish2 %>% select(-Length_mm, - fifteen.per.length)
+
+write.csv(fish2, file= "../2_outputs/ROV_fish_biomass.csv", row.names = FALSE)
+
+```
+
+# Summary per transect total biomass
+```{r}
+# Select variables excluding species names etc and Group by transect
+biomass.total <- fish2 %>% select(
+Survey,Reef,Site,Transect,T_ID, Date,Video, Lat, Long, Depth, Temperature, Habitat,Aspect,Benthic_Complexity,Total_Biomass_g
+)
+
+ 
+```
+
+
+
+```{r}
+# Summary per transect total biomass
+biomass.total<- biomass.total %>% group_by(Survey,Reef,Site,Transect,T_ID,Video, Date, Lat, Long, Depth, Temperature, Habitat,Aspect,Benthic_Complexity) %>%
+  summarise(Total_Biomass_g = sum(Total_Biomass_g))
+
+```
+
+# Write csv for summary total biomass by transect biomass
+```{r}
+
+write.csv(biomass.total, file= "../2_outputs/ROV_transect_biomass.csv", row.names = FALSE)
+
+```
+
